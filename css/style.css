@@ -1,0 +1,224 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 15, ../sass/base/_variables.scss */
+.main_wrapper .s_intro .intro__main_text {
+  font-family: "Arial";
+  font-size: 0.803em;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Bebas Neue Bold";
+  src: url('../fonts/bebas/BebasNeue Bold.ttf?1389691024') format('truetype'), url('../fonts/bebas/BebasNeue Bold.otf?1389690976') format('opentype');
+}
+@font-face {
+  font-family: "Bebas Neue Book";
+  src: url('../fonts/bebas/BebasNeue Book.ttf?1389998576') format('truetype'), url('../fonts/bebas/BebasNeue Book.otf?1389998436') format('opentype');
+}
+@font-face {
+  font-family: "Bebas Neue Regular";
+  src: url('../fonts/bebas/BebasNeue Light.ttf?1389998707') format('truetype'), url('../fonts/bebas/BebasNeue Light.otf?1389998676') format('opentype');
+}
+/* line 4, ../sass/base/_reset.scss */
+body, .main-wrapper, html {
+  display: block;
+  position: static;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
+/* line 11, ../sass/base/_reset.scss */
+body h1, .main-wrapper h1, html h1 {
+  text-transform: uppercase;
+}
+
+/* line 1, ../sass/base/_header.scss */
+header {
+  width: 100%;
+  position: fixed;
+  height: 78px;
+  background-color: #DA251C;
+  z-index: 20;
+}
+/* line 7, ../sass/base/_header.scss */
+header > * {
+  padding-top: 19px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 13, ../sass/base/_header.scss */
+header .h_divider {
+  border-left: 1px solid #FF3B31;
+  border-right: 1px solid #B21810;
+  height: 26px;
+}
+/* line 18, ../sass/base/_header.scss */
+header .h_logo {
+  width: 12%;
+  text-align: center;
+}
+/* line 22, ../sass/base/_header.scss */
+header nav {
+  width: 45%;
+  color: #FFF;
+  font-family: "Bebas Neue Bold";
+  font-size: 18px;
+  font-weight: 400;
+}
+/* line 28, ../sass/base/_header.scss */
+header nav div {
+  display: inline-block;
+}
+/* line 32, ../sass/base/_header.scss */
+header .h_number {
+  width: 33%;
+}
+
+/* line 1, ../sass/base/_main-wrapper.scss */
+.main_wrapper {
+  display: block;
+  height: 100vh;
+  margin: 0 auto;
+}
+/* line 5, ../sass/base/_main-wrapper.scss */
+.main_wrapper section {
+  width: 100%;
+  height: 100%;
+}
+/* line 1, ../sass/components/_intro.scss */
+.main_wrapper .s_intro {
+  position: relative;
+  width: 100%;
+  max-height: 978px;
+  background: #000;
+  overflow: hidden;
+}
+/* line 3, ../sass/components/_intro.scss */
+.main_wrapper .s_intro > * {
+  display: inline-block;
+}
+/* line 6, ../sass/components/_intro.scss */
+.main_wrapper .s_intro .intro__main_logo {
+  position: absolute;
+  z-index: 4;
+  height: 38%;
+  width: 23%;
+  top: 23%;
+  left: 4.5%;
+  background: url(../images/logo_intro_big.png) no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+/* line 18, ../sass/components/_intro.scss */
+.main_wrapper .s_intro .intro__main_text {
+  color: #FFFFFF;
+  z-index: 6;
+  position: absolute;
+  top: 22%;
+  left: 31%;
+  max-width: 415px;
+}
+/* line 26, ../sass/components/_intro.scss */
+.main_wrapper .s_intro .intro__main_text h1 {
+  max-width: 500px;
+  line-height: 1.2em;
+  color: #FFF;
+  padding-bottom: 7%;
+  color: #FFF;
+  font-family: "Bebas Neue Light";
+  font-size: 4.308em;
+  font-weight: 300;
+}
+/* line 33, ../sass/components/_intro.scss */
+.main_wrapper .s_intro .intro__main_text p {
+  padding-bottom: 5%;
+}
+/* line 37, ../sass/components/_intro.scss */
+.main_wrapper .s_intro .intro__backscreen {
+  position: absolute;
+  z-index: 2;
+  float: right;
+  height: 100%;
+  width: 80%;
+  left: 21%;
+  background: url(../images/main.png) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 1, ../sass/components/_directions.scss */
+.main_wrapper .s_directions {
+  position: relative;
+  width: 100%;
+  max-height: 978px;
+  background: #FFF;
+  overflow: hidden;
+}

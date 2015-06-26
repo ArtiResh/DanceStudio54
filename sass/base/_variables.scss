@@ -1,0 +1,25 @@
+@import "compass";
+@import "susy";
+
+$susy: (
+        columns: 12,
+        gutters: 0.1
+);
+@mixin sections($bg-color){
+  position: relative;
+  width: 100%;
+  max-height: 978px;
+  background: $bg-color;
+  overflow: hidden;
+}
+%var_textArial{
+  font-family: "Arial";
+  font-size: 0.803em;
+  font-weight: 400;
+}
+@mixin var_textBebasNewRegRed($color,$fsize){
+  color: $color;
+  font-family: "Bebas Neue Light";
+  font-size: $fsize;
+  font-weight: 300;
+}

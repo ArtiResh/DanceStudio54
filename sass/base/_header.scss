@@ -1,0 +1,35 @@
+header{
+      width: 100%;
+      position: fixed;
+      height: 78px;
+      background-color: #DA251C;
+      z-index:20;
+      > *{
+          padding-top: 19px;
+          height: auto;
+          display: inline-block;
+          vertical-align: middle;
+      }
+      .h_divider{
+        border-left: 1px solid #FF3B31;
+        border-right: 1px solid #B21810;
+        height: 26px;
+      }
+      .h_logo{
+          width: 12%;
+          text-align: center;
+      }
+      nav{
+          width: 45%;
+          color: #FFF;
+          font-family: "Bebas Neue Bold";
+          font-size: 18px;
+          font-weight: 400;
+          div{
+              display: inline-block;
+          }
+      }
+      .h_number{
+          width: 33%;
+      }
+}

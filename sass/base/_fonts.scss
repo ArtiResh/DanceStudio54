@@ -1,0 +1,4 @@
+@import "compass/css3";
+@include font-face("Bebas Neue Bold", font-files("bebas/BebasNeue Bold.ttf",ttf, "bebas/BebasNeue Bold.otf",otf));
+@include font-face("Bebas Neue Book", font-files("bebas/BebasNeue Book.ttf",ttf, "bebas/BebasNeue Book.otf",otf));
+@include font-face("Bebas Neue Regular", font-files("bebas/BebasNeue Light.ttf",ttf, "bebas/BebasNeue Light.otf",otf));
