@@ -1,4 +1,18 @@
 .s_directions{
   @include sections(#FFF);
+      .directions__text-head{
+          position: relative;
+          z-index: 5;
+          left: 5%;
+          padding-top: 47px;
+          max-width: 995px;
+      }
+      .directions__nav{
+          position: relative;
+          z-index: 5;
+          div{
+            display: inline;
+          }
+      }
 
 }
