@@ -49,15 +49,15 @@
                 В нашей студии можно подготовится к мероприятиям различного уровня, от танца в клубе, до профессионального выступления на чемпионатах мирового уровня.
             </div>
             <div class="directions__nav">
-                <div class="nav_01 active_dir">jazz modern</div>
-                <div class="nav_02">Go-Go</div>
-                <div class="nav_03">jazz funk</div>
-                <div class="nav_04">dance show</div>
-                <div class="nav_05">strip dance</div>
-                <div class="nav_06">latina solo</div>
-                <div class="nav_07">disco</div>
-                <div class="nav_08">pilates</div>
-                <div class="nav_09">stretching</div>
+                <div class="nav_1 active_dir">jazz modern</div>
+                <div class="nav_2">Go-Go</div>
+                <div class="nav_3">jazz funk</div>
+                <div class="nav_4">dance show</div>
+                <div class="nav_5">strip dance</div>
+                <div class="nav_6">latina solo</div>
+                <div class="nav_7">disco</div>
+                <div class="nav_8">pilates</div>
+                <div class="nav_9">stretching</div>
                 <div class="nav_10">Хореография</div>
                 <div class="nav_11">постановка Свадебного танца
                 </div>
@@ -96,34 +96,68 @@
             </div>
 
         </section>
-        <section class="s_studio section"></section>
+        <section class="s_studio section">
+            <div class="studio__head">В нашей студии преподаванием занимаются опытные хореографы,
+                которые прошли не один десяток мастер-классов, состоялись как профессиональные
+                танцоры и подготовили множество юных спортсменов к соревнованиям и выступлениям.</div>
+            <?
+            for($i=0;$i<6;$i++){
+                ?>
+                <div class="studio__teacher">
+                    <div class="ico"></div>
+                    <div class="description">
+                        <h1>Ксения
+                            Тагильцева</h1>
+
+                        <p>Замечательный хореограф, опыт более 10 лет, победительница таких соревнований
+                            как FGW Dance Competition и многих других, зарекомендовала себя как хороший лидер.</p>
+                        <a class="more" href="javascript:none">Узнать больше</a>
+                        <a class="applicate" href="javascript:none;">Записаться к этом у хореографу
+
+                        </a>
+                    </div>
+                </div>
+
+                <?
+            }
+            ?>
+
+        </section>
         <section class="s_application section"></section>
-        <section class="s_information section"></section>
+        <section class="s_inform section"></section>
     </div>
     <script>
+        function slider(direct){
+            setTimeout(function() {
+                $(".backscreen .center").removeClass("center");
+                if(direct ==="last"){
+                    $(".directions__slider").css({left: "8.3333%"}).prepend($(".directions__slider div:last"));
+                }
+                else{
+                    $(".directions__slider").css({left: "-8.3333%"}).append($(".directions__slider div:first"));
+                }
+            }, 250);
+
+        }
+
+//        $('.s_directions .directions__nav .nav_1').click(function(){
+//            slider();
+//        });
         $(document).ready(function() {
            $('.main_wrapper').fullpage();
-            setTimeout(function(){
-                if(direction == "+"){
-                    $(".slider_promo_au").css({left:"-740px"}).prepend($(".slider_promo_au li:last"));
-                    $(".slider_promo_au").animate({left:direction+"=740"}, 500, 'easeOutBack', function(){
-                        $(".item_img").removeClass("blur");
-                        $(".item_img:first").addClass("active");
-                        $(".bg:first").addClass("active");
-                        $(".bg").removeClass("blur");
-                    });
-                } else {
-                    $(".slider_promo_au").animate({left:direction+"=740"}, 500, 'easeOutBack', function(){
-                        $(this).css({left:"0"}).append($(".slider_promo_au li:first"));
-                        $(".item_img").removeClass("blur");
-                        $(".item_img:first").addClass("active");
-                        $(".bg:first").addClass("active");
-                        $(".bg").removeClass("blur");
-                    });
-                };
-            }, 250);
-        }
+
+            $('.nav_1').click(function(){
+                    slider('last');
+                }
+
+            );
+            $('.nav_2').click(function(){
+                    slider('first');
+                }
+
+            );
         });
+
     </script>
 </body>
 

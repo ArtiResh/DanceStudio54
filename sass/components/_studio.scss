@@ -1,0 +1,12 @@
+.s_studio {
+  @include sections(#FFF);
+  .studio__head{
+    position: relative;
+    z-index: 5;
+    left: 3.5%;
+    padding: 122px 0 32px;
+    max-width: 995px;
+    line-height: 1.2em;
+    @extend %var_textArial;
+  }
+}

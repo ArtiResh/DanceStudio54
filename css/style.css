@@ -68,7 +68,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 15, ../sass/base/_variables.scss */
-.main_wrapper .s_intro .intro__main_text, .main_wrapper .s_directions .directions__text-head {
+.main_wrapper .s_intro .intro__main_text, .main_wrapper .s_directions .directions__text-head, .main_wrapper .s_studio .studio__head {
   font-family: "Arial";
   font-size: 0.803em;
   font-weight: 400;
@@ -306,4 +306,21 @@ header .h_number {
   font-family: "Bebas Neue Book";
   font-size: 125px;
   font-weight: 300;
+}
+/* line 1, ../sass/components/_studio.scss */
+.main_wrapper .s_studio {
+  position: relative;
+  width: 100%;
+  max-height: 980px;
+  background: #FFF;
+  overflow: hidden;
+}
+/* line 3, ../sass/components/_studio.scss */
+.main_wrapper .s_studio .studio__head {
+  position: relative;
+  z-index: 5;
+  left: 3.5%;
+  padding: 122px 0 32px;
+  max-width: 995px;
+  line-height: 1.2em;
 }
