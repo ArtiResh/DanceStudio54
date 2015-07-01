@@ -3,16 +3,69 @@
       .directions__text-head{
           position: relative;
           z-index: 5;
-          left: 5%;
-          padding-top: 47px;
+          left: 3.5%;
+          padding: 122px 0 32px;
           max-width: 995px;
+          line-height: 1.2em;
+          @extend %var_textArial;
       }
       .directions__nav{
           position: relative;
           z-index: 5;
+          text-align: center;
           div{
             display: inline;
+            @include var_textBebasNew(#2B1B1B, 1.5em," Bold");
+            font-family: "Bebas Neue Bold";
+            margin: 0 1em;
+            letter-spacing: 0.05em;
+          }
+          .active_dir{
+            color: #DA251C;
+            width: 161px;
+            height: 64px;
+            background: url(../images/button_menu_directions.png) no-repeat;
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-position: 0px 10px;
+            padding: 0.7em 1.1em 1.5em 1.1em;
           }
       }
+        .directions__slider{
+          width: 25*12%;
+          height: 100%;
+          vertical-align: bottom;
 
+          div{
+            @include span(1 of 12);
+            position: relative;
+            padding-top: 8%;
+            height: 50%;
+            background: url(../images/jazz_modern.png) no-repeat;
+            background-position: center;
+            -webkit-background-size: contain;
+            background-size: contain;
+
+          }
+          .center{
+            left: -0.5%;
+            padding-top: 2%;
+            @include span(1 of 6);
+            height: 75%;
+           background-position: left;
+          }
+        }
+
+
+        .directions_text{
+          position: absolute;
+          z-index: 8;
+          top: 32%;
+          left: 55%;
+          max-width: 430px;
+          h1{
+            @include var_textBebasNew(#DA251C,125px," Book");
+          }
+
+       }
 }

@@ -17,9 +17,9 @@ $susy: (
   font-size: 0.803em;
   font-weight: 400;
 }
-@mixin var_textBebasNewRegRed($color,$fsize){
+@mixin var_textBebasNew($color,$fsize, $ftype){
   color: $color;
-  font-family: "Bebas Neue Light";
+  font-family: "Bebas Neue"+$ftype;
   font-size: $fsize;
   font-weight: 300;
 }

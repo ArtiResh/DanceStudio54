@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,51 +24,51 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 /* line 15, ../sass/base/_variables.scss */
-.main_wrapper .s_intro .intro__main_text {
+.main_wrapper .s_intro .intro__main_text, .main_wrapper .s_directions .directions__text-head {
   font-family: "Arial";
   font-size: 0.803em;
   font-weight: 400;
@@ -83,8 +83,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   src: url('../fonts/bebas/BebasNeue Book.ttf?1389998576') format('truetype'), url('../fonts/bebas/BebasNeue Book.otf?1389998436') format('opentype');
 }
 @font-face {
-  font-family: "Bebas Neue Regular";
+  font-family: "Bebas Neue Light";
   src: url('../fonts/bebas/BebasNeue Light.ttf?1389998707') format('truetype'), url('../fonts/bebas/BebasNeue Light.otf?1389998676') format('opentype');
+}
+@font-face {
+  font-family: "Bebas Neue Regular";
+  src: url('../fonts/bebas/BebasNeue Regular.ttf?1389998907') format('truetype'), url('../fonts/bebas/BebasNeue Regular.otf?1389998859') format('opentype');
 }
 /* line 4, ../sass/base/_reset.scss */
 body, .main-wrapper, html {
@@ -226,16 +230,80 @@ header .h_number {
 .main_wrapper .s_directions .directions__text-head {
   position: relative;
   z-index: 5;
-  left: 5%;
-  padding-top: 47px;
+  left: 3.5%;
+  padding: 122px 0 32px;
   max-width: 995px;
+  line-height: 1.2em;
 }
-/* line 10, ../sass/components/_directions.scss */
+/* line 12, ../sass/components/_directions.scss */
 .main_wrapper .s_directions .directions__nav {
   position: relative;
   z-index: 5;
+  text-align: center;
 }
-/* line 13, ../sass/components/_directions.scss */
+/* line 16, ../sass/components/_directions.scss */
 .main_wrapper .s_directions .directions__nav div {
   display: inline;
+  color: #2B1B1B;
+  font-family: "Bebas Neue Bold";
+  font-size: 1.5em;
+  font-weight: 300;
+  font-family: "Bebas Neue Bold";
+  margin: 0 1em;
+  letter-spacing: 0.05em;
+}
+/* line 23, ../sass/components/_directions.scss */
+.main_wrapper .s_directions .directions__nav .active_dir {
+  color: #DA251C;
+  width: 161px;
+  height: 64px;
+  background: url(../images/button_menu_directions.png) no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: 0px 10px;
+  padding: 0.7em 1.1em 1.5em 1.1em;
+}
+/* line 34, ../sass/components/_directions.scss */
+.main_wrapper .s_directions .directions__slider {
+  width: 300%;
+  height: 100%;
+  vertical-align: bottom;
+}
+/* line 39, ../sass/components/_directions.scss */
+.main_wrapper .s_directions .directions__slider div {
+  width: 7.63359%;
+  float: left;
+  margin-right: 0.76336%;
+  position: relative;
+  padding-top: 8%;
+  height: 50%;
+  background: url(../images/jazz_modern.png) no-repeat;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+/* line 50, ../sass/components/_directions.scss */
+.main_wrapper .s_directions .directions__slider .center {
+  left: -0.5%;
+  padding-top: 2%;
+  width: 15.38462%;
+  float: left;
+  margin-right: 1.53846%;
+  height: 75%;
+  background-position: left;
+}
+/* line 60, ../sass/components/_directions.scss */
+.main_wrapper .s_directions .directions_text {
+  position: absolute;
+  z-index: 8;
+  top: 32%;
+  left: 55%;
+  max-width: 430px;
+}
+/* line 66, ../sass/components/_directions.scss */
+.main_wrapper .s_directions .directions_text h1 {
+  color: #DA251C;
+  font-family: "Bebas Neue Book";
+  font-size: 125px;
+  font-weight: 300;
 }

@@ -28,7 +28,7 @@
           line-height: 1.2em;
           color: #FFF;
           padding-bottom: 7%;
-          @include var_textBebasNewRegRed(#FFF,4.308em);
+          @include var_textBebasNew(#FFF,4.308em," Light");
         }
         p{
           padding-bottom: 5%;
