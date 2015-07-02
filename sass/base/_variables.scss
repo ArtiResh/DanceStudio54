@@ -23,3 +23,14 @@ $susy: (
   font-size: $fsize;
   font-weight: 300;
 }
+@mixin before_image($side,$locate){
+  &:before{
+    content: '';
+    display: inline-block;
+    height: $side;
+    width: $side;
+    position: relative;
+    top: ($side/2);
+    background: url($locate) no-repeat;
+  }
+}

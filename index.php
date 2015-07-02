@@ -100,18 +100,21 @@
             <div class="studio__head">В нашей студии преподаванием занимаются опытные хореографы,
                 которые прошли не один десяток мастер-классов, состоялись как профессиональные
                 танцоры и подготовили множество юных спортсменов к соревнованиям и выступлениям.</div>
+            <div class="studio__teacher">
             <?
             for($i=0;$i<6;$i++){
                 ?>
-                <div class="studio__teacher">
-                    <div class="ico"></div>
+                <div class="teachers">
+                    <div class="ico">
+                        <img src="images/foto_teacher.png" alt="foto_teacher"/>
+                    </div>
                     <div class="description">
                         <h1>Ксения
                             Тагильцева</h1>
 
                         <p>Замечательный хореограф, опыт более 10 лет, победительница таких соревнований
                             как FGW Dance Competition и многих других, зарекомендовала себя как хороший лидер.</p>
-                        <a class="more" href="javascript:none">Узнать больше</a>
+                        <a class="more" href="javascript:none">Узнать больше</a></br>
                         <a class="applicate" href="javascript:none;">Записаться к этом у хореографу
 
                         </a>
@@ -121,8 +124,10 @@
                 <?
             }
             ?>
+                </div>
 
         </section>
+        <section class="s_application section"></section>
         <section class="s_application section"></section>
         <section class="s_inform section"></section>
     </div>
@@ -144,7 +149,7 @@
 //            slider();
 //        });
         $(document).ready(function() {
-           $('.main_wrapper').fullpage();
+//          $('.main_wrapper').fullpage();
 
             $('.nav_1').click(function(){
                     slider('last');
