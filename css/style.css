@@ -68,14 +68,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 8, ../sass/base/_variables.scss */
-.main_wrapper .s_directions .directions__text-head, .main_wrapper .s_studio .studio__head, .main_wrapper .s_intro .intro__main_text, .main_wrapper .s_studio .studio__teacher .teachers .description a {
+.main_wrapper .s_directions .directions__text-head, .main_wrapper .s_studio .studio__head, .main_wrapper .s_event .event__head, .main_wrapper .s_intro .intro__main_text, .main_wrapper .s_studio .studio__teacher .teachers .description a, .main_wrapper .s_event .event__information .events .description a {
   font-family: "Arial";
   font-size: 0.803em;
   font-weight: 400;
 }
 
 /* line 13, ../sass/base/_variables.scss */
-.main_wrapper .s_directions .directions__text-head, .main_wrapper .s_studio .studio__head {
+.main_wrapper .s_directions .directions__text-head, .main_wrapper .s_studio .studio__head, .main_wrapper .s_event .event__head {
   position: relative;
   z-index: 5;
   left: 3.5%;
@@ -131,30 +131,90 @@ header > * {
 }
 /* line 13, ../sass/base/_header.scss */
 header .h_divider {
+  position: relative;
+  top: 7px;
   border-left: 1px solid #FF3B31;
   border-right: 1px solid #B21810;
   height: 26px;
 }
-/* line 18, ../sass/base/_header.scss */
+/* line 20, ../sass/base/_header.scss */
 header .h_logo {
   width: 12%;
   text-align: center;
 }
-/* line 22, ../sass/base/_header.scss */
+/* line 24, ../sass/base/_header.scss */
 header nav {
-  width: 45%;
+  width: 44.2%;
   color: #FFF;
   font-family: "Bebas Neue Bold";
   font-size: 18px;
   font-weight: 400;
 }
-/* line 28, ../sass/base/_header.scss */
+/* line 30, ../sass/base/_header.scss */
 header nav div {
   display: inline-block;
+  text-align: center;
+  letter-spacing: 2px;
 }
-/* line 32, ../sass/base/_header.scss */
+/* line 35, ../sass/base/_header.scss */
+header nav .link_01 {
+  width: 19.54545%;
+  float: left;
+  margin-left: 0.22727%;
+  margin-right: 0.22727%;
+  margin-left: 5%;
+}
+/* line 40, ../sass/base/_header.scss */
+header nav .link_02 {
+  width: 14.54545%;
+  float: left;
+  margin-left: 0.22727%;
+  margin-right: 0.22727%;
+}
+/* line 43, ../sass/base/_header.scss */
+header nav .link_03 {
+  width: 14.54545%;
+  float: left;
+  margin-left: 0.22727%;
+  margin-right: 0.22727%;
+}
+/* line 46, ../sass/base/_header.scss */
+header nav .link_04 {
+  width: 19.54545%;
+  float: left;
+  margin-left: 0.22727%;
+  margin-right: 0.22727%;
+}
+/* line 49, ../sass/base/_header.scss */
+header nav .link_05 {
+  width: 19.54545%;
+  float: left;
+  margin-left: 0.22727%;
+  margin-right: 0.22727%;
+}
+/* line 53, ../sass/base/_header.scss */
 header .h_number {
   width: 33%;
+  font-family: "Arial Black";
+  font-size: 1.250em;
+  color: #FFFFFF;
+  padding: 0 0 0 4%;
+}
+/* line 37, ../sass/base/_variables.scss */
+header .h_number:before {
+  content: '';
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 15.5px;
+  background: url("../images/tel_ico.png") no-repeat;
+}
+/* line 60, ../sass/base/_header.scss */
+header .h_number:before {
+  padding: 0;
+  margin-right: 10px;
+  top: 10px;
 }
 
 /* line 1, ../sass/base/_main-wrapper.scss */
@@ -388,7 +448,7 @@ header .h_number {
   height: 35px;
   width: 35px;
   position: relative;
-  top: 17.5px;
+  top: 15.5px;
   background: url("../images/button_small_question.png") no-repeat;
 }
 /* line 37, ../sass/base/_variables.scss */
@@ -398,6 +458,101 @@ header .h_number {
   height: 35px;
   width: 35px;
   position: relative;
-  top: 17.5px;
+  top: 15.5px;
+  background: url("../images/button_small_check_teachers.png") no-repeat;
+}
+/* line 1, ../sass/components/_event.scss */
+.main_wrapper .s_event {
+  position: relative;
+  width: 100%;
+  max-height: 980px;
+  background: #000;
+  overflow: hidden;
+  color: #FFF;
+}
+/* line 7, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information {
+  text-align: center;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+.main_wrapper .s_event .event__information:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 10, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information .events {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 1.7% 0;
+  width: 30.30303%;
+  float: left;
+  margin-left: 1.51515%;
+  margin-right: 1.51515%;
+}
+/* line 15, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information .events div {
+  display: inline-block;
+  text-align: left;
+}
+/* line 19, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information .events .foto {
+  float: left;
+  width: 46.06061%;
+  float: left;
+  margin-left: 0.30303%;
+  margin-right: 0.30303%;
+}
+/* line 22, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information .events .foto img {
+  width: 90%;
+}
+/* line 26, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information .events .description {
+  width: 52.72727%;
+  float: left;
+  margin-left: 0.30303%;
+  margin-right: 0.30303%;
+  float: right;
+}
+/* line 29, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information .events .description h1 {
+  color: #DA251C;
+  font-family: "Bebas Neue Book";
+  font-size: 3.5em;
+  font-weight: 300;
+  padding-bottom: 0.4em;
+  max-width: 80%;
+}
+/* line 34, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information .events .description p {
+  padding-bottom: 0.3em;
+}
+/* line 37, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information .events .description a {
+  color: #FFF;
+  font-size: 0.915em;
+}
+/* line 37, ../sass/base/_variables.scss */
+.main_wrapper .s_event .event__information .events .description .more:before {
+  content: '';
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 15.5px;
+  background: url("../images/button_small_question.png") no-repeat;
+}
+/* line 37, ../sass/base/_variables.scss */
+.main_wrapper .s_event .event__information .events .description .applicate:before {
+  content: '';
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 15.5px;
   background: url("../images/button_small_check_teachers.png") no-repeat;
 }

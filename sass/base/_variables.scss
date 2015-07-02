@@ -40,7 +40,7 @@ $susy: (
     height: $side;
     width: $side;
     position: relative;
-    top: ($side/2);
+    top: ($side/2)-2px;
     background: url($locate) no-repeat;
   }
 }

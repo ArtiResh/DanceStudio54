@@ -127,7 +127,33 @@
                 </div>
 
         </section>
-        <section class="s_event section"></section>
+        <section class="s_event section">
+            <div class="event__head">Мы находимся в постоянном развитии и самосовершенствовании.
+                Жизнь в студии кипит и пополняет наши альбомы отличными моментами с соревнований или выступлений.</div>
+            <div class="event__information">
+                <?
+                for($i=0;$i<6;$i++){
+                    ?>
+                    <div class="events">
+                        <div class="foto">
+                            <img src="images/foto_teacher.png" alt="foto_teacher"/>
+                        </div>
+                        <div class="description">
+                            <h1>Дискотека
+                                90-х</h1>
+
+                            <p>Выступление с Иванушками.</p>
+                            <p class="data">10.01.2014</p>
+                            <a class="more" href="javascript:none">Узнать больше</a></br>
+                            </a>
+                        </div>
+                    </div>
+
+                <?
+                }
+                ?>
+            </div>
+        </section>
         <section class="s_application section"></section>
         <section class="s_inform section"></section>
     </div>
@@ -149,7 +175,7 @@
 //            slider();
 //        });
         $(document).ready(function() {
-//          $('.main_wrapper').fullpage();
+          $('.main_wrapper').fullpage();
 
             $('.nav_1').click(function(){
                     slider('last');

@@ -11,6 +11,8 @@ header{
           vertical-align: middle;
       }
       .h_divider{
+        position: relative;
+        top: 7px;
         border-left: 1px solid #FF3B31;
         border-right: 1px solid #B21810;
         height: 26px;
@@ -20,16 +22,45 @@ header{
           text-align: center;
       }
       nav{
-          width: 45%;
+          width: 44.2%;
           color: #FFF;
           font-family: "Bebas Neue Bold";
           font-size: 18px;
           font-weight: 400;
           div{
               display: inline-block;
+              text-align: center;
+            letter-spacing: 2px;
+          }
+          .link_01{
+
+            @include span(4 of 20 split);
+            margin-left: 5%;
+          }
+          .link_02{
+            @include span(3 of 20 split);
+          }
+          .link_03{
+            @include span(3 of 20 split);
+          }
+          .link_04{
+            @include span(4 of 20 split);
+          }
+          .link_05{
+            @include span(4 of 20 split);
           }
       }
       .h_number{
           width: 33%;
+          font-family: "Arial Black";
+          font-size: 1.250em;
+          color: #FFFFFF;
+          @include var_BeforeImage(35px,'../images/tel_ico.png');
+          padding: 0 0 0 4%;
+          &:before{
+            padding: 0;
+            margin-right: 10px;
+            top: 10px;
+          }
       }
 }
