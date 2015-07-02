@@ -171,8 +171,9 @@
         <div class="application__inform">
             <div class="now">
                 <?
-                for ($i = 0; $i < 6; $i++) {
+                for ($i = 0; $i < 3; $i++) {
                     ?>
+                                <div>
                                 <h1>Strip / Go-go</h1>
 
                                 <p>Условия набора</p>
@@ -184,6 +185,7 @@
                                 </p>
                                 <a class="applicate" href="javascript:none">Записаться на Strip / Go-go</a></br>
                                 </a>
+                                    </div>
 
 
                     <?

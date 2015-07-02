@@ -1,0 +1,22 @@
+.s_application {
+  @include var_Sections(#000);
+  color: #FFF;
+  .application__head {
+    @extend %var_top-short-description;
+  }
+  .application__inform{
+    width: 100%;
+    div{
+      display: inline-block;
+    }
+    .now{
+      @include span(3 of 5 split);
+      div{
+        @include span(1 of 3 split);
+      }
+    }
+    .load{
+      @include span(1 of 3);
+    }
+  }
+}
