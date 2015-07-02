@@ -1,5 +1,5 @@
 .s_intro{
-  @include sections(#000);
+  @include var_Sections(#000);
   > *{
         display: inline-block;
   }
@@ -22,13 +22,13 @@
         top: 22%;
         left: 31%;
         max-width: 415px;
-        @extend %var_textArial;
+        @extend %var_text-arial;
         h1{
           max-width: 500px;
           line-height: 1.2em;
           color: #FFF;
           padding-bottom: 7%;
-          @include var_textBebasNew(#FFF,4.308em," Light");
+          @include var_TextBebasNew(#FFF,4.308em," Light");
         }
         p{
           padding-bottom: 5%;

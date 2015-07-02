@@ -127,7 +127,7 @@
                 </div>
 
         </section>
-        <section class="s_application section"></section>
+        <section class="s_event section"></section>
         <section class="s_application section"></section>
         <section class="s_inform section"></section>
     </div>

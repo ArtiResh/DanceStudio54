@@ -1,0 +1,6 @@
+.s_event {
+  @include var_Sections(#000);
+  .event__head{
+    @extend %var_top-short-description;
+  }
+}

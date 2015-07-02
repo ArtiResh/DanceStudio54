@@ -5,25 +5,35 @@ $susy: (
         columns: 12,
         gutters: 0.1
 );
-@mixin sections($bg-color){
+%var_text-arial{
+  font-family: "Arial";
+  font-size: 0.803em;
+  font-weight: 400;
+}
+%var_top-short-description{
+  position: relative;
+  z-index: 5;
+  left: 3.5%;
+  padding: 122px 0 32px;
+  max-width: 995px;
+  line-height: 1.2em;
+  @extend %var_text-arial;
+}
+
+@mixin var_Sections($bg-color){
   position: relative;
   width: 100%;
   max-height: 980px;
   background: $bg-color;
   overflow: hidden;
 }
-%var_textArial{
-  font-family: "Arial";
-  font-size: 0.803em;
-  font-weight: 400;
-}
-@mixin var_textBebasNew($color,$fsize, $ftype){
+@mixin var_TextBebasNew($color,$fsize, $ftype){
   color: $color;
   font-family: "Bebas Neue"+$ftype;
   font-size: $fsize;
   font-weight: 300;
 }
-@mixin before_image($side,$locate){
+@mixin var_BeforeImage($side,$locate){
   &:before{
     content: '';
     display: inline-block;

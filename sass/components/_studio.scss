@@ -1,14 +1,8 @@
 .s_studio {
-  @include sections(#000);
+  @include var_Sections(#000);
   color: #FFF;
   .studio__head{
-    position: relative;
-    z-index: 5;
-    left: 3.5%;
-    padding: 122px 0 32px;
-    max-width: 995px;
-    line-height: 1.2em;
-    @extend %var_textArial;
+    @extend %var_top-short-description;
   }
   .studio__teacher{
     text-align: center;
@@ -33,7 +27,7 @@
         @include span (8 of 15 split);
         float: right;
         h1{
-          @include var_textBebasNew(#DA251C,3.5em," Book");
+          @include var_TextBebasNew(#DA251C,3.5em," Book");
           padding-bottom: 0.4em;
         }
         p{
@@ -41,14 +35,14 @@
         }
         a{
           color: #FFF;
-          @extend %var_textArial;
+          @extend %var_text-arial;
           font-size: 0.915em;
         }
         .more{
-          @include before_image(35px,'../images/button_small_question.png');
+          @include var_BeforeImage(35px,'../images/button_small_question.png');
         }
         .applicate{
-          @include before_image(35px,'../images/button_small_check_teachers.png');
+          @include var_BeforeImage(35px,'../images/button_small_check_teachers.png');
         }
       }
     }

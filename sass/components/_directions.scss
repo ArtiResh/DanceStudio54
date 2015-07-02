@@ -1,13 +1,7 @@
 .s_directions{
-  @include sections(#FFF);
+  @include var_Sections(#FFF);
       .directions__text-head{
-          position: relative;
-          z-index: 5;
-          left: 3.5%;
-          padding: 122px 0 32px;
-          max-width: 995px;
-          line-height: 1.2em;
-          @extend %var_textArial;
+          @extend %var_top-short-description;
       }
       .directions__nav{
           position: relative;
@@ -15,8 +9,8 @@
           text-align: center;
           div{
             display: inline;
-            @include var_textBebasNew(#2B1B1B, 1.5em," Bold");
-            font-family: "Bebas Neue Bold";
+            @include var_TextBebasNew(#2B1B1B, 1.5em," Bold");
+//            font-family: "Bebas Neue Bold";
             margin: 0 1em;
             letter-spacing: 0.05em;
           }
@@ -64,7 +58,7 @@
           left: 55%;
           max-width: 430px;
           h1{
-            @include var_textBebasNew(#DA251C,7.7em," Book");
+            @include var_TextBebasNew(#DA251C,7.7em," Book");
           }
 
        }
