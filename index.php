@@ -136,7 +136,7 @@
                     ?>
                     <div class="events">
                         <div class="foto">
-                            <img src="images/foto_teacher.png" alt="foto_teacher"/>
+                            <img src="images/temp-events.jpg" alt="90e"/>
                         </div>
                         <div class="description">
                             <h1>Дискотека
@@ -175,7 +175,7 @@
 //            slider();
 //        });
         $(document).ready(function() {
-          $('.main_wrapper').fullpage();
+      //    $('.main_wrapper').fullpage();
 
             $('.nav_1').click(function(){
                     slider('last');

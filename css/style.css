@@ -487,7 +487,7 @@ header .h_number:before {
 .main_wrapper .s_event .event__information .events {
   vertical-align: middle;
   display: inline-block;
-  padding: 1.7% 0;
+  padding: 1.7% 0 3.8%;
   width: 30.30303%;
   float: left;
   margin-left: 1.51515%;
@@ -509,8 +509,11 @@ header .h_number:before {
 /* line 22, ../sass/components/_event.scss */
 .main_wrapper .s_event .event__information .events .foto img {
   width: 90%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
-/* line 26, ../sass/components/_event.scss */
+/* line 29, ../sass/components/_event.scss */
 .main_wrapper .s_event .event__information .events .description {
   width: 52.72727%;
   float: left;
@@ -518,7 +521,7 @@ header .h_number:before {
   margin-right: 0.30303%;
   float: right;
 }
-/* line 29, ../sass/components/_event.scss */
+/* line 32, ../sass/components/_event.scss */
 .main_wrapper .s_event .event__information .events .description h1 {
   color: #DA251C;
   font-family: "Bebas Neue Book";
@@ -527,11 +530,15 @@ header .h_number:before {
   padding-bottom: 0.4em;
   max-width: 80%;
 }
-/* line 34, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information .events .description p {
-  padding-bottom: 0.3em;
-}
 /* line 37, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information .events .description p {
+  padding-bottom: 1em;
+}
+/* line 40, ../sass/components/_event.scss */
+.main_wrapper .s_event .event__information .events .description .data {
+  padding-bottom: 0;
+}
+/* line 43, ../sass/components/_event.scss */
 .main_wrapper .s_event .event__information .events .description a {
   color: #FFF;
   font-size: 0.915em;

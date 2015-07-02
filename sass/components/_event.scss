@@ -10,7 +10,7 @@
     .events{
       vertical-align: middle;
       display: inline-block;
-      padding: 1.7% 0;
+      padding: 1.7% 0 3.8%;
       @include span(1 of 3 split);
       div{
         display: inline-block;
@@ -21,6 +21,9 @@
         @include span (7 of 15 split);
         img{
           width: 90%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
         }
       }
       .description{
@@ -32,7 +35,10 @@
           max-width: 80%;
         }
         p{
-          padding-bottom: 0.3em;
+          padding-bottom: 1em;
+        }
+        .data{
+          padding-bottom: 0;
         }
         a{
           color: #FFF;
