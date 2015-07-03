@@ -52,10 +52,34 @@
     }
     .application__form{
       width: 100%;
-      border: 1px solid #fff;
-      .send_form{
-        div{
+      #send_form{
+
+        position: relative;
+        left: 3.5%;
+        width: 47.2%;
+        .form-subheader{
+          width: 100%;
+          background: #FFFFFF;
+          @include var_TextBebasNew(#DA251C,2.5em," Book");
+          padding: 1% 4%;
+        }
+        .form-left{
           display: inline;
+          @include span(5 of 13 no-gutters);
+
+          background: #150303;
+        }
+        .form-middle{
+          display: inline;
+          @include span(5 of 13 no-gutters);
+
+          background: #1c0404;
+        }
+        .form.right{
+          display: inline;
+          @include span(3 of 13 no-gutters);
+
+          background: #260705;
         }
       }
     }

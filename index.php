@@ -180,10 +180,10 @@
 
                                     <p>Условия набора</p>
                                     <p class="data">
-                                    Девушки, 16 - 22 года;
-                                    Спортивное телосложение;
-                                    Тренировки пн-чт, с 16:00 до 18:00;
-                                    Зал на пр.Мира, тц "Спутник" , 4 этаж;
+                                    Девушки, 16 - 22 года;</br>
+                                    Спортивное телосложение;</br>
+                                    Тренировки пн-чт, с 16:00 до 18:00;</br>
+                                    Зал на пр.Мира, тц "Спутник" , 4 этаж;</br>
                                     </p>
                                     <a class="applicate" href="javascript:none">Записаться на Strip / Go-go</a>
 
@@ -209,6 +209,7 @@
         </div>
         <div class="application__form">
             <form action="handler.php" id="send_form">
+                <div class="form-subheader">Запись на обучение</div>
                 <div class="form-left">
                     <div>
                         <p>ФИО</p>
@@ -272,7 +273,7 @@
     //            slider();
     //        });
     $(document).ready(function () {
-       // $('.main_wrapper').fullpage();
+      // $('.main_wrapper').fullpage();
 
         $('.nav_1').click(function () {
                 slider('last');

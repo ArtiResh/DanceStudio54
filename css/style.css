@@ -675,9 +675,41 @@ header .h_number:before {
 /* line 53, ../sass/components/_application.scss */
 .main_wrapper .s_application .application__form {
   width: 100%;
-  border: 1px solid #fff;
 }
-/* line 57, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form .send_form div {
+/* line 55, ../sass/components/_application.scss */
+.main_wrapper .s_application .application__form #send_form {
+  position: relative;
+  left: 3.5%;
+  width: 47.2%;
+}
+/* line 60, ../sass/components/_application.scss */
+.main_wrapper .s_application .application__form #send_form .form-subheader {
+  width: 100%;
+  background: #FFFFFF;
+  color: #DA251C;
+  font-family: "Bebas Neue Book";
+  font-size: 2.5em;
+  font-weight: 300;
+  padding: 1% 4%;
+}
+/* line 66, ../sass/components/_application.scss */
+.main_wrapper .s_application .application__form #send_form .form-left {
   display: inline;
+  width: 38.02817%;
+  float: left;
+  background: #150303;
+}
+/* line 72, ../sass/components/_application.scss */
+.main_wrapper .s_application .application__form #send_form .form-middle {
+  display: inline;
+  width: 38.02817%;
+  float: left;
+  background: #1c0404;
+}
+/* line 78, ../sass/components/_application.scss */
+.main_wrapper .s_application .application__form #send_form .form.right {
+  display: inline;
+  width: 22.53521%;
+  float: left;
+  background: #260705;
 }
