@@ -1,22 +1,62 @@
 .s_application {
   @include var_Sections(#000);
   color: #FFF;
-  .application__head {
-    @extend %var_top-short-description;
-  }
-  .application__inform{
-    width: 100%;
-    div{
-      display: inline-block;
+    .application__head {
+      @extend %var_top-short-description;
     }
-    .now{
-      @include span(3 of 5 split);
+    .application__inform{
+      padding: 4px 0 0 32px;
+      width: 100%;
+      height: 25.5%;
       div{
-        @include span(1 of 3 split);
+        display: inline-block;
+        vertical-align: top;
+      }
+      .now{
+        @include span(3 of 5 split);
+        div{
+          @include span(1 of 3 split);
+          h1{
+            @include var_TextBebasNew(#DA251C,3.5em," Book");
+            padding-bottom: 8px;
+          }
+          .data{
+            padding-bottom: 0;
+          }
+          a{
+            color: #FFF;
+            @extend %var_text-arial;
+            font-size: 0.915em;
+          }
+          .applicate{
+            @include var_BeforeImage(35px,'../images/button_small_check_teachers.png');
+          }
+        }
+      }
+      .divider{
+        width: 5%;
+        margin-top: 1%;
+        height: 55%;
+        border-left: 1px solid #545454;
+        background-position: right;
+      }
+      .load{
+
+        width: 15%;
+        a{
+          @include var_TextBebasNew(#DA251C,3.5em," Book");
+
+        }
+
       }
     }
-    .load{
-      @include span(1 of 3);
+    .application__form{
+      width: 100%;
+      border: 1px solid #fff;
+      .send_form{
+        div{
+          display: inline;
+        }
+      }
     }
-  }
 }

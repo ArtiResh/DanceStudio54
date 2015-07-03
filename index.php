@@ -138,8 +138,10 @@
 
     </section>
     <section class="s_event section">
-        <div class="event__head">Мы находимся в постоянном развитии и самосовершенствовании.
-            Жизнь в студии кипит и пополняет наши альбомы отличными моментами с соревнований или выступлений.
+        <div class="event__head">
+            Мы находимся в постоянном развитии и самосовершенствовании.
+            Жизнь в студии кипит и пополняет наши альбомы отличными
+            моментами с соревнований или выступлений.
         </div>
         <div class="event__information">
             <?
@@ -174,29 +176,34 @@
                 for ($i = 0; $i < 3; $i++) {
                     ?>
                                 <div>
-                                <h1>Strip / Go-go</h1>
+                                    <h1>Strip / Go-go</h1>
 
-                                <p>Условия набора</p>
-                                <p class="data">
-                                Девушки, 16 - 22 года;
-                                Спортивное телосложение;
-                                Тренировки пн-чт, с 16:00 до 18:00;
-                                Зал на пр.Мира, тц "Спутник" , 4 этаж;
-                                </p>
-                                <a class="applicate" href="javascript:none">Записаться на Strip / Go-go</a></br>
-                                </a>
-                                    </div>
+                                    <p>Условия набора</p>
+                                    <p class="data">
+                                    Девушки, 16 - 22 года;
+                                    Спортивное телосложение;
+                                    Тренировки пн-чт, с 16:00 до 18:00;
+                                    Зал на пр.Мира, тц "Спутник" , 4 этаж;
+                                    </p>
+                                    <a class="applicate" href="javascript:none">Записаться на Strip / Go-go</a>
+
+                                </div>
 
 
                     <?
                 }
                 ?>
             </div>
-            <div class="divider"></div>
+            <div class="divider">
+
+            </div>
+            <div class="image-b"><img src="images/button_big_lines.png"/></div>
             <div class="load">
-                Скачать
-                расписание
-                тренировок
+              <a href="javascript:none;">
+                    Скачать
+                    расписание
+                    тренировок</a>
+
             </div>
 
         </div>
@@ -265,7 +272,7 @@
     //            slider();
     //        });
     $(document).ready(function () {
-        $('.main_wrapper').fullpage();
+//        $('.main_wrapper').fullpage();
 
         $('.nav_1').click(function () {
                 slider('last');
