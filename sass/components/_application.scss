@@ -1,86 +1,135 @@
 .s_application {
   @include var_Sections(#000);
   color: #FFF;
-    .application__head {
-      @extend %var_top-short-description;
+  .application__head {
+    @extend %var_top-short-description;
+  }
+  .application__inform {
+    padding: 4px 0 0 32px;
+    width: 100%;
+    height: 25.5%;
+    div {
+      display: inline-block;
+      vertical-align: top;
     }
-    .application__inform{
-      padding: 4px 0 0 32px;
-      width: 100%;
-      height: 25.5%;
-      div{
-        display: inline-block;
-        vertical-align: top;
+    .now {
+      @include span(3 of 5 split);
+      div {
+        @include span(1 of 3 split);
+        h1 {
+          @include var_TextBebasNew(#DA251C, 3.5em, " Book");
+          padding-bottom: 8px;
+        }
+        .data {
+          padding-bottom: 0;
+        }
+        a {
+          color: #FFF;
+          @extend %var_text-arial;
+          font-size: 0.915em;
+        }
+        .applicate {
+          @include var_BeforeImage(35px, '../images/button_small_check_teachers.png');
+        }
       }
-      .now{
-        @include span(3 of 5 split);
+    }
+    .divider {
+      width: 5%;
+      margin-top: 1%;
+      height: 55%;
+      border-left: 1px solid #545454;
+      background-position: right;
+    }
+    .load {
+
+      width: 15%;
+      a {
+        @include var_TextBebasNew(#DA251C, 3.5em, " Book");
+
+      }
+
+    }
+  }
+  .application__form {
+    width: 100%;
+    #send_form {
+      border: 1px solid #FFFFFF;
+      position: relative;
+      left: 3.5%;
+      width: 51.2%;
+      @extend %var_text-arial;
+      font-size: 1em;
+      .form-subheader {
+        width: 95.5%;
+        background: #FFFFFF;
+        @include var_TextBebasNew(#DA251C, 2.5em, " Book");
+        padding: 1% 0 1% 3.5%;
+      }
+      .form-left {
+        display: inline;
+        @include span(5 of 13 no-gutters);
+
+        background: #150303;
         div{
-          @include span(1 of 3 split);
-          h1{
-            @include var_TextBebasNew(#DA251C,3.5em," Book");
-            padding-bottom: 8px;
+          padding-left: 10%;
+          width: 90%;
+        }
+        div~*{
+          display: inline-block;
+        }
+        .line_1 {
+          p {
+            @include span(1 of 7 no-gutters);
           }
-          .data{
-            padding-bottom: 0;
+          input {
+            @include span(5 of 7 no-gutters);
           }
-          a{
-            color: #FFF;
-            @extend %var_text-arial;
-            font-size: 0.915em;
+        }
+        .line_2 {
+          p {
+            @include span(4 of 11 no-gutters);
           }
-          .applicate{
-            @include var_BeforeImage(35px,'../images/button_small_check_teachers.png');
+          input {
+            @include span(1 of 2 no-gutters);
+          }
+        }
+        .line_3 {
+          #il_31 {
+            @include span(5 of 22 no-gutters);
+          }
+          #il_32 {
+            @include span(5 of 22 no-gutters);
+          }
+          #il_33 {
+            @include span(5 of 22 no-gutters);
+            text-align: right;
+
+          }
+          #il_34 {
+            @include span(3 of 22 no-gutters);
+          }
+        }
+        .line_4 {
+          p {
+            @include span(1 of 2 no-gutters);
+          }
+          input {
+            @include span(1 of 2 no-gutters);
           }
         }
       }
-      .divider{
-        width: 5%;
-        margin-top: 1%;
-        height: 55%;
-        border-left: 1px solid #545454;
-        background-position: right;
+      .form-middle {
+        display: inline;
+        @include span(5 of 13 no-gutters);
+
+        background: #1c0404;
       }
-      .load{
+      .form.right {
+        display: inline;
+        @include span(3 of 13 no-gutters);
 
-        width: 15%;
-        a{
-          @include var_TextBebasNew(#DA251C,3.5em," Book");
-
-        }
-
-      }
-    }
-    .application__form{
-      width: 100%;
-      #send_form{
-
-        position: relative;
-        left: 3.5%;
-        width: 47.2%;
-        .form-subheader{
-          width: 100%;
-          background: #FFFFFF;
-          @include var_TextBebasNew(#DA251C,2.5em," Book");
-          padding: 1% 4%;
-        }
-        .form-left{
-          display: inline;
-          @include span(5 of 13 no-gutters);
-
-          background: #150303;
-        }
-        .form-middle{
-          display: inline;
-          @include span(5 of 13 no-gutters);
-
-          background: #1c0404;
-        }
-        .form.right{
-          display: inline;
-          @include span(3 of 13 no-gutters);
-
-          background: #260705;
-        }
+        background: #260705;
       }
     }
+  }
 }

@@ -211,21 +211,21 @@
             <form action="handler.php" id="send_form">
                 <div class="form-subheader">Запись на обучение</div>
                 <div class="form-left">
-                    <div>
+                    <div class="line_1">
                         <p>ФИО</p>
                         <input type="text"/>
                     </div>
-                    <div>
+                    <div class="line_2">
                         <p>Дата рождения</p>
                         <input type="date"/>
                     </div>
-                    <div>
-                        <p>Рост (см)</p>
-                        <input type="text"/>
-                        <p>Вес (кг)</p>
-                        <input type="text"/>
+                    <div class="line_3">
+                        <p id="l_31">Рост (см)</p>
+                        <input type="text" id="l_32"/>
+                        <p id="l_33">Вес (кг)</p>
+                        <input type="text" id="l_34"/>
                     </div>
-                    <div>
+                    <div class="line_4">
                         <p>Контактный телефон</p>
                         <input type="text" placeholder="(___) ___ __ __" id="user_phone" class="rfield" />
                     </div>
