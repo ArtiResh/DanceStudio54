@@ -68,7 +68,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 8, ../sass/base/_variables.scss */
-.main_wrapper .s_directions .directions__text-head, .main_wrapper .s_studio .studio__head, .main_wrapper .s_event .event__head, .main_wrapper .s_application .application__head, .main_wrapper .s_intro .intro__main_text, .main_wrapper .s_studio .studio__teacher .teachers .description a, .main_wrapper .s_event .event__information .events .description a, .main_wrapper .s_application .application__inform .now div a {
+.main_wrapper .s_directions .directions__text-head, .main_wrapper .s_studio .studio__head, .main_wrapper .s_event .event__head, .main_wrapper .s_application .application__head, .main_wrapper .s_intro .intro__main_text, .main_wrapper .s_directions .directions_text p, .main_wrapper .s_directions .directions_text a, .main_wrapper .s_studio .studio__teacher .teachers .description a, .main_wrapper .s_event .event__information .events .description a, .main_wrapper .s_application .application__inform .now div a {
   font-family: "Arial";
   font-size: 0.803em;
   font-weight: 400;
@@ -366,6 +366,35 @@ header .h_number:before {
   font-family: "Bebas Neue Book";
   font-size: 7.7em;
   font-weight: 300;
+}
+/* line 63, ../sass/components/_directions.scss */
+.main_wrapper .s_directions .directions_text p {
+  padding-bottom: 0.3em;
+}
+/* line 68, ../sass/components/_directions.scss */
+.main_wrapper .s_directions .directions_text a {
+  color: #4491F9;
+  font-size: 1.2em;
+}
+/* line 37, ../sass/base/_variables.scss */
+.main_wrapper .s_directions .directions_text .video:before {
+  content: '';
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  position: relative;
+  top: 20.5px;
+  background: url("../images/button_small_video.png") no-repeat;
+}
+/* line 37, ../sass/base/_variables.scss */
+.main_wrapper .s_directions .directions_text .applicate:before {
+  content: '';
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  position: relative;
+  top: 20.5px;
+  background: url("../images/button_small_check.png") no-repeat;
 }
 /* line 1, ../sass/components/_studio.scss */
 .main_wrapper .s_studio {

@@ -82,10 +82,10 @@
                 позаботиться о своей фигуре.</p>
             <ul>
                 <a href="javascript:none;">
-                    <li class="content_video"></li>
+                    <li class="video">Смотреть видео</li>
                 </a>
                 <a href="javascript:none;">
-                    <li class="content_applicate">Записаться на Jazz Modern</li>
+                    <li class="applicate">Записаться на Jazz Modern</li>
                 </a>
             </ul>
         </div>
@@ -272,7 +272,7 @@
     //            slider();
     //        });
     $(document).ready(function () {
-//        $('.main_wrapper').fullpage();
+       // $('.main_wrapper').fullpage();
 
         $('.nav_1').click(function () {
                 slider('last');

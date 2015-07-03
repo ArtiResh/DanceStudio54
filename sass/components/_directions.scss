@@ -60,6 +60,21 @@
           h1{
             @include var_TextBebasNew(#DA251C,7.7em," Book");
           }
+          p{
+            padding-bottom: 0.3em;
+            @extend %var_text-arial;
 
+          }
+          a{
+            color: #4491F9;
+            @extend %var_text-arial;
+            font-size: 1.2em;
+          }
+          .video{
+            @include var_BeforeImage(45px,'../images/button_small_video.png');
+          }
+          .applicate{
+            @include var_BeforeImage(45px,'../images/button_small_check.png');
+          }
        }
 }
