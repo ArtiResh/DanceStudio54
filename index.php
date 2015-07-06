@@ -11,20 +11,20 @@
 </head>
 <body>
 <header>
-    <div class="h_logo"><img src="images/main_logo_2.png"></div>
+    <div class="h_logo"><a href="/#s_intro"><img src="images/main_logo_2.png"></div></a>
     <div class="h_divider"></div>
     <nav>
-        <div class="link_01">НАПРАВЛЕНИЯ</div>
-        <div class="link_02">ХОРЕОГРАФЫ</div>
-        <div class="link_03">СТУДИЯ</div>
-        <div class="link_04">ЗАПИСЬ НА ОБУЧЕНИЕ</div>
-        <div class="link_05">НАЙТИ НАС</div>
+        <a href="/#s_directions" class="link_01">НАПРАВЛЕНИЯ</div></a>
+        <a href="/#s_masters" class="link_02">ХОРЕОГРАФЫ</div></a>
+        <a href="/#s_studio" class="link_03">СТУДИЯ</div></a>
+        <a href="/#s_application" class="link_04">ЗАПИСЬ НА ОБУЧЕНИЕ</div></a>
+        <a href="/#s_inform" class="link_05">НАЙТИ НАС</div></a>
     </nav>
     <div class="h_divider"></div>
     <div class="h_number">8 (4012) 37-74-54</div>
 </header>
 <div class="main_wrapper">
-    <section class="s_intro section">
+    <section id="s_intro" class="section">
         <div class="intro__main_logo"></div>
         <article class="intro__main_text">
             <h1>Современные танцы</br>
@@ -43,7 +43,7 @@
         </article>
         <div class="intro__backscreen"></div>
     </section>
-    <section class="s_directions section">
+    <section id="s_directions" class="section">
         <div class="directions__text-head">
             Мы предлагаем запись на обучение по множеству танцевальных направлений.
             Наши педагоги проводят тренировки как по современным танцам, так и по классической хореографии.
@@ -105,12 +105,12 @@
         </div>
 
     </section>
-    <section class="s_studio section">
-        <div class="studio__head">В нашей студии преподаванием занимаются опытные хореографы,
+    <section id="s_masters" class="section">
+        <div class="masters__head">В нашей студии преподаванием занимаются опытные хореографы,
             которые прошли не один десяток мастер-классов, состоялись как профессиональные
             танцоры и подготовили множество юных спортсменов к соревнованиям и выступлениям.
         </div>
-        <div class="studio__teacher">
+        <div class="masters__teacher">
             <?
             for ($i = 0; $i < 6; $i++) {
                 ?>
@@ -137,17 +137,17 @@
         </div>
 
     </section>
-    <section class="s_event section">
-        <div class="event__head">
+    <section id="s_studio" class="section">
+        <div class="studio__head">
             Мы находимся в постоянном развитии и самосовершенствовании.
             Жизнь в студии кипит и пополняет наши альбомы отличными
             моментами с соревнований или выступлений.
         </div>
-        <div class="event__information">
+        <div class="studio__information">
             <?
             for ($i = 0; $i < 6; $i++) {
                 ?>
-                <div class="events">
+                <div class="studios">
                     <div class="foto">
                         <img src="images/temp-events.jpg" alt="90e"/>
                     </div>
@@ -168,7 +168,7 @@
             ?>
         </div>
     </section>
-    <section class="s_application section">
+    <section id="s_application" class="section">
         <div class="application__head">Сейчас идет набор в группы</div>
         <div class="application__inform">
             <div class="now">
@@ -253,7 +253,7 @@
         </div>
 
     </section>
-    <section class="s_inform section"></section>
+    <section id="s_inform" class="section"></section>
 </div>
 <script>
     function slider(direct) {
@@ -273,7 +273,7 @@
     //            slider();
     //        });
     $(document).ready(function () {
-      // $('.main_wrapper').fullpage();
+      $('.main_wrapper').fullpage();
 
         $('.nav_1').click(function () {
                 slider('last');

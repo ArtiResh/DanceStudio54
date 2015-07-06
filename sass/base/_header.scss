@@ -23,14 +23,15 @@ header{
       }
       nav{
           width: 44.2%;
-          color: #FFF;
-          font-family: "Bebas Neue Bold";
-          font-size: 18px;
-          font-weight: 400;
-          div{
+          a{
               display: inline-block;
               text-align: center;
             letter-spacing: 2px;
+            color: #FFF;
+            font-family: "Bebas Neue Bold";
+            font-size: 18px;
+            font-weight: 400;
+            text-decoration: none;
           }
           .link_01{
 

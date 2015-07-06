@@ -68,14 +68,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 8, ../sass/base/_variables.scss */
-.main_wrapper .s_directions .directions__text-head, .main_wrapper .s_studio .studio__head, .main_wrapper .s_event .event__head, .main_wrapper .s_application .application__head, .main_wrapper .s_intro .intro__main_text, .main_wrapper .s_directions .directions_text p, .main_wrapper .s_directions .directions_text a, .main_wrapper .s_studio .studio__teacher .teachers .description a, .main_wrapper .s_event .event__information .events .description a, .main_wrapper .s_application .application__inform .now div a, .main_wrapper .s_application .application__form #send_form {
+.main_wrapper #s_directions .directions__text-head, .main_wrapper #s_masters .masters__head, .main_wrapper #s_studio .studio__head, .main_wrapper #s_application .application__head, .main_wrapper #s_intro .intro__main_text, .main_wrapper #s_directions .directions_text p, .main_wrapper #s_directions .directions_text a, .main_wrapper #s_masters .masters__teacher .teachers .description a, .main_wrapper #s_studio .studio__information .studios .description a, .main_wrapper #s_application .application__inform .now div a, .main_wrapper #s_application .application__form #send_form {
   font-family: "Arial";
   font-size: 0.803em;
   font-weight: 400;
 }
 
 /* line 13, ../sass/base/_variables.scss */
-.main_wrapper .s_directions .directions__text-head, .main_wrapper .s_studio .studio__head, .main_wrapper .s_event .event__head, .main_wrapper .s_application .application__head {
+.main_wrapper #s_directions .directions__text-head, .main_wrapper #s_masters .masters__head, .main_wrapper #s_studio .studio__head, .main_wrapper #s_application .application__head {
   position: relative;
   z-index: 5;
   left: 3.5%;
@@ -145,18 +145,19 @@ header .h_logo {
 /* line 24, ../sass/base/_header.scss */
 header nav {
   width: 44.2%;
+}
+/* line 26, ../sass/base/_header.scss */
+header nav a {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 2px;
   color: #FFF;
   font-family: "Bebas Neue Bold";
   font-size: 18px;
   font-weight: 400;
+  text-decoration: none;
 }
-/* line 30, ../sass/base/_header.scss */
-header nav div {
-  display: inline-block;
-  text-align: center;
-  letter-spacing: 2px;
-}
-/* line 35, ../sass/base/_header.scss */
+/* line 36, ../sass/base/_header.scss */
 header nav .link_01 {
   width: 19.54545%;
   float: left;
@@ -164,35 +165,35 @@ header nav .link_01 {
   margin-right: 0.22727%;
   margin-left: 5%;
 }
-/* line 40, ../sass/base/_header.scss */
+/* line 41, ../sass/base/_header.scss */
 header nav .link_02 {
   width: 14.54545%;
   float: left;
   margin-left: 0.22727%;
   margin-right: 0.22727%;
 }
-/* line 43, ../sass/base/_header.scss */
+/* line 44, ../sass/base/_header.scss */
 header nav .link_03 {
   width: 14.54545%;
   float: left;
   margin-left: 0.22727%;
   margin-right: 0.22727%;
 }
-/* line 46, ../sass/base/_header.scss */
+/* line 47, ../sass/base/_header.scss */
 header nav .link_04 {
   width: 19.54545%;
   float: left;
   margin-left: 0.22727%;
   margin-right: 0.22727%;
 }
-/* line 49, ../sass/base/_header.scss */
+/* line 50, ../sass/base/_header.scss */
 header nav .link_05 {
   width: 19.54545%;
   float: left;
   margin-left: 0.22727%;
   margin-right: 0.22727%;
 }
-/* line 53, ../sass/base/_header.scss */
+/* line 54, ../sass/base/_header.scss */
 header .h_number {
   width: 33%;
   font-family: "Arial Black";
@@ -210,7 +211,7 @@ header .h_number:before {
   top: 15.5px;
   background: url("../images/tel_ico.png") no-repeat;
 }
-/* line 60, ../sass/base/_header.scss */
+/* line 61, ../sass/base/_header.scss */
 header .h_number:before {
   padding: 0;
   margin-right: 10px;
@@ -229,7 +230,7 @@ header .h_number:before {
   height: 100%;
 }
 /* line 1, ../sass/components/_intro.scss */
-.main_wrapper .s_intro {
+.main_wrapper #s_intro {
   position: relative;
   width: 100%;
   max-height: 980px;
@@ -237,11 +238,11 @@ header .h_number:before {
   overflow: hidden;
 }
 /* line 3, ../sass/components/_intro.scss */
-.main_wrapper .s_intro > * {
+.main_wrapper #s_intro > * {
   display: inline-block;
 }
 /* line 6, ../sass/components/_intro.scss */
-.main_wrapper .s_intro .intro__main_logo {
+.main_wrapper #s_intro .intro__main_logo {
   position: absolute;
   z-index: 4;
   height: 38%;
@@ -253,7 +254,7 @@ header .h_number:before {
   background-size: contain;
 }
 /* line 18, ../sass/components/_intro.scss */
-.main_wrapper .s_intro .intro__main_text {
+.main_wrapper #s_intro .intro__main_text {
   color: #FFFFFF;
   z-index: 6;
   position: absolute;
@@ -262,7 +263,7 @@ header .h_number:before {
   max-width: 415px;
 }
 /* line 26, ../sass/components/_intro.scss */
-.main_wrapper .s_intro .intro__main_text h1 {
+.main_wrapper #s_intro .intro__main_text h1 {
   max-width: 500px;
   line-height: 1.2em;
   color: #FFF;
@@ -273,11 +274,11 @@ header .h_number:before {
   font-weight: 300;
 }
 /* line 33, ../sass/components/_intro.scss */
-.main_wrapper .s_intro .intro__main_text p {
+.main_wrapper #s_intro .intro__main_text p {
   padding-bottom: 5%;
 }
 /* line 37, ../sass/components/_intro.scss */
-.main_wrapper .s_intro .intro__backscreen {
+.main_wrapper #s_intro .intro__backscreen {
   position: absolute;
   z-index: 2;
   float: right;
@@ -289,7 +290,7 @@ header .h_number:before {
   background-size: cover;
 }
 /* line 1, ../sass/components/_directions.scss */
-.main_wrapper .s_directions {
+.main_wrapper #s_directions {
   position: relative;
   width: 100%;
   max-height: 980px;
@@ -297,13 +298,13 @@ header .h_number:before {
   overflow: hidden;
 }
 /* line 6, ../sass/components/_directions.scss */
-.main_wrapper .s_directions .directions__nav {
+.main_wrapper #s_directions .directions__nav {
   position: relative;
   z-index: 5;
   text-align: center;
 }
 /* line 10, ../sass/components/_directions.scss */
-.main_wrapper .s_directions .directions__nav div {
+.main_wrapper #s_directions .directions__nav div {
   display: inline;
   color: #2B1B1B;
   font-family: "Bebas Neue Bold";
@@ -313,7 +314,7 @@ header .h_number:before {
   letter-spacing: 0.05em;
 }
 /* line 17, ../sass/components/_directions.scss */
-.main_wrapper .s_directions .directions__nav .active_dir {
+.main_wrapper #s_directions .directions__nav .active_dir {
   color: #DA251C;
   width: 161px;
   height: 64px;
@@ -324,13 +325,13 @@ header .h_number:before {
   padding: 0.7em 1.1em 1.5em 1.1em;
 }
 /* line 28, ../sass/components/_directions.scss */
-.main_wrapper .s_directions .directions__slider {
+.main_wrapper #s_directions .directions__slider {
   width: 300%;
   height: 100%;
   vertical-align: bottom;
 }
 /* line 33, ../sass/components/_directions.scss */
-.main_wrapper .s_directions .directions__slider div {
+.main_wrapper #s_directions .directions__slider div {
   width: 7.63359%;
   float: left;
   margin-right: 0.76336%;
@@ -343,7 +344,7 @@ header .h_number:before {
   background-size: contain;
 }
 /* line 44, ../sass/components/_directions.scss */
-.main_wrapper .s_directions .directions__slider .center {
+.main_wrapper #s_directions .directions__slider .center {
   left: -0.5%;
   padding-top: 2%;
   width: 15.38462%;
@@ -353,7 +354,7 @@ header .h_number:before {
   background-position: left;
 }
 /* line 54, ../sass/components/_directions.scss */
-.main_wrapper .s_directions .directions_text {
+.main_wrapper #s_directions .directions_text {
   position: absolute;
   z-index: 8;
   top: 32%;
@@ -361,23 +362,23 @@ header .h_number:before {
   max-width: 430px;
 }
 /* line 60, ../sass/components/_directions.scss */
-.main_wrapper .s_directions .directions_text h1 {
+.main_wrapper #s_directions .directions_text h1 {
   color: #DA251C;
   font-family: "Bebas Neue Book";
   font-size: 7.7em;
   font-weight: 300;
 }
 /* line 63, ../sass/components/_directions.scss */
-.main_wrapper .s_directions .directions_text p {
+.main_wrapper #s_directions .directions_text p {
   padding-bottom: 0.3em;
 }
 /* line 68, ../sass/components/_directions.scss */
-.main_wrapper .s_directions .directions_text a {
+.main_wrapper #s_directions .directions_text a {
   color: #4491F9;
   font-size: 1.2em;
 }
 /* line 37, ../sass/base/_variables.scss */
-.main_wrapper .s_directions .directions_text .video:before {
+.main_wrapper #s_directions .directions_text .video:before {
   content: '';
   display: inline-block;
   height: 45px;
@@ -387,7 +388,7 @@ header .h_number:before {
   background: url("../images/button_small_video.png") no-repeat;
 }
 /* line 37, ../sass/base/_variables.scss */
-.main_wrapper .s_directions .directions_text .applicate:before {
+.main_wrapper #s_directions .directions_text .applicate:before {
   content: '';
   display: inline-block;
   height: 45px;
@@ -396,8 +397,8 @@ header .h_number:before {
   top: 20.5px;
   background: url("../images/button_small_check.png") no-repeat;
 }
-/* line 1, ../sass/components/_studio.scss */
-.main_wrapper .s_studio {
+/* line 1, ../sass/components/_masters.scss */
+.main_wrapper #s_masters {
   position: relative;
   width: 100%;
   max-height: 980px;
@@ -405,21 +406,21 @@ header .h_number:before {
   overflow: hidden;
   color: #FFF;
 }
-/* line 7, ../sass/components/_studio.scss */
-.main_wrapper .s_studio .studio__teacher {
+/* line 7, ../sass/components/_masters.scss */
+.main_wrapper #s_masters .masters__teacher {
   text-align: center;
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 /* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
-.main_wrapper .s_studio .studio__teacher:after {
+.main_wrapper #s_masters .masters__teacher:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 10, ../sass/components/_studio.scss */
-.main_wrapper .s_studio .studio__teacher .teachers {
+/* line 10, ../sass/components/_masters.scss */
+.main_wrapper #s_masters .masters__teacher .teachers {
   vertical-align: middle;
   display: inline-block;
   padding: 1.7% 0;
@@ -428,50 +429,50 @@ header .h_number:before {
   margin-left: 1.51515%;
   margin-right: 1.51515%;
 }
-/* line 15, ../sass/components/_studio.scss */
-.main_wrapper .s_studio .studio__teacher .teachers div {
+/* line 15, ../sass/components/_masters.scss */
+.main_wrapper #s_masters .masters__teacher .teachers div {
   display: inline-block;
   text-align: left;
 }
-/* line 19, ../sass/components/_studio.scss */
-.main_wrapper .s_studio .studio__teacher .teachers .ico {
+/* line 19, ../sass/components/_masters.scss */
+.main_wrapper #s_masters .masters__teacher .teachers .ico {
   float: left;
   width: 46.06061%;
   float: left;
   margin-left: 0.30303%;
   margin-right: 0.30303%;
 }
-/* line 22, ../sass/components/_studio.scss */
-.main_wrapper .s_studio .studio__teacher .teachers .ico img {
+/* line 22, ../sass/components/_masters.scss */
+.main_wrapper #s_masters .masters__teacher .teachers .ico img {
   width: 90%;
 }
-/* line 26, ../sass/components/_studio.scss */
-.main_wrapper .s_studio .studio__teacher .teachers .description {
+/* line 26, ../sass/components/_masters.scss */
+.main_wrapper #s_masters .masters__teacher .teachers .description {
   width: 52.72727%;
   float: left;
   margin-left: 0.30303%;
   margin-right: 0.30303%;
   float: right;
 }
-/* line 29, ../sass/components/_studio.scss */
-.main_wrapper .s_studio .studio__teacher .teachers .description h1 {
+/* line 29, ../sass/components/_masters.scss */
+.main_wrapper #s_masters .masters__teacher .teachers .description h1 {
   color: #DA251C;
   font-family: "Bebas Neue Book";
   font-size: 3.5em;
   font-weight: 300;
   padding-bottom: 0.4em;
 }
-/* line 33, ../sass/components/_studio.scss */
-.main_wrapper .s_studio .studio__teacher .teachers .description p {
+/* line 33, ../sass/components/_masters.scss */
+.main_wrapper #s_masters .masters__teacher .teachers .description p {
   padding-bottom: 0.3em;
 }
-/* line 36, ../sass/components/_studio.scss */
-.main_wrapper .s_studio .studio__teacher .teachers .description a {
+/* line 36, ../sass/components/_masters.scss */
+.main_wrapper #s_masters .masters__teacher .teachers .description a {
   color: #FFF;
   font-size: 0.915em;
 }
 /* line 37, ../sass/base/_variables.scss */
-.main_wrapper .s_studio .studio__teacher .teachers .description .more:before {
+.main_wrapper #s_masters .masters__teacher .teachers .description .more:before {
   content: '';
   display: inline-block;
   height: 35px;
@@ -481,7 +482,7 @@ header .h_number:before {
   background: url("../images/button_small_question.png") no-repeat;
 }
 /* line 37, ../sass/base/_variables.scss */
-.main_wrapper .s_studio .studio__teacher .teachers .description .applicate:before {
+.main_wrapper #s_masters .masters__teacher .teachers .description .applicate:before {
   content: '';
   display: inline-block;
   height: 35px;
@@ -490,8 +491,8 @@ header .h_number:before {
   top: 15.5px;
   background: url("../images/button_small_check_teachers.png") no-repeat;
 }
-/* line 1, ../sass/components/_event.scss */
-.main_wrapper .s_event {
+/* line 1, ../sass/components/_studio.scss */
+.main_wrapper #s_studio {
   position: relative;
   width: 100%;
   max-height: 980px;
@@ -499,21 +500,21 @@ header .h_number:before {
   overflow: hidden;
   color: #FFF;
 }
-/* line 7, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information {
+/* line 7, ../sass/components/_studio.scss */
+.main_wrapper #s_studio .studio__information {
   text-align: center;
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 /* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
-.main_wrapper .s_event .event__information:after {
+.main_wrapper #s_studio .studio__information:after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 10, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information .events {
+/* line 10, ../sass/components/_studio.scss */
+.main_wrapper #s_studio .studio__information .studios {
   vertical-align: middle;
   display: inline-block;
   padding: 1.7% 0 3.8%;
@@ -522,36 +523,36 @@ header .h_number:before {
   margin-left: 1.51515%;
   margin-right: 1.51515%;
 }
-/* line 15, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information .events div {
+/* line 15, ../sass/components/_studio.scss */
+.main_wrapper #s_studio .studio__information .studios div {
   display: inline-block;
   text-align: left;
 }
-/* line 19, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information .events .foto {
+/* line 19, ../sass/components/_studio.scss */
+.main_wrapper #s_studio .studio__information .studios .foto {
   float: left;
   width: 46.06061%;
   float: left;
   margin-left: 0.30303%;
   margin-right: 0.30303%;
 }
-/* line 22, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information .events .foto img {
+/* line 22, ../sass/components/_studio.scss */
+.main_wrapper #s_studio .studio__information .studios .foto img {
   width: 90%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 29, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information .events .description {
+/* line 29, ../sass/components/_studio.scss */
+.main_wrapper #s_studio .studio__information .studios .description {
   width: 52.72727%;
   float: left;
   margin-left: 0.30303%;
   margin-right: 0.30303%;
   float: right;
 }
-/* line 32, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information .events .description h1 {
+/* line 32, ../sass/components/_studio.scss */
+.main_wrapper #s_studio .studio__information .studios .description h1 {
   color: #DA251C;
   font-family: "Bebas Neue Book";
   font-size: 3.5em;
@@ -559,21 +560,21 @@ header .h_number:before {
   padding-bottom: 0.4em;
   max-width: 80%;
 }
-/* line 37, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information .events .description p {
+/* line 37, ../sass/components/_studio.scss */
+.main_wrapper #s_studio .studio__information .studios .description p {
   padding-bottom: 1em;
 }
-/* line 40, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information .events .description .data {
+/* line 40, ../sass/components/_studio.scss */
+.main_wrapper #s_studio .studio__information .studios .description .data {
   padding-bottom: 0;
 }
-/* line 43, ../sass/components/_event.scss */
-.main_wrapper .s_event .event__information .events .description a {
+/* line 43, ../sass/components/_studio.scss */
+.main_wrapper #s_studio .studio__information .studios .description a {
   color: #FFF;
   font-size: 0.915em;
 }
 /* line 37, ../sass/base/_variables.scss */
-.main_wrapper .s_event .event__information .events .description .more:before {
+.main_wrapper #s_studio .studio__information .studios .description .more:before {
   content: '';
   display: inline-block;
   height: 35px;
@@ -583,7 +584,7 @@ header .h_number:before {
   background: url("../images/button_small_question.png") no-repeat;
 }
 /* line 37, ../sass/base/_variables.scss */
-.main_wrapper .s_event .event__information .events .description .applicate:before {
+.main_wrapper #s_studio .studio__information .studios .description .applicate:before {
   content: '';
   display: inline-block;
   height: 35px;
@@ -593,7 +594,7 @@ header .h_number:before {
   background: url("../images/button_small_check_teachers.png") no-repeat;
 }
 /* line 1, ../sass/components/_application.scss */
-.main_wrapper .s_application {
+.main_wrapper #s_application {
   position: relative;
   width: 100%;
   max-height: 980px;
@@ -602,32 +603,32 @@ header .h_number:before {
   color: #FFF;
 }
 /* line 7, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__inform {
+.main_wrapper #s_application .application__inform {
   padding: 4px 0 0 32px;
   width: 100%;
   height: 25.5%;
 }
 /* line 11, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__inform div {
+.main_wrapper #s_application .application__inform div {
   display: inline-block;
   vertical-align: top;
 }
 /* line 15, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__inform .now {
+.main_wrapper #s_application .application__inform .now {
   width: 58.18182%;
   float: left;
   margin-left: 0.90909%;
   margin-right: 0.90909%;
 }
 /* line 17, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__inform .now div {
+.main_wrapper #s_application .application__inform .now div {
   width: 30.30303%;
   float: left;
   margin-left: 1.51515%;
   margin-right: 1.51515%;
 }
 /* line 19, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__inform .now div h1 {
+.main_wrapper #s_application .application__inform .now div h1 {
   color: #DA251C;
   font-family: "Bebas Neue Book";
   font-size: 3.5em;
@@ -635,16 +636,16 @@ header .h_number:before {
   padding-bottom: 8px;
 }
 /* line 23, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__inform .now div .data {
+.main_wrapper #s_application .application__inform .now div .data {
   padding-bottom: 0;
 }
 /* line 26, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__inform .now div a {
+.main_wrapper #s_application .application__inform .now div a {
   color: #FFF;
   font-size: 0.915em;
 }
 /* line 37, ../sass/base/_variables.scss */
-.main_wrapper .s_application .application__inform .now div .applicate:before {
+.main_wrapper #s_application .application__inform .now div .applicate:before {
   content: '';
   display: inline-block;
   height: 35px;
@@ -654,7 +655,7 @@ header .h_number:before {
   background: url("../images/button_small_check_teachers.png") no-repeat;
 }
 /* line 36, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__inform .divider {
+.main_wrapper #s_application .application__inform .divider {
   width: 5%;
   margin-top: 1%;
   height: 55%;
@@ -662,22 +663,22 @@ header .h_number:before {
   background-position: right;
 }
 /* line 43, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__inform .load {
+.main_wrapper #s_application .application__inform .load {
   width: 15%;
 }
 /* line 46, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__inform .load a {
+.main_wrapper #s_application .application__inform .load a {
   color: #DA251C;
   font-family: "Bebas Neue Book";
   font-size: 3.5em;
   font-weight: 300;
 }
 /* line 53, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form {
+.main_wrapper #s_application .application__form {
   width: 100%;
 }
 /* line 55, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form {
+.main_wrapper #s_application .application__form #send_form {
   border: 1px solid #FFFFFF;
   position: relative;
   left: 3.5%;
@@ -685,7 +686,7 @@ header .h_number:before {
   font-size: 1em;
 }
 /* line 62, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-subheader {
+.main_wrapper #s_application .application__form #send_form .form-subheader {
   width: 95.5%;
   background: #FFFFFF;
   color: #DA251C;
@@ -695,81 +696,81 @@ header .h_number:before {
   padding: 1% 0 1% 3.5%;
 }
 /* line 68, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left {
+.main_wrapper #s_application .application__form #send_form .form-left {
   display: inline;
   width: 38.02817%;
   float: left;
   background: #150303;
 }
 /* line 73, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left div {
+.main_wrapper #s_application .application__form #send_form .form-left div {
   padding-left: 10%;
   width: 90%;
 }
 /* line 77, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left div ~ * {
+.main_wrapper #s_application .application__form #send_form .form-left div ~ * {
   display: inline-block;
 }
 /* line 81, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left .line_1 p {
+.main_wrapper #s_application .application__form #send_form .form-left .line_1 p {
   width: 13.15789%;
   float: left;
 }
 /* line 84, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left .line_1 input {
+.main_wrapper #s_application .application__form #send_form .form-left .line_1 input {
   width: 71.05263%;
   float: left;
 }
 /* line 89, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left .line_2 p {
+.main_wrapper #s_application .application__form #send_form .form-left .line_2 p {
   width: 35.83333%;
   float: left;
 }
 /* line 92, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left .line_2 input {
+.main_wrapper #s_application .application__form #send_form .form-left .line_2 input {
   width: 47.61905%;
   float: left;
 }
 /* line 97, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left .line_3 #il_31 {
+.main_wrapper #s_application .application__form #send_form .form-left .line_3 #il_31 {
   width: 22.40664%;
   float: left;
 }
 /* line 100, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left .line_3 #il_32 {
+.main_wrapper #s_application .application__form #send_form .form-left .line_3 #il_32 {
   width: 22.40664%;
   float: left;
 }
 /* line 103, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left .line_3 #il_33 {
+.main_wrapper #s_application .application__form #send_form .form-left .line_3 #il_33 {
   width: 22.40664%;
   float: left;
   text-align: right;
 }
 /* line 108, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left .line_3 #il_34 {
+.main_wrapper #s_application .application__form #send_form .form-left .line_3 #il_34 {
   width: 13.27801%;
   float: left;
 }
 /* line 113, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left .line_4 p {
+.main_wrapper #s_application .application__form #send_form .form-left .line_4 p {
   width: 47.61905%;
   float: left;
 }
 /* line 116, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-left .line_4 input {
+.main_wrapper #s_application .application__form #send_form .form-left .line_4 input {
   width: 47.61905%;
   float: left;
 }
 /* line 121, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form-middle {
+.main_wrapper #s_application .application__form #send_form .form-middle {
   display: inline;
   width: 38.02817%;
   float: left;
   background: #1c0404;
 }
 /* line 127, ../sass/components/_application.scss */
-.main_wrapper .s_application .application__form #send_form .form.right {
+.main_wrapper #s_application .application__form #send_form .form.right {
   display: inline;
   width: 22.53521%;
   float: left;

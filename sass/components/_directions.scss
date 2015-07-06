@@ -1,4 +1,4 @@
-.s_directions{
+#s_directions{
   @include var_Sections(#FFF);
       .directions__text-head{
           @extend %var_top-short-description;
