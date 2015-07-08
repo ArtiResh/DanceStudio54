@@ -865,3 +865,12 @@ header .h_number:before {
   position: relative;
   margin-top: -11%;
 }
+/* line 1, ../sass/components/_inform.scss */
+.main_wrapper #s_inform {
+  position: relative;
+  width: 100%;
+  max-height: 980px;
+  background: #000000;
+  overflow: hidden;
+  color: #ffffff;
+}

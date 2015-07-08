@@ -1,3 +1,13 @@
 #s_inform{
   @include var_Sections(#000000);
+  color:#ffffff;
+  .studio{
+    div{
+      display: inline-block;
+    }
+    .image img{
+      max-height: 147px;
+      max-width: 139px;
+    }
+  }
 }

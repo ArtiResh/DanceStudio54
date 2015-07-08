@@ -254,7 +254,7 @@
                 </div>
                 <div class="form-right">
                     <a href="#" onclick="$('#send_form').submit(); return false;">
-                        <img src="images/button_big_check.png" alt="Запись на обучение"/>
+                        <img src="images/button_big_check.png" alt="Запись на обучение в танцкласс"/>
                         <p>Отправить заявку</p>
                     </a>
                 </div>
@@ -262,7 +262,44 @@
         </div>
 
     </section>
-    <section id="s_inform" class="section"></section>
+    <section id="s_inform" class="section">
+        <div class="studio st_01">
+            <div class="inform">
+                <div class="image">
+                    <img src="images/studio_mira.png" alt="Танцевальная студия на проспекте Мира"/>
+                </div>
+                <div class="description">
+                    <h1>студия На «Мира»</h1>
+                    <p>Адрес: пр-т Мира, д. 61, ТЦ СПУТНИК, 4 этаж
+                        Ориентир: Парк Калинина
+
+                    </p>
+
+                    <p class="number">Телефон: 8 (4012) 37-74-54</p>
+                </div>
+            </div>
+            <div class="location">
+
+            </div>
+        </div>
+        <div class="studio st_02">
+            <div class="inform">
+                <div class="image">
+                    <img src="images/studio_gorkiy.png" alt="Танцевальная студия на улице Горького"/>
+                </div>
+                <div class="description">
+                    <h1>студия На «Горького»</h1>
+
+                    <p>Адрес: ул. Горького 170В
+                        Ориентир: Магазин «Семья»
+                        </p>
+
+                    <p class="number">Телефон: 8 (4012) 37-74-54</p>
+                </div>
+            </div>
+            <div class="location"></div>
+        </div>
+    </section>
 </div>
 <script>
     function slider(direct) {
