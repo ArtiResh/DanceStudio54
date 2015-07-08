@@ -156,21 +156,50 @@
         }
       }
       .form-middle {
+        padding-right: 1.4%;
         display: inline;
         @include span(5 of 13 no-gutters);
         height: 85%;
 
         background: #1c0404;
         div{
-          margin: 8% 12% 5% 9.5%;
+          margin: 24% 9.5% 5% 12%;
+          select{
+            width: 100%;
+            border-right: 1px solid #fff;
+            background: #1c0404;
+            color: #ffffff;
+            margin-top: 6%;
+            padding: 0.3em;
+          }
+          &:last-child{
+            margin-top: 10%;
+          }
         }
       }
-      .form.right {
+      .form-right {
         display: inline;
         @include span(3 of 13 no-gutters);
         text-align: center;
-
         background: #260705;
+        height: 85%;
+
+        a{
+          height: 100%;
+          vertical-align: middle;
+          text-align: center;
+          color: #ffffff;
+          text-decoration: none;
+          img{
+            margin-top: 36%;
+          }
+          p{
+            position: relative;
+            margin-top: -11%;
+          }
+        }
+
+
       }
     }
   }
