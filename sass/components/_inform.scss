@@ -1,13 +1,41 @@
 #s_inform{
   @include var_Sections(#000000);
   color:#ffffff;
-  .studio{
-    div{
-      display: inline-block;
+  height: 91%;
+  .inform__studio{
+    padding-top: 132px;
+    padding-left: 3.5%;
+    .inform{
+      div{
+        display: inline-block;
+        vertical-align: top;
+
+      }
+      .image img{
+        max-height: 147px;
+        max-width: 139px;
+      }
+      .description{
+        padding: 0.3em 0 0 1em;
+        h1{
+          @include var_TextBebasNew(#DA251C, 3.5em, " Book");
+          padding-bottom: 5px;
+        }
+        p{
+          max-width: 500px;
+        }
+        .phone{
+          padding-top: 1em;
+        }
+      }
     }
-    .image img{
-      max-height: 147px;
-      max-width: 139px;
+    .location{
+      height: 174px;
+      width: 657px;
+      margin-top: 1.308em;
     }
+  }
+  .line2{
+    padding-top: 3.3em;
   }
 }

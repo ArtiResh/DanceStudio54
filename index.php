@@ -8,6 +8,7 @@
     <script src="js/jquery-1.7.2.min.js"></script>
     <!--    <script type="text/javascript" src="js/owl.carousel.min.js"></script>-->
     <script src="js/jquery.fullPage.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 </head>
 <body>
 <header>
@@ -263,26 +264,26 @@
 
     </section>
     <section id="s_inform" class="section">
-        <div class="studio st_01">
+        <div class="inform__studio">
             <div class="inform">
                 <div class="image">
                     <img src="images/studio_mira.png" alt="Танцевальная студия на проспекте Мира"/>
                 </div>
                 <div class="description">
                     <h1>студия На «Мира»</h1>
-                    <p>Адрес: пр-т Мира, д. 61, ТЦ СПУТНИК, 4 этаж
+                    <p>Адрес: пр-т Мира, д. 61, ТЦ СПУТНИК, 4 этаж</p>
+                    <p>
                         Ориентир: Парк Калинина
-
                     </p>
 
-                    <p class="number">Телефон: 8 (4012) 37-74-54</p>
+                    <p class="phone">Телефон: 8 (4012) 37-74-54</p>
                 </div>
             </div>
-            <div class="location">
+            <div class="location" id="st_01">
 
             </div>
         </div>
-        <div class="studio st_02">
+        <div class="inform__studio line2">
             <div class="inform">
                 <div class="image">
                     <img src="images/studio_gorkiy.png" alt="Танцевальная студия на улице Горького"/>
@@ -290,18 +291,57 @@
                 <div class="description">
                     <h1>студия На «Горького»</h1>
 
-                    <p>Адрес: ул. Горького 170В
+                    <p>Адрес: ул. Горького 170В</p>
+                    <p>
                         Ориентир: Магазин «Семья»
                         </p>
 
-                    <p class="number">Телефон: 8 (4012) 37-74-54</p>
+                    <p class="phone">Телефон: 8 (4012) 37-74-54</p>
                 </div>
             </div>
-            <div class="location"></div>
+            <div class="location" id="st_02"></div>
         </div>
     </section>
+    <footer>
+        <div class="footer__info">
+            <p>Dance 54 Studio, школа современных танцев в Калининграде
+            </p>
+
+            <p> © 2015
+            </p>
+        </div>
+        <div class="footer__developer">
+            Сделано в студии <a href="#">xxXxxxxx</a>
+        </div>
+    </footer>
 </div>
 <script>
+
+    function initializeMap() {
+        var dot_1 = myLatlng = new google.maps.LatLng(54.7204646,20.4736443);
+        var dot_2 = myLatlng = new google.maps.LatLng(54.7498295,20.5013145);
+        map_1 = new google.maps.Map(document.getElementById('st_01'), {
+            zoom: 16,
+            center: dot_1
+        });
+        map_2 = new google.maps.Map(document.getElementById('st_02'), {
+            zoom: 16,
+            center: dot_2
+        });
+        var marker_1 = new google.maps.Marker({
+            position: dot_1,
+            map: map_1,
+            title: 'Hello World!'
+        });
+        var marker_2 = new google.maps.Marker({
+            position: dot_2,
+            map: map_2,
+            title: 'Hello World!'
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initializeMap);
+
     function slider(direct) {
         setTimeout(function () {
             $(".backscreen .center").removeClass("center");
@@ -319,7 +359,7 @@
     //            slider();
     //        });
     $(document).ready(function () {
-//     $('.main_wrapper').fullpage();
+   //s  $('.main_wrapper').fullpage();
 
         $('.nav_1').click(function () {
                 slider('last');
@@ -330,6 +370,11 @@
             }
         );
     });
+
+</script>
+
+<script>
+
 
 </script>
 </body>
