@@ -227,21 +227,30 @@
                     </div>
                     <div class="line_4">
                         <p>Контактный телефон</p>
-                        <input type="text" placeholder="(___) ___ __ __" id="user_phone" class="rfield" />
+                        <input type="text" placeholder="+7(___) ___ __ __" id="user_phone" class="rfield" />
                     </div>
                 </div>
                 <div class="form-middle">
-                    <p>Выберите танцевальное направление</p>
-                    <select name="" id="send_direction">
-                        <option value="">Juzz Funk</option>
-                        <option value="">Dance Show</option>
-                        <option value="">Disco</option>
-                    </select>
-                    <p>Выберите удобный для Вас зал</p>
-                    <select name="" id="send_location">
-                        <option value="">студия На «МИРА»</option>
-                        <option value="">студия На «ГОРЬКОГО»</option>
-                    </select>
+                    <div>
+
+                        <p>Выберите танцевальное направление</p>
+                        <select name="" id="send_direction">
+                            <option value="">Juzz Funk</option>
+                            <option value="">Dance Show</option>
+                            <option value="">Disco</option>
+                        </select>
+
+                    </div>
+                    <div>
+
+                        <p>Выберите удобный для Вас зал</p>
+                        <select name="" id="send_location">
+                            <option value="">студия На «МИРА»</option>
+                            <option value="">студия На «ГОРЬКОГО»</option>
+                        </select>
+
+                    </div>
+
                 </div>
                 <div class="form-right">
                     <a href="#" onclick="$('#send_form').submit(); return false;">
@@ -273,7 +282,7 @@
     //            slider();
     //        });
     $(document).ready(function () {
-     $('.main_wrapper').fullpage();
+//     $('.main_wrapper').fullpage();
 
         $('.nav_1').click(function () {
                 slider('last');

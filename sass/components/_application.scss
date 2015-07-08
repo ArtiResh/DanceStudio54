@@ -59,74 +59,116 @@
       width: 51.2%;
       @extend %var_text-arial;
       font-size: 1em;
+      height: 41vh;
+
       .form-subheader {
-        width: 95.5%;
+        width: 96.5%;
         background: #FFFFFF;
         @include var_TextBebasNew(#DA251C, 2.5em, " Book");
         padding: 1% 0 1% 3.5%;
+        height: 10%;
       }
       .form-left {
         display: inline;
+        height: 85%;
         @include span(5 of 13 no-gutters);
 
         background: #150303;
         div{
-          padding-left: 10%;
-          width: 90%;
+          padding: 7% 12% 5% 9.5%;
+          width: 78.5%;
+          input{
+            border-right: 1px solid #fff;
+            background: #150303;
+            color: #fff;
+            padding: 0.3em;
+          }
         }
         div~*{
           display: inline-block;
+          vertical-align: middle;
         }
         .line_1 {
+          padding-top: 18%;
           p {
-            @include span(1 of 7 no-gutters);
+            padding-top: 1.5%;
+            @include span(2 of 12 no-gutters);
           }
           input {
-            @include span(5 of 7 no-gutters);
+            @include span(4 of 5 no-gutters last);
           }
         }
         .line_2 {
           p {
-            @include span(4 of 11 no-gutters);
+             padding-top: 1.5%;
+             @include span(10 of 23 no-gutters);
           }
           input {
-            @include span(1 of 2 no-gutters);
+            @include span(10 of 20 no-gutters last);
+            text-align: right;
+            &::-webkit-datetime-edit {
+              text-align: center;
+            }
+            &::-webkit-calendar-picker-indicator{
+              opacity:1;
+              background: url('../images/date_form_button.png') no-repeat;
+              padding-left: 21%;
+              margin-right: -16%;
+              -webkit-appearance: none;
+
+            }
+            &::-webkit-inner-spin-button {
+              display: none;
+            }
           }
         }
         .line_3 {
-          #il_31 {
-            @include span(5 of 22 no-gutters);
+          padding-top: 5%;
+          #l_31 {
+            padding-top: 1.5%;
+            @include span(11 of 36 no-gutters);
           }
-          #il_32 {
-            @include span(5 of 22 no-gutters);
-          }
-          #il_33 {
-            @include span(5 of 22 no-gutters);
+          #l_32 {
+            @include span(5 of 24 no-gutters);
             text-align: right;
+          }
+          #l_33 {
+            padding-top: 1.5%;
+            @include span(2 of 7 no-gutters);
+            text-align: center;
+
 
           }
-          #il_34 {
-            @include span(3 of 22 no-gutters);
+          #l_34 {
+            @include span(1 of 7 no-gutters last);
           }
         }
         .line_4 {
+          padding-top: 5%;
           p {
-            @include span(1 of 2 no-gutters);
+            padding-top: 1.5%;
+            @include span(13 of 24 no-gutters);
           }
           input {
-            @include span(1 of 2 no-gutters);
+            @include span(12 of 32 no-gutters last);
+            text-align: center;
           }
         }
       }
       .form-middle {
         display: inline;
         @include span(5 of 13 no-gutters);
+        height: 85%;
 
         background: #1c0404;
+        div{
+          margin: 8% 12% 5% 9.5%;
+        }
       }
       .form.right {
         display: inline;
         @include span(3 of 13 no-gutters);
+        text-align: center;
 
         background: #260705;
       }
