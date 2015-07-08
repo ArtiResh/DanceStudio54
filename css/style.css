@@ -68,7 +68,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 8, ../sass/base/_variables.scss */
-.main_wrapper #s_directions .directions__text-head, .main_wrapper #s_masters .masters__head, .main_wrapper #s_studio .studio__head, .main_wrapper #s_application .application__head, .main_wrapper #s_intro .intro__main_text, .main_wrapper #s_directions .directions_text p, .main_wrapper #s_directions .directions_text a, .main_wrapper #s_masters .masters__teacher .teachers .description a, .main_wrapper #s_studio .studio__information .studios .description a, .main_wrapper #s_application .application__inform .now div a, .main_wrapper #s_application .application__form #send_form {
+.main_wrapper #s_directions .directions__text-head, .main_wrapper #s_masters .masters__head, .main_wrapper #s_studio .studio__head, .main_wrapper #s_application .application__head, .main_wrapper #s_intro .intro__main_text, .main_wrapper #s_directions .directions_text p, .main_wrapper #s_directions .directions_text a, .main_wrapper #s_masters .masters__teacher .teachers .description a, .main_wrapper #s_studio .studio__information .studios .description a, .main_wrapper #s_application .application__inform .now div a, .main_wrapper #s_application .application__form #send_form, .main_wrapper footer div {
   font-family: "Arial";
   font-size: 0.803em;
   font-weight: 400;
@@ -922,9 +922,36 @@ header .h_number:before {
 }
 /* line 1, ../sass/base/_footer.scss */
 .main_wrapper footer {
-  position: relative;
+  position: fixed;
+  top: 592%;
   z-index: 10;
   width: 100%;
   height: 80px;
   background-color: #DA251C;
+}
+/* line 8, ../sass/base/_footer.scss */
+.main_wrapper footer div {
+  display: inline-block;
+  color: #ffffff;
+  padding-top: 20px;
+  font-size: 16px;
+}
+/* line 15, ../sass/base/_footer.scss */
+.main_wrapper footer .footer__info {
+  position: relative;
+  left: 3.5%;
+  vertical-align: middle;
+}
+/* line 19, ../sass/base/_footer.scss */
+.main_wrapper footer .footer__info p {
+  padding-bottom: 5px;
+}
+/* line 24, ../sass/base/_footer.scss */
+.main_wrapper footer .footer__developer {
+  float: right;
+  padding-right: 26%;
+}
+/* line 27, ../sass/base/_footer.scss */
+.main_wrapper footer .footer__developer a {
+  color: #ffffff;
 }

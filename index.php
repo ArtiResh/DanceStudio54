@@ -359,7 +359,7 @@
     //            slider();
     //        });
     $(document).ready(function () {
-   //s  $('.main_wrapper').fullpage();
+     $('.main_wrapper').fullpage();
 
         $('.nav_1').click(function () {
                 slider('last');
