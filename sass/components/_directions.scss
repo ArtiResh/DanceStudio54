@@ -76,5 +76,6 @@
           .applicate{
             @include var_BeforeImage(45px,'../images/button_small_check.png');
           }
-       }
+        }
+        @include var_SvgSwitcher(#dc241c)
 }

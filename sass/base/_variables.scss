@@ -44,3 +44,14 @@ $susy: (
     background: url($locate) no-repeat;
   }
 }
+@mixin var_SvgSwitcher($line-color){
+  svg{
+    position: absolute;
+    z-index: 15;
+    top:90.5%;
+    left:49%;
+    line{
+      stroke: $line-color;
+    }
+  }
+}

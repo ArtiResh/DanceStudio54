@@ -397,6 +397,17 @@ header .h_number:before {
   top: 20.5px;
   background: url("../images/button_small_check.png") no-repeat;
 }
+/* line 48, ../sass/base/_variables.scss */
+.main_wrapper #s_directions svg {
+  position: absolute;
+  z-index: 15;
+  top: 90.5%;
+  left: 49%;
+}
+/* line 53, ../sass/base/_variables.scss */
+.main_wrapper #s_directions svg line {
+  stroke: #dc241c;
+}
 /* line 1, ../sass/components/_masters.scss */
 .main_wrapper #s_masters {
   position: relative;
@@ -490,6 +501,17 @@ header .h_number:before {
   position: relative;
   top: 15.5px;
   background: url("../images/button_small_check_teachers.png") no-repeat;
+}
+/* line 48, ../sass/base/_variables.scss */
+.main_wrapper #s_masters svg {
+  position: absolute;
+  z-index: 15;
+  top: 90.5%;
+  left: 49%;
+}
+/* line 53, ../sass/base/_variables.scss */
+.main_wrapper #s_masters svg line {
+  stroke: #ffffff;
 }
 /* line 1, ../sass/components/_studio.scss */
 .main_wrapper #s_studio {
@@ -592,6 +614,17 @@ header .h_number:before {
   position: relative;
   top: 15.5px;
   background: url("../images/button_small_check_teachers.png") no-repeat;
+}
+/* line 48, ../sass/base/_variables.scss */
+.main_wrapper #s_studio svg {
+  position: absolute;
+  z-index: 15;
+  top: 90.5%;
+  left: 49%;
+}
+/* line 53, ../sass/base/_variables.scss */
+.main_wrapper #s_studio svg line {
+  stroke: #ffffff;
 }
 /* line 1, ../sass/components/_application.scss */
 .main_wrapper #s_application {
@@ -864,6 +897,17 @@ header .h_number:before {
 .main_wrapper #s_application .application__form #send_form .form-right a p {
   position: relative;
   margin-top: -11%;
+}
+/* line 48, ../sass/base/_variables.scss */
+.main_wrapper #s_application svg {
+  position: absolute;
+  z-index: 15;
+  top: 90.5%;
+  left: 49%;
+}
+/* line 53, ../sass/base/_variables.scss */
+.main_wrapper #s_application svg line {
+  stroke: #ffffff;
 }
 /* line 1, ../sass/components/_inform.scss */
 .main_wrapper #s_inform {

@@ -104,7 +104,12 @@
             <div class="backscreen"></div>
             <div class="backscreen"></div>
         </div>
-
+        <svg width="53" height="53">
+            <circle r="25" cx="27" cy="27"
+                    fill="none" stroke="#dc241c" stroke-width="2" />
+                <line x1="40" y1="20" x2="26" y2="34"></line>
+                <line x1="15" y1="20" x2="26" y2="34"></line>
+        </svg>
     </section>
     <section id="s_masters" class="section">
         <div class="masters__head">В нашей студии преподаванием занимаются опытные хореографы,
@@ -136,6 +141,12 @@
             }
             ?>
         </div>
+        <svg width="53" height="53">
+            <circle r="25" cx="27" cy="27"
+                    fill="none" stroke="#dc241c" stroke-width="2" />
+            <line x1="40" y1="20" x2="26" y2="34"></line>
+            <line x1="15" y1="20" x2="26" y2="34"></line>
+        </svg>
 
     </section>
     <section id="s_studio" class="section">
@@ -168,6 +179,12 @@
             }
             ?>
         </div>
+        <svg width="53" height="53">
+            <circle r="25" cx="27" cy="27"
+                    fill="none" stroke="#dc241c" stroke-width="2" />
+            <line x1="40" y1="20" x2="26" y2="34"></line>
+            <line x1="15" y1="20" x2="26" y2="34"></line>
+        </svg>
     </section>
     <section id="s_application" class="section">
         <div class="application__head">Сейчас идет набор в группы</div>
@@ -261,7 +278,12 @@
                 </div>
             </form>
         </div>
-
+        <svg width="53" height="53">
+            <circle r="25" cx="27" cy="27"
+                    fill="none" stroke="#dc241c" stroke-width="2" />
+            <line x1="40" y1="20" x2="26" y2="34"></line>
+            <line x1="15" y1="20" x2="26" y2="34"></line>
+        </svg>
     </section>
     <section id="s_inform" class="section">
         <div class="inform__studio">
