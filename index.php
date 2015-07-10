@@ -53,17 +53,17 @@
             выступления на чемпионатах мирового уровня.
         </div>
         <div class="directions__nav">
-            <div class="nav_1 active_dir">jazz modern</div>
-            <div class="nav_2">Go-Go</div>
-            <div class="nav_3">jazz funk</div>
-            <div class="nav_4">dance show</div>
-            <div class="nav_5">strip dance</div>
-            <div class="nav_6">latina solo</div>
-            <div class="nav_7">disco</div>
-            <div class="nav_8">pilates</div>
-            <div class="nav_9">stretching</div>
-            <div class="nav_10">Хореография</div>
-            <div class="nav_11">постановка Свадебного танца
+            <div class="active_dir" id="nv_1">jazz modern</div>
+            <div id="nv_2">Go-Go</div>
+            <div id="nv_3">jazz funk</div>
+            <div id="nv_4">dance show</div>
+            <div id="nv_5">strip dance</div>
+            <div id="nv_6">latina solo</div>
+            <div id="nv_7">disco</div>
+            <div id="nv_8">pilates</div>
+            <div id="nv_9">stretching</div>
+            <div id="nv_10">Хореография</div>
+            <div id="nv_11">постановка Свадебного танца
             </div>
         </div>
         <?

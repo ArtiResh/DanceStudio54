@@ -84,12 +84,10 @@ function getProductId(elem){
 }
 
 (function ($) {
-
     $.fn.getWidthInPercent = function () {
         var width = parseFloat($(this).css('width'))/parseFloat($(this).parent().css('width'));
         return (100*width);
     };
-
 })(jQuery);
 
 
@@ -97,10 +95,25 @@ var naturalWidthFuture=[];
 $(document).ready(function(){
     $(".directions__nav div").click(function(){
        if( $(this).hasClass("active_dir"))return false;
+        maxim = 12;
         $(".directions__nav div").removeClass("active_dir");
         $(this).addClass("active_dir");
+        idDir = getProductId($(this));
+        idCenter = getProductId(".center");
+        leftSide = idCenter - idDir;
+        rightSide = maxim - (idCenter + idDir)
+        console.log("#bs_"+idDir);
+        //sideOfMovement = Math.round(($("#bs_"+idDir).position().left - $(".center").position().left));
+        console.log(sideOfMovement);
+
+
     });
+
+
+
+
     $(".backscreen").on('click', function(event){
+        if( $(this).hasClass("center"))return false;
         if(jQuery.isEmptyObject(naturalWidthFuture)){
             $(".backscreen").each(function(){
                 id = getProductId($(this));
@@ -110,18 +123,9 @@ $(document).ready(function(){
         }
 
         var selected = $(this);
-        /*** @@@@@ ***/
-        var leftPart = [];
-        var rightPart = [];
         var marginLeft,marginRight, sideOfMovement;
-            marginLeft = 0.5;
-            marginRight = 1.5;
-        $(".directions__slider").children('.backscreen').each(function(){
-            (getProductId($(this)) < getProductId(selected))?leftPart.push($(this)):rightPart.push($(this));
-        });
-
-        leftPart.reverse();
-        /*** @@@@@ ***/
+        marginLeft = 0.5;
+        marginRight = 1.5;
 
        // (getProductId($(this)) < getProductId($(".center")))?leftPart.push($(this)):rightPart.push($(this));
             /** Определяем в какую сторону смещение относительно родительского элемента */
@@ -158,10 +162,10 @@ $(document).ready(function(){
                 //$(selected).animate({marginLeft:marginLeft+"%"},10);
                 offset = -naturalWidthFuture[getProductId($(this))]*2;
                 //offset = 0;
-                $(".directions__slider").animate({left:offset+"%"},150,function(){
+                $(".directions__slider").animate({left:offset+"%"},100,function(){
 
                     $(".directions__slider").css({left:0}).append($(".directions__slider .backscreen:first"));
-                    $(".center").animate({width:naturalWidthFuture[getProductId(".center")]+"%",marginRight:"0",marginLeft:"0"},600,function(){
+                    $(".center").animate({width:naturalWidthFuture[getProductId(".center")]+"%",marginRight:"0",marginLeft:"0"},300,function(){
                         console.log($(".center").width);
                         $(this).removeClass("center");
                         $(selected).animate({height:"86%",paddingTop:"0%",marginLeft:marginLeft+"%"},400,function(){
