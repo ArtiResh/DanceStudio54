@@ -92,42 +92,18 @@
             </ul>
         </div>
         <div class="directions__slider">
-            <div class="backscreen" id="bs_0">
-                <img src="images/jazz_modern2.png" alt=""/>
-            </div>
-            <div class="backscreen center" id="bs_1">
-                <img src="images/jazz_modern.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_2">
-                <img src="images/jazz_modern2.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_3">
-                <img src="images/jazz_modern.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_4">
-                <img src="images/jazz_modern1.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_5">
-                <img src="images/jazz_modern2.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_6">
-                <img src="images/jazz_modern.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_7">
-                <img src="images/jazz_modern1.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_8">
-                <img src="images/jazz_modern.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_9">
-                <img src="images/jazz_modern2.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_10">
-                <img src="images/jazz_modern.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_11">
-                <img src="images/jazz_modern1.png" alt=""/>
-            </div>
+            <div class="backscreen" id="bs_1"></div>
+            <div class="backscreen center" d="bs_2"></div>
+            <div class="backscreen" d="bs_3"></div>
+            <div class="backscreen" d="bs_4"></div>
+            <div class="backscreen" d="bs_5"></div>
+            <div class="backscreen" d="bs_6"></div>
+            <div class="backscreen" d="bs_7"></div>
+            <div class="backscreen" d="bs_8"></div>
+            <div class="backscreen" d="bs_9"></div>
+            <div class="backscreen" d="bs_10"></div>
+            <div class="backscreen" d="bs_11"></div>
+            <div class="backscreen" d="bs_12"></div>
         </div>
         <svg width="53" height="53">
             <circle r="25" cx="27" cy="27"
@@ -406,7 +382,7 @@
     //            slider();
     //        });
     $(document).ready(function () {
-//     $('.main_wrapper').fullpage();
+     $('.main_wrapper').fullpage();
 
         $('.nav_1').click(function () {
                 slider('last');
