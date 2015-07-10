@@ -63,7 +63,7 @@
             <div id="nv_8">pilates</div>
             <div id="nv_9">stretching</div>
             <div id="nv_10">Хореография</div>
-            <div id="nv_11">постановка Свадебного танца
+            <div id="nv_0">постановка Свадебного танца
             </div>
         </div>
         <?
@@ -93,40 +93,37 @@
         </div>
         <div class="directions__slider">
             <div class="backscreen" id="bs_0">
-                <img src="images/jazz_modern2.png" alt=""/>
+                <img src="images/jazz_modern0.png" alt=""/>
             </div>
             <div class="backscreen center" id="bs_1">
-                <img src="images/jazz_modern.png" alt=""/>
+                <img src="images/jazz_modern1.png" alt=""/>
             </div>
             <div class="backscreen" id="bs_2">
                 <img src="images/jazz_modern2.png" alt=""/>
             </div>
             <div class="backscreen" id="bs_3">
-                <img src="images/jazz_modern.png" alt=""/>
+                <img src="images/jazz_modern3.png" alt=""/>
             </div>
             <div class="backscreen" id="bs_4">
-                <img src="images/jazz_modern1.png" alt=""/>
+                <img src="images/jazz_modern4.png" alt=""/>
             </div>
             <div class="backscreen" id="bs_5">
-                <img src="images/jazz_modern2.png" alt=""/>
+                <img src="images/jazz_modern5.png" alt=""/>
             </div>
             <div class="backscreen" id="bs_6">
-                <img src="images/jazz_modern.png" alt=""/>
+                <img src="images/jazz_modern6.png" alt=""/>
             </div>
             <div class="backscreen" id="bs_7">
-                <img src="images/jazz_modern1.png" alt=""/>
+                <img src="images/jazz_modern7.png" alt=""/>
             </div>
             <div class="backscreen" id="bs_8">
-                <img src="images/jazz_modern.png" alt=""/>
+                <img src="images/jazz_modern8.png" alt=""/>
             </div>
             <div class="backscreen" id="bs_9">
-                <img src="images/jazz_modern2.png" alt=""/>
+                <img src="images/jazz_modern9.png" alt=""/>
             </div>
             <div class="backscreen" id="bs_10">
-                <img src="images/jazz_modern.png" alt=""/>
-            </div>
-            <div class="backscreen" id="bs_11">
-                <img src="images/jazz_modern1.png" alt=""/>
+                <img src="images/jazz_modern10.png" alt=""/>
             </div>
         </div>
         <svg width="53" height="53">

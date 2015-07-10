@@ -95,16 +95,26 @@ var naturalWidthFuture=[];
 $(document).ready(function(){
     $(".directions__nav div").click(function(){
        if( $(this).hasClass("active_dir"))return false;
-        maxim = 12;
         $(".directions__nav div").removeClass("active_dir");
         $(this).addClass("active_dir");
-        idDir = getProductId($(this));
-        idCenter = getProductId(".center");
-        leftSide = idCenter - idDir;
-        rightSide = maxim - (idCenter + idDir)
+        var idCenter, idDir, idMax,leftSide,rightSide,itter;
+        idMax = 12;
+        idDir = parseInt(getProductId($(this)));
+        idCenter = parseInt(getProductId(".center"));
+        if(idDir<idCenter){
+            rightSide = idCenter - idDir;
+            leftSide = (idMax - idCenter) + idDir;
+        }
+        else{
+            rightSide = idDir - idCenter;
+            leftSide = (idMax - idDir) + idCenter;
+        }
+
+        leftSide<rightSide?itter=leftSide:itter=rightSide;
+        console.log(idDir+"||"+idCenter+"))"+leftSide+"   "+rightSide+"   "+itter);
         console.log("#bs_"+idDir);
         //sideOfMovement = Math.round(($("#bs_"+idDir).position().left - $(".center").position().left));
-        console.log(sideOfMovement);
+       // console.log(sideOfMovement);
 
 
     });
