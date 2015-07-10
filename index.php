@@ -389,33 +389,12 @@
 
     google.maps.event.addDomListener(window, 'load', initializeMap);
 
-    function slider(direct) {
-        setTimeout(function () {
-            $(".backscreen .center").removeClass("center");
-            if (direct === "last") {
-                $(".directions__slider").css({left: "8.3333%"}).prepend($(".directions__slider div:last"));
-            }
-            else {
-                $(".directions__slider").css({left: "-8.3333%"}).append($(".directions__slider div:first"));
-            }
-        }, 250);
-
-    }
-
     //        $('.s_directions .directions__nav .nav_1').click(function(){
     //            slider();
     //        });
     $(document).ready(function () {
 //     $('.main_wrapper').fullpage();
 
-        $('.nav_1').click(function () {
-                slider('last');
-            }
-        );
-        $('.nav_2').click(function () {
-                slider('first');
-            }
-        );
     });
 
 </script>

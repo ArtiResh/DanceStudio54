@@ -312,8 +312,9 @@ header .h_number:before {
   font-weight: 300;
   margin: 0 1em;
   letter-spacing: 0.05em;
+  cursor: pointer;
 }
-/* line 16, ../sass/components/_directions.scss */
+/* line 17, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__nav .active_dir {
   color: #DA251C;
   width: 161px;
@@ -324,14 +325,14 @@ header .h_number:before {
   background-position: 0px 10px;
   padding: 0.7em 1.1em 1.5em 1.1em;
 }
-/* line 27, ../sass/components/_directions.scss */
+/* line 28, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__slider {
   width: 300%;
   height: 100%;
   vertical-align: bottom;
   position: absolute;
 }
-/* line 33, ../sass/components/_directions.scss */
+/* line 34, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__slider div {
   width: 7.63359%;
   float: left;
@@ -339,13 +340,13 @@ header .h_number:before {
   padding-top: 4.5%;
   height: 50%;
 }
-/* line 42, ../sass/components/_directions.scss */
+/* line 43, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__slider div img {
   display: block;
   max-width: 100%;
   max-height: 100%;
 }
-/* line 48, ../sass/components/_directions.scss */
+/* line 49, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__slider .center {
   padding-top: 0;
   width: 15.38462%;
@@ -355,7 +356,7 @@ header .h_number:before {
   height: 86%;
   background-position: left;
 }
-/* line 59, ../sass/components/_directions.scss */
+/* line 60, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text {
   position: absolute;
   z-index: 8;
@@ -363,7 +364,7 @@ header .h_number:before {
   left: 55%;
   max-width: 430px;
 }
-/* line 65, ../sass/components/_directions.scss */
+/* line 66, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text h1 {
   color: #DA251C;
   font-family: "Bebas Neue Book";
@@ -372,12 +373,12 @@ header .h_number:before {
   line-height: 0.95em;
   padding-bottom: 0.1em;
 }
-/* line 70, ../sass/components/_directions.scss */
+/* line 71, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text p {
   padding: 0.7em 0 0.7em;
   line-height: 1.2em;
 }
-/* line 76, ../sass/components/_directions.scss */
+/* line 77, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text a {
   color: #4491F9;
   font-size: 1.2em;

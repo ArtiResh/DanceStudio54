@@ -12,6 +12,7 @@
             @include var_TextBebasNew(#2B1B1B, 1.5em," Bold");
             margin: 0 1em;
             letter-spacing: 0.05em;
+            cursor: pointer;
           }
           .active_dir{
             color: #DA251C;
