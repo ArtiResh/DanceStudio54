@@ -1,84 +1,136 @@
-/**
- * Created by Максим on 09.07.2015.
- */
+///**
+// * Created by Максим on 09.07.2015.
+// */
+//
+//(function($) {
+//    $.fn.showcaseSlider = function(options){
+//
+//
+//
+//        function Showcase(element,options){
+//
+//            this.options = $.extend({},Showcade.Defaults,options);
+//
+//            this.$element = $(element);
+//
+//            this._current = null;
+//
+//            /**
+//             * Animation speed in milliseconds.
+//             * @protected
+//             */
+//            this._speed = null;
+//
+//            /**
+//             * Current width of the plugin element.
+//             */
+//            this._width = null;
+//
+//            /**
+//             * All real items.
+//             * @protected
+//             */
+//            this._items = [];
+//
+//            /**
+//             * All cloned items.
+//             * @protected
+//             */
+//            this._clones = [];
+//
+//            /**
+//             * Merge values of all items.
+//             * @todo Maybe this could be part of a plugin.
+//             * @protected
+//             */
+//            this._mergers = [];
+//
+//            /**
+//             * Invalidated parts within the update process.
+//             * @protected
+//             */
+//            this._invalidated = {};
+//
+//            /**
+//             * Ordered list of workers for the update process.
+//             * @protected
+//             */
+//            this._pipe = [];
+//
+//
+//            this.setup();
+//            this.initialize();
+//
+//        }
+//
+//        Showcase.Defualts = {
+//            marginLeft: 0,
+//            marginRight : 0,
+//            slider: ".Showcase-slider",
+//            blockImage:".Showcase-image"
+//        };
+//    };
+//    $.fn.showcaseSlider = function ( options ) {
+//        return this.each(function () {
+//            if (!$.data(this, 'plugin_' + Showcase)) {
+//                $.data(this, 'plugin_' + Showcase,
+//                    new Plugin( this, options ));
+//            }
+//        });
+//    }
+//})(jQuery);
+//
+//;(function ( $, window, document, element,options ) {
+//
+//    var pluginName = 'showcaseSlider';
+//
+//    function Showcase( element, options ) {
+//        this.element = element;
+//
+//        this.options = $.extend({},Showcade.Defaults,options);
+//
+//        this._defaults = defaults;
+//        this._name = pluginName;
+//
+//        this.init();
+//    }
+//
+//    Showcase.Defualts = {
+//        height: "50%",
+//        paddingTop: 0,
+//        marginLeft: 0,
+//        marginRight : 0,
+//        slider: ".Showcase-slider",
+//        blockImage:".Showcase-image"
+//    };
+//
+//    Showcase.prototype.init = function () {
+//        this.trigger('initialize');
+//
+//    };
+//
+//    Showcase.prototype.getProductId = function(elem){
+//        var countOfNum = 3;
+//        return parseInt($(elem).attr('id').substr(countOfNum));
+//    }
+//
+//    Showcase.prototype.getWidthInPercent = function () {
+//        var width = parseFloat($(this).css('width'))/parseFloat($(this).parent().css('width'));
+//        return (100*width);
+//    };
+//
+//    $.fn.showcaseSlider = function ( options ) {
+//        return this.each(function () {
+//            if (!$.data(this, 'plugin_' + pluginName)) {
+//                $.data(this, 'plugin_' + pluginName,
+//                    new Showcase( this, options ));
+//            }
+//        });
+//    }
+//
+//})( jQuery, window, document );
 
-(function($) {
-    $.fn.showcaseSlider = function(options){
 
-
-
-        function Showcase(element,options){
-
-            this.options = $.extend({},Showcade.Defaults,options);
-
-            this.$element = $(element);
-
-            this._current = null;
-
-            /**
-             * Animation speed in milliseconds.
-             * @protected
-             */
-            this._speed = null;
-
-            /**
-             * Current width of the plugin element.
-             */
-            this._width = null;
-
-            /**
-             * All real items.
-             * @protected
-             */
-            this._items = [];
-
-            /**
-             * All cloned items.
-             * @protected
-             */
-            this._clones = [];
-
-            /**
-             * Merge values of all items.
-             * @todo Maybe this could be part of a plugin.
-             * @protected
-             */
-            this._mergers = [];
-
-            /**
-             * Invalidated parts within the update process.
-             * @protected
-             */
-            this._invalidated = {};
-
-            /**
-             * Ordered list of workers for the update process.
-             * @protected
-             */
-            this._pipe = [];
-
-
-            this.setup();
-            this.initialize();
-
-        }
-
-        Showcase.Defualts = {
-            marginLeft: 0,
-            marginRight : 0,
-            slider: ".Showcase-slider",
-            blockImage:".Showcase-image"
-        };
-    };
-    $.fn.showcaseSlider = function ( options ) {
-        return this.each(function () {
-            if (!$.data(this, 'plugin_' + Showcase)) {
-                $.data(this, 'plugin_' + Showcase,
-                    new Plugin( this, options ));
-            }
-        });
-    }
-})(jQuery);
 
 /** */
 /**
@@ -100,47 +152,6 @@ function getProductId(elem){
         return (100*width);
     };
 })(jQuery);
-
-
-;(function ( $, window, document, element,options ) {
-
-    var pluginName = 'showcaseSlider';
-
-    function Showcase( element, options ) {
-        this.element = element;
-
-        this.options = $.extend( {}, defaults, options) ;
-
-        this._defaults = defaults;
-        this._name = pluginName;
-
-        this.init();
-    }
-
-    Showcase.Defualts = {
-        height: "50%",
-        paddingTop: 0,
-        marginLeft: 0,
-        marginRight : 0,
-        slider: ".Showcase-slider",
-        blockImage:".Showcase-image"
-    };
-
-    Showcase.prototype.init = function () {
-        this.trigger('initialize');
-
-    };
-
-    $.fn.showcaseSlider = function ( options ) {
-        return this.each(function () {
-            if (!$.data(this, 'plugin_' + pluginName)) {
-                $.data(this, 'plugin_' + pluginName,
-                    new Showcase( this, options ));
-            }
-        });
-    }
-
-})( jQuery, window, document );
 
 
 /**
