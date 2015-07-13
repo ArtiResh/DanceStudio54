@@ -2,16 +2,15 @@
  * Created by Максим on 09.07.2015.
  */
 
-;(function ( $, window, document, element, options ) {
+;
+(function ($, window, document, element, options) {
 
     var pluginName = 'showcaseSlider';
 
-    function Showcase( element, options ) {
+    function Showcase(element, options) {
         this.element = element;
 
-        this.options = $.extend({},Showcase.Defaults,options);
-
-        console.log(options);
+        this.options = $.extend({}, Showcase.Defaults, options);
 
         this._name = pluginName;
 
@@ -23,12 +22,12 @@
 
     Showcase.Defaults = {
         heightLow: 50,
-        heightTall: 50,
-        paddingTop: 0,
-        marginLeft: 0,
-        marginRight : 0,
+        heightTall: 86,
+        paddingTop: 4.5,
+        marginLeft: 0.5,
+        marginRight: 1.5,
         slider: ".directions__slider",
-        blockImage:".backscreen",
+        blockImage: ".backscreen",
         //slider: ".Showcase-slider",
         //blockImage:".Showcase-image",
         countOfNum: 3,
@@ -42,104 +41,121 @@
             var id;
             var _this = this;
             var settings = this.options;
-            $(this.element).children().each(function(){
-                id = _this.getProductId(this,settings.countOfNum);
+            $(this.element).children().each(function () {
+                id = _this.getProductId(this, settings.countOfNum);
                 _this.naturalWidthFuture[id] = _this.getWidthInPercent(this);
-                if ($(this).hasClass(settings.nameOfCenterEl))_this.naturalWidthFuture[id] = _this.naturalWidthFuture[id]/2;
-                this.onclick = function() {
-                    _this.on(this,settings)
+                if ($(this).hasClass(settings.nameOfCenterEl))_this.naturalWidthFuture[id] = _this.naturalWidthFuture[id] / 2;
+                this.onclick = function () {
+                    _this.on(this, settings)
                 };
             });
             return this.naturalWidthFuture = _this.naturalWidthFuture;
         },
 
-        on: function(elem,settings){
-            settings.sideOfMovement = $(elem).position().left - $("."+settings.nameOfCenterEl).position().left;
-            settings.sideOfMovement<0?settings.sideOfMovement="left":settings.sideOfMovement=-"right";
-            this.slide(elem,settings);
+        on: function (elem, settings) {
+            settings.sideOfMovement = $(elem).position().left - $("." + settings.nameOfCenterEl).position().left;
+            settings.sideOfMovement < 0 ? settings.sideOfMovement = "left" : settings.sideOfMovement = -"right";
+            this.slide(elem, settings);
         },
 
-        getProductId: function(elem,countOfNum){
+        getProductId: function (elem, countOfNum) {
             return parseInt($(elem).attr('id').substr(countOfNum));
         },
 
         getWidthInPercent: function (elem) {
-            var width = parseFloat($(elem).css('width'))/parseFloat($(elem).parent().css('width'));
-            return (100*width);
+            var width = parseFloat($(elem).css('width')) / parseFloat($(elem).parent().css('width'));
+            return (100 * width);
         },
 
-        slide: function(elem,settings){
+        slide: function (elem, settings) {
             var selected = elem;
             var _this = this;
             var _mainEl = this.element;
-            //console.log (selected);
-            //console.log(this.element);
-            //console.log(settings.sideOfMovement);
-            console.log(settings);
-            $(_mainEl).children(settings.nameOfCenterEl).animate({paddingTop:settings.paddingTop+"%", height:settings.heightLow+"%"},150,function(){
 
-                if(settings.sideOfMovement === "left"){
-                    //temp = -(_this.naturalWidthFuture[getProductId(settings.slider+" "+settings.blockImage+":last")])+"%";
-                    //temp = -(_this.naturalWidthFuture[getProductId(".directions__slider .backscreen:last")])+"%";
-                    //
+            //$(_mainEl).children(settings.nameOfCenterEl).animate({paddingTop:(settings.paddingTop)+"%", height:(settings.heightLow)+"%"},150,function(){
 
-                    $(_mainEl).css({left: -(settings.naturalWidthFuture[getProductId(".directions__slider .backscreen:last")])*3+"%"}).prepend($(".directions__slider .backscreen:last"));
-                    selected.animate({width:settings.naturalWidthFuture[getProductId(selected)]*2+"%",marginRight:settings.marginRight+"%",marginLeft:settings.marginLeft+"%"},500);
-                    $(this).removeClass("center");
-                    $(_mainEl).animate({left:"0"},500);
-                    $(selected).animate({height:settings.heightTall+"%",paddingTop:settings.paddingTop},400,function(){
-                        $(this).addClass("center");
-                        $(this).next().css({width:settings.naturalWidthFuture[getProductId(this)]+"%",marginRight:0});
-                    });
+            $("." + settings.nameOfCenterEl).animate(
+                {
+                    paddingTop: settings.paddingTop + "%",
+                    height: settings.heightLow + "%"
+                }, 150, function () {
+                    if (settings.sideOfMovement === "left") {
 
-                }
-                //else{
-                //    //$(".directions__slider").css({left: naturalWidthFuture[getProductId(".directions__slider .backscreen:last")]}).prepend($(".directions__slider .backscreen:last"));
-                //    //selected.width(naturalWidthFuture[getProductId(selected)]*2+"%");
-                //
-                //    $(selected).css({width:naturalWidthFuture[getProductId(this)]*2+"%",marginRight:marginRight+"%",marginLeft:marginLeft+"%"});
-                //
-                //    //$(selected).animate({marginLeft:marginLeft+"%"},10);
-                //    offset = -naturalWidthFuture[getProductId($(this))]*2;
-                //    //offset = 0;
-                //    $(".directions__slider").animate({left:offset+"%"},100,function(){
-                //
-                //        $(".directions__slider").css({left:0}).append($(".directions__slider .backscreen:first"));
-                //        $(".center").animate({width:naturalWidthFuture[getProductId(".center")]+"%",marginRight:"0",marginLeft:"0"},300,function(){
-                //
-                //            $(this).removeClass("center");
-                //            $(selected).animate({height:"86%",paddingTop:"0%",marginLeft:marginLeft+"%"},400,function(){
-                //                $(this).addClass("center");
-                //                $(this).next().css({width:naturalWidthFuture[getProductId(this)]+"%",marginRight:0});
-                //            });
-                //        });
-                //
-                //    });
-                //
-                //
-                //
-                //
-                //}
+                        $(_mainEl).css({left: -(_this.naturalWidthFuture[_this.getProductId(".directions__slider .backscreen:last", settings.countOfNum)]) * 3 + "%"})
+                            .prepend($(".directions__slider .backscreen:last"));
 
-            });
+                        $(selected).animate({
+                            width: _this.naturalWidthFuture[_this.getProductId(selected, settings.countOfNum)] * 2 + "%",
+                            marginRight: settings.marginRight + "%",
+                            marginLeft: settings.marginLeft + "%"
+                        }, 500);
+                        $(this).removeClass(settings.nameOfCenterEl);
+                        $(_mainEl).animate({left: "0"}, 500);
+                        $(selected).animate({height: settings.heightTall + "%", paddingTop: 0}, 400, function () {
+                            $(this).addClass(settings.nameOfCenterEl);
+                            $(this).next().css({
+                                width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
+                                marginRight: 0
+                            });
+                        });
+
+                    }
+                    else {
+
+                        $(selected).css({
+                            width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] * 2 + "%",
+                            marginRight: settings.marginRight + "%",
+                            marginLeft: settings.marginLeft + "%"
+                        });
+                        offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 2);
+                        
+                        $(_mainEl).animate({left: offset + "%"}, 100, function () {
+                            $(_mainEl).css({left: 0}).append($(".directions__slider .backscreen:first"));
+
+                            $("." + settings.nameOfCenterEl).animate({
+                                width: _this.naturalWidthFuture[_this.getProductId("." + settings.nameOfCenterEl, settings.countOfNum)] + "%",
+                                marginRight: "0",
+                                marginLeft: "0"
+                            }, 300, function () {
+
+                                $(this).removeClass(settings.nameOfCenterEl);
+                                $(selected).animate({
+                                    height: settings.heightTall + "%",
+                                    paddingTop: 0,
+                                    marginLeft: settings.marginLeft + "%"
+                                }, 400, function () {
+                                    $(this).addClass(settings.nameOfCenterEl);
+                                    $(this).next().css({
+                                        width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
+                                        marginRight: 0
+                                    });
+                                });
+                            });
+
+                        });
+
+
+                    }
+
+                });
         }
 
     };
 
-    $.fn.showcaseSlider = function ( options ) {
+    $.fn.showcaseSlider = function (options) {
         return this.each(function () {
             if (!$.data(this, 'plugin_' + pluginName)) {
                 $.data(this, 'plugin_' + pluginName,
-                    new Showcase( this, options ));
+                    new Showcase(this, options));
             }
         });
     }
 
-})( jQuery, window, document );
+})(jQuery, window, document);
 
-$(document).ready(function(){
-    options = {paddingTop:"4.5"};
-    $(".directions__slider").showcaseSlider(this,options);
+$(document).ready(function () {
+    options = {paddingTop: "4.5"};
+    $(".directions__slider").showcaseSlider(this, options);
 });
 
 
