@@ -1,6 +1,6 @@
 /**
  *  * Showcase Slider
- * @version 1.0.0
+ * @version 1.0.1
  * @author Reshetov Artem
  *
  */
@@ -188,13 +188,14 @@
                         }, 500);
 
                         /** убираем класс с экс-центрального элемента и двигаем слайдер*/
+                        var exTemp = $(this);
                         $(this).removeClass(settings.nameOfCenterEl);
                         $(_mainEl).animate({left: "0"}, 500);
 
                         /** увеличивааем центральный элемент, добавляем класс и уменьшаем длину экс-центрального элемента*/
                         $(selected).animate({height: settings.heightTall + "%", paddingTop: 0}, 400, function () {
                             $(this).addClass(settings.nameOfCenterEl);
-                            $(this).next().css({
+                            exTemp.css({
                                 width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
                                 marginRight: 0
                             });
@@ -226,6 +227,7 @@
                             }, 300, function () {
 
                                 /** увеличение выбранного элемента*/
+                                var exTemp = $(this);
                                 $(this).removeClass(settings.nameOfCenterEl);
                                 $(selected).animate({
                                     height: settings.heightTall + "%",
@@ -235,7 +237,7 @@
 
                                     /** Добавление класса */
                                     $(this).addClass(settings.nameOfCenterEl);
-                                    $(this).next().css({
+                                    exTemp.css({
                                         width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
                                         marginRight: 0
                                     });

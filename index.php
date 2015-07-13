@@ -9,7 +9,7 @@
     <!--    <script type="text/javascript" src="js/owl.carousel.min.js"></script>-->
     <script src="js/jquery.fullPage.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script src="js/jquery.showcase-slider-temp.js"></script>
+    <script src="js/jquery.showcase-slider.js"></script>
 </head>
 <body>
 <header>
