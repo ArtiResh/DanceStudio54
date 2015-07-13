@@ -278,62 +278,6 @@ $(document).ready(function(){
                 sideOfMovement<0?sideOfMovement="left":sideOfMovement=-"right";
 
                 Slider(sideOfMovement,$(this));
-        //$(".center").animate({paddingTop:"4.5%", height:"50%"},150,function(){
-        //    if(sideOfMovement==="left"){
-        //        temp = -naturalWidthFuture[getProductId(".directions__slider .backscreen:last")]+"%";
-        //       $(".directions__slider").css({left: -naturalWidthFuture[getProductId(".directions__slider .backscreen:last")]*3+"%"}).prepend($(".directions__slider .backscreen:last"));
-        //       // $(".directions__slider").prepend($(".directions__slider .backscreen:last"));
-        //        /**Получение позиции смещения*/
-        //        offset = 0;
-        //        //var leftVar =(parseFloat($(".directions__slider").position().left)/parseFloat($(".directions__slider").parent().css('width'))*100);
-        //        //offset = 0;
-        //        //offset = (leftVar - offset)+'%';
-        //        selected.animate({width:naturalWidthFuture[getProductId(selected)]*2+"%",marginRight:marginRight+"%",marginLeft:marginLeft+"%"},500);
-        //        $(this).removeClass("center");
-        //        $(".directions__slider").animate({left:offset+"%"},500);
-        //        $(selected).animate({height:"86%",paddingTop:"0%"},400,function(){
-        //            $(this).addClass("center");
-        //            $(this).next().css({width:naturalWidthFuture[getProductId(this)]+"%",marginRight:0});
-        //        });
-        //
-        //    }
-        //    else{
-        //        //$(".directions__slider").css({left: naturalWidthFuture[getProductId(".directions__slider .backscreen:last")]}).prepend($(".directions__slider .backscreen:last"));
-        //        //selected.width(naturalWidthFuture[getProductId(selected)]*2+"%");
-        //
-        //        $(selected).css({width:naturalWidthFuture[getProductId(this)]*2+"%",marginRight:marginRight+"%",marginLeft:marginLeft+"%"});
-        //
-        //        //$(selected).animate({marginLeft:marginLeft+"%"},10);
-        //        offset = -naturalWidthFuture[getProductId($(this))]*2;
-        //        //offset = 0;
-        //        $(".directions__slider").animate({left:offset+"%"},100,function(){
-        //
-        //            $(".directions__slider").css({left:0}).append($(".directions__slider .backscreen:first"));
-        //            $(".center").animate({width:naturalWidthFuture[getProductId(".center")]+"%",marginRight:"0",marginLeft:"0"},300,function(){
-        //
-        //                $(this).removeClass("center");
-        //                $(selected).animate({height:"86%",paddingTop:"0%",marginLeft:marginLeft+"%"},400,function(){
-        //                    $(this).addClass("center");
-        //                    $(this).next().css({width:naturalWidthFuture[getProductId(this)]+"%",marginRight:0});
-        //                });
-        //            });
-        //
-        //        });
-        //
-        //
-        //
-        //
-        //    }
-        //
-        //
-        //   // $(this).animate({width:(naturalWidthFuture[getProductId(".center")]/2+"%")},250);
-        //
-        //  //  sideOfMovement==="right"?$(".directions__slider").append($(".directions__slider .backscreen:first")):null;
-        //
-        //
-        //});
-
-
 
     });
 });

@@ -2,84 +2,6 @@
  * Created by Максим on 09.07.2015.
  */
 
-//(function($) {
-//    $.fn.showcaseSlider = function(options){
-//
-//
-//
-//        function Showcase(element,options){
-//
-//            this.options = $.extend({},Showcade.Defaults,options);
-//
-//            this.$element = $(element);
-//
-//            this._current = null;
-//
-//            /**
-//             * Animation speed in milliseconds.
-//             * @protected
-//             */
-//            this._speed = null;
-//
-//            /**
-//             * Current width of the plugin element.
-//             */
-//            this._width = null;
-//
-//            /**
-//             * All real items.
-//             * @protected
-//             */
-//            this._items = [];
-//
-//            /**
-//             * All cloned items.
-//             * @protected
-//             */
-//            this._clones = [];
-//
-//            /**
-//             * Merge values of all items.
-//             * @todo Maybe this could be part of a plugin.
-//             * @protected
-//             */
-//            this._mergers = [];
-//
-//            /**
-//             * Invalidated parts within the update process.
-//             * @protected
-//             */
-//            this._invalidated = {};
-//
-//            /**
-//             * Ordered list of workers for the update process.
-//             * @protected
-//             */
-//            this._pipe = [];
-//
-//
-//            this.setup();
-//            this.initialize();
-//
-//        }
-//
-//        Showcase.Defualts = {
-//            marginLeft: 0,
-//            marginRight : 0,
-//            slider: ".Showcase-slider",
-//            blockImage:".Showcase-image"
-//        };
-//    };
-//    $.fn.showcaseSlider = function ( options ) {
-//        return this.each(function () {
-//            if (!$.data(this, 'plugin_' + Showcase)) {
-//                $.data(this, 'plugin_' + Showcase,
-//                    new Plugin( this, options ));
-//            }
-//        });
-//    }
-//})(jQuery);
-
 ;(function ( $, window, document, element, options ) {
 
     var pluginName = 'showcaseSlider';
@@ -89,17 +11,19 @@
 
         this.options = $.extend({},Showcase.Defaults,options);
 
+        console.log(options);
+
         this._name = pluginName;
 
         this.naturalWidthFuture = [];
 
         this.init();
-        //
-        //this.getProductId();
+
     }
 
     Showcase.Defaults = {
-        height: "50%",
+        heightLow: 50,
+        heightTall: 50,
         paddingTop: 0,
         marginLeft: 0,
         marginRight : 0,
@@ -108,54 +32,99 @@
         //slider: ".Showcase-slider",
         //blockImage:".Showcase-image",
         countOfNum: 3,
-        nameOfCenterEl: "center"
+        nameOfCenterEl: "center",
+        sideOfMovement: "left"
     };
 
     Showcase.prototype = {
 
         init: function () {
             var id;
+            var _this = this;
+            var settings = this.options;
             $(this.element).children().each(function(){
-                console.log("o");
-                //console.log($(this.options));
-                id = this.getProductId(this.element,this.options.countOfNum);
-                this.naturalWidthFuture[id] = this.element.getWidthInPercent();
-                console.log(this.naturalWidthFuture[id]);
-                if ($(this).hasClass(this.options.nameOfCenterEl))naturalWidthFuture[id] = naturalWidthFuture[id]/2;
+                id = _this.getProductId(this,settings.countOfNum);
+                _this.naturalWidthFuture[id] = _this.getWidthInPercent(this);
+                if ($(this).hasClass(settings.nameOfCenterEl))_this.naturalWidthFuture[id] = _this.naturalWidthFuture[id]/2;
+                this.onclick = function() {
+                    _this.on(this,settings)
+                };
             });
+            return this.naturalWidthFuture = _this.naturalWidthFuture;
+        },
 
+        on: function(elem,settings){
+            settings.sideOfMovement = $(elem).position().left - $("."+settings.nameOfCenterEl).position().left;
+            settings.sideOfMovement<0?settings.sideOfMovement="left":settings.sideOfMovement=-"right";
+            this.slide(elem,settings);
         },
 
         getProductId: function(elem,countOfNum){
             return parseInt($(elem).attr('id').substr(countOfNum));
         },
 
-        getWidthInPercent: function () {
-            var width = parseFloat($(this).css('width'))/parseFloat($(this).parent().css('width'));
+        getWidthInPercent: function (elem) {
+            var width = parseFloat($(elem).css('width'))/parseFloat($(elem).parent().css('width'));
             return (100*width);
         },
 
-        slide: function(){
+        slide: function(elem,settings){
+            var selected = elem;
+            var _this = this;
+            var _mainEl = this.element;
+            //console.log (selected);
+            //console.log(this.element);
+            //console.log(settings.sideOfMovement);
+            console.log(settings);
+            $(_mainEl).children(settings.nameOfCenterEl).animate({paddingTop:settings.paddingTop+"%", height:settings.heightLow+"%"},150,function(){
 
+                if(settings.sideOfMovement === "left"){
+                    //temp = -(_this.naturalWidthFuture[getProductId(settings.slider+" "+settings.blockImage+":last")])+"%";
+                    //temp = -(_this.naturalWidthFuture[getProductId(".directions__slider .backscreen:last")])+"%";
+                    //
+
+                    $(_mainEl).css({left: -(settings.naturalWidthFuture[getProductId(".directions__slider .backscreen:last")])*3+"%"}).prepend($(".directions__slider .backscreen:last"));
+                    selected.animate({width:settings.naturalWidthFuture[getProductId(selected)]*2+"%",marginRight:settings.marginRight+"%",marginLeft:settings.marginLeft+"%"},500);
+                    $(this).removeClass("center");
+                    $(_mainEl).animate({left:"0"},500);
+                    $(selected).animate({height:settings.heightTall+"%",paddingTop:settings.paddingTop},400,function(){
+                        $(this).addClass("center");
+                        $(this).next().css({width:settings.naturalWidthFuture[getProductId(this)]+"%",marginRight:0});
+                    });
+
+                }
+                //else{
+                //    //$(".directions__slider").css({left: naturalWidthFuture[getProductId(".directions__slider .backscreen:last")]}).prepend($(".directions__slider .backscreen:last"));
+                //    //selected.width(naturalWidthFuture[getProductId(selected)]*2+"%");
+                //
+                //    $(selected).css({width:naturalWidthFuture[getProductId(this)]*2+"%",marginRight:marginRight+"%",marginLeft:marginLeft+"%"});
+                //
+                //    //$(selected).animate({marginLeft:marginLeft+"%"},10);
+                //    offset = -naturalWidthFuture[getProductId($(this))]*2;
+                //    //offset = 0;
+                //    $(".directions__slider").animate({left:offset+"%"},100,function(){
+                //
+                //        $(".directions__slider").css({left:0}).append($(".directions__slider .backscreen:first"));
+                //        $(".center").animate({width:naturalWidthFuture[getProductId(".center")]+"%",marginRight:"0",marginLeft:"0"},300,function(){
+                //
+                //            $(this).removeClass("center");
+                //            $(selected).animate({height:"86%",paddingTop:"0%",marginLeft:marginLeft+"%"},400,function(){
+                //                $(this).addClass("center");
+                //                $(this).next().css({width:naturalWidthFuture[getProductId(this)]+"%",marginRight:0});
+                //            });
+                //        });
+                //
+                //    });
+                //
+                //
+                //
+                //
+                //}
+
+            });
         }
 
-    }
-
-
-
-    //Showcase.prototype.getProductId = function(elem,countOfNum){
-    //
-    //    return parseInt($(elem).attr('id').substr(countOfNum));
-    //};
-    //
-    //Showcase.prototype.getWidthInPercent = function () {
-    //    var width = parseFloat($(this).css('width'))/parseFloat($(this).parent().css('width'));
-    //    return (100*width);
-    //};
-    //
-    //Showcase.prototype.slide = function(){
-    //
-    //};
+    };
 
     $.fn.showcaseSlider = function ( options ) {
         return this.each(function () {
@@ -169,7 +138,7 @@
 })( jQuery, window, document );
 
 $(document).ready(function(){
-    options = {paddingTop:"4.5%"};
+    options = {paddingTop:"4.5"};
     $(".directions__slider").showcaseSlider(this,options);
 });
 
