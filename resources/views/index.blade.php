@@ -44,7 +44,6 @@
         <div class="directions__nav">
             <div class="active_dir" id="nv_1">jazz modern</div>
             <div id="nv_2">Go-Go</div>
-            <div id="nv_2">Go-Go</div>
             <div id="nv_3">jazz funk</div>
             <div id="nv_4">dance show</div>
             <div id="nv_5">strip dance</div>
