@@ -1,9 +1,11 @@
 
 <header>
-    <div class="h_logo"><a href="/#s_intro">
+    <div class="h_logo">
+        <a href="/#s_intro">
             {!! HTML::image('images/main_logo_2.png', 'Logo Dance Studio 54' )!!}
             {{--<img src="images/main_logo_2.png">--}}
-    </div></a>
+        </a>
+    </div>
     <div class="h_divider"></div>
     <nav>
         <a href="/#s_directions" class="link_01">НАПРАВЛЕНИЯ</div></a>

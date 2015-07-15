@@ -23,5 +23,9 @@ function initializeMap() {
 google.maps.event.addDomListener(window, 'load', initializeMap);
 $(document).ready(function () {
     $(".directions__slider").showcaseSlider(this);
+<<<<<<< HEAD
   //  $('.main_wrapper').fullpage();
+=======
+    //$('.main_wrapper').fullpage();
+>>>>>>> origin/master
 });
