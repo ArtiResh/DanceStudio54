@@ -23,5 +23,7 @@ function initializeMap() {
 google.maps.event.addDomListener(window, 'load', initializeMap);
 $(document).ready(function () {
     $(".directions__slider").showcaseSlider(this);
+
     //$('.main_wrapper').fullpage();
+
 });

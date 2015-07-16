@@ -1,6 +1,6 @@
 /**
  *  * Showcase Slider
- * @version 1.0.1
+ * @version 1.0.2
  * @author Reshetov Artem
  *
  */
@@ -43,7 +43,8 @@
         navigationClass: "active_dir",
         countOfNum: 3,
         nameOfCenterEl: "center",
-        sideOfMovement: "left"
+        sideOfMovement: "left",
+        speedSlide: 200
     };
 
     /**
@@ -90,7 +91,7 @@
 
         on: function (elem, settings) {
             settings.sideOfMovement = $(elem).position().left - $("." + settings.nameOfCenterEl).position().left;
-            settings.sideOfMovement < 0 ? settings.sideOfMovement = "left" : settings.sideOfMovement = -"right";
+            settings.sideOfMovement < 0 ? settings.sideOfMovement = "left" : settings.sideOfMovement = "right";
             this.slide(elem, settings);
         },
 
@@ -99,6 +100,7 @@
          * */
 
         getProductId: function (elem, countOfNum) {
+            typeof(elem)=="object"? elem = elem:elem = $(this.element).find(elem);
             return parseInt($(elem).attr('id').substr(countOfNum));
         },
 
@@ -131,7 +133,7 @@
 
             /** получение номера id центрального элемента и вызываемого пункта*/
             idDir = parseInt(_this.getProductId($(elem), settings.countOfNum));
-            idCenter = parseInt(_this.getProductId($("."+settings.nameOfCenterEl), settings.countOfNum));
+            idCenter = parseInt(_this.getProductId(($("."+settings.nameOfCenterEl)), settings.countOfNum));
 
             /** рассчет на сколько небходимо сдвинуться вправо и влево для смены*/
             if(idDir<idCenter){
@@ -142,7 +144,7 @@
                 leftSide = idDir - idCenter;
                 rightSide = (idMax - idDir) + idCenter;
             }
-
+            console.log(rightSide+"!!!!");
 
             /** выбор кратчайшего смещения и стороны смещения*/
             itter = leftSide<rightSide?leftSide:rightSide;
@@ -150,7 +152,7 @@
 
             /** прокрутка слайдера*/
             for(var i=0;i<itter;i++){
-                setTimeout(_this.slide(("#bs_"+idDir),settings), 700);
+                setInterval(_this.slide(("#bs_"+idDir),settings), 1000);
             }
 
         },
@@ -160,6 +162,7 @@
          * */
 
         slide: function (elem, settings) {
+
             /** определение переменных, и сброс если был клинкнут центральный элемент*/
             var selected = elem;
             var _this = this;
@@ -177,8 +180,7 @@
                     if (settings.sideOfMovement === "left") {
 
                         /** добавление в начало слайдера блока из конца (на случай если был выбран первый элемент) и смещение слайдера на его длину*/
-                        $(_mainEl).css({left: -(_this.naturalWidthFuture[_this.getProductId(".directions__slider .backscreen:last", settings.countOfNum)]) * 3 + "%"})
-                            .prepend($(".directions__slider .backscreen:last"));
+                        $(_mainEl).css({left: -(_this.naturalWidthFuture[_this.getProductId($(".directions__slider .backscreen:last"), settings.countOfNum)]) * 3 + "%"});
 
                         /** увеличение длины и отступов выбранного элемента*/
                         $(selected).animate({
@@ -190,7 +192,7 @@
                         /** убираем класс с экс-центрального элемента и двигаем слайдер*/
                         var exTemp = $(this);
                         $(this).removeClass(settings.nameOfCenterEl);
-                        $(_mainEl).animate({left: "0"}, 500);
+                        $(_mainEl).animate({left: "0"}, (settings.speedSlide*2.5));
 
                         /** увеличивааем центральный элемент, добавляем класс и уменьшаем длину экс-центрального элемента*/
                         $(selected).animate({height: settings.heightTall + "%", paddingTop: 0}, 400, function () {
@@ -205,6 +207,7 @@
 
                     /** реализация движения при выборе вправого элемента*/
                     else {
+
                         /** увеличение длины и отступов выбранного элемента*/
                         $(selected).css({
                             width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] * 2 + "%",
@@ -213,18 +216,18 @@
                         });
 
                         /** смещение слайдера на 2ую длину выбранного блока*/
-                        offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 2);
-                        $(_mainEl).animate({left: offset + "%"}, 100, function () {
+                        offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 3);
+                        $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide*1.25),"linear", function () {
 
                             /** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину*/
-                            $(_mainEl).css({left: 0}).append($(".directions__slider .backscreen:first"));
+                            $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
 
                             /** уменьшение длины и отступов экс-центрального элемента*/
                             $("." + settings.nameOfCenterEl).animate({
                                 width: _this.naturalWidthFuture[_this.getProductId("." + settings.nameOfCenterEl, settings.countOfNum)] + "%",
                                 marginRight: "0",
                                 marginLeft: "0"
-                            }, 300, function () {
+                            }, settings.speedSlide,"linear", function () {
 
                                 /** увеличение выбранного элемента*/
                                 var exTemp = $(this);
@@ -250,6 +253,7 @@
                     }
 
                 });
+
         }
 
     };
