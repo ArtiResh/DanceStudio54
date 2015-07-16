@@ -18,3 +18,4 @@
 //Admin::menu('App\News')->label('Преподаватели')->icon('fa-table');
 //Admin::menu('App\News')->label('События')->icon('fa-table');
 Admin::menu()->url('/')->label('Start page')->icon('fa-dashboard')->uses('\SleepingOwl\Admin\Controllers\DummyController@getIndex');
+Admin::menu('App\Directions')->icon('fa-table');
