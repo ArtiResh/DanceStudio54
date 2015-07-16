@@ -5,7 +5,7 @@ use SleepingOwl\Models\Interfaces\ModelWithImageFieldsInterface;
 use SleepingOwl\Models\SleepingOwlModel;
 use SleepingOwl\Models\Traits\ModelWithImageOrFileFieldsTrait;
 
-class Directions extends SleepingOwlModel implements ModelWithImageFieldsInterface
+class Pictures extends SleepingOwlModel implements ModelWithImageFieldsInterface
 {
     use ModelWithImageOrFileFieldsTrait;
 
@@ -13,14 +13,13 @@ class Directions extends SleepingOwlModel implements ModelWithImageFieldsInterfa
 
     protected $fillable = [
         'name',
-        'description',
-        'video_link',
-        'bg_src',
+        'src',
+        'desc'
     ];
     protected $hidden = [
         'id',
-        'created_at',
-        'updated_at'
+        'src',
+        'desc'
     ];
 
     public function getImageFields()
@@ -30,8 +29,8 @@ class Directions extends SleepingOwlModel implements ModelWithImageFieldsInterfa
         ];
     }
 
-    public function photos()
+    public function imageable()
     {
-        return $this->morphMany('Photo', 'imageable');
+        return $this->morphTo();
     }
 }

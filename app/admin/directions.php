@@ -9,16 +9,20 @@ Admin::model('App\Directions')->title('Направления')
         Column::string('name', 'Название');
         Column::string('description', 'Описание');
         Column::string('video_link', 'Видео');
-        Column::string('bg_src', 'Картинка');
+        Column::image('bg_src', 'Картинка');
     })
     ->form(function ()
     {
         // Describing elements in create and editing forms
-        FormItem::text('id', 'id');
-        FormItem::timestamp('created_at', 'Дата создания');
-        FormItem::timestamp('updated_at', 'Дата изменения');
         FormItem::text('name', 'Название');
         FormItem::text('description', 'Описание');
         FormItem::text('video_link', 'Видео');
-        FormItem::text('bg_src', 'Картинка');
+
+        $staff = \App\Directions::find(1);
+
+        foreach ($staff->photos as $photo)
+        {
+            var_dump($photo);
+        }
+
     });
