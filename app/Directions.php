@@ -32,6 +32,7 @@ class Directions extends SleepingOwlModel implements ModelWithImageFieldsInterfa
 
     public function photos()
     {
-        return $this->morphMany('Photo', 'imageable');
+        return $this->morphMany('\App\Pictures', 'parent');
     }
+
 }

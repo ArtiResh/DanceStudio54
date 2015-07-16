@@ -17,12 +17,21 @@ Admin::model('App\Directions')->title('Направления')
         FormItem::text('name', 'Название');
         FormItem::text('description', 'Описание');
         FormItem::text('video_link', 'Видео');
+        FormItem::image('bg_src', 'Картинки');
 
-        $staff = \App\Directions::find(1);
+        $photos = \App\Directions::find(9);
 
-        foreach ($staff->photos as $photo)
+        /*$photo = new \App\Pictures();
+
+        $photo->src = 'test.png';
+
+        $photo->desc = 'test desc';
+
+        $photos->photos()->save($photo);*/
+
+        var_dump($photos->photos);
+        foreach ($photos->photos as $photo)
         {
             var_dump($photo);
         }
-
     });

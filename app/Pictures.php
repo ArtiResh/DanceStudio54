@@ -1,35 +1,23 @@
 <?php
 namespace App;
 
-use SleepingOwl\Models\Interfaces\ModelWithImageFieldsInterface;
 use SleepingOwl\Models\SleepingOwlModel;
-use SleepingOwl\Models\Traits\ModelWithImageOrFileFieldsTrait;
 
-class Pictures extends SleepingOwlModel implements ModelWithImageFieldsInterface
+class Pictures extends SleepingOwlModel
 {
-    use ModelWithImageOrFileFieldsTrait;
-
-    protected $table = 'directions';
+    /*protected $table = 'pictures';
 
     protected $fillable = [
-        'name',
+        'desc',
         'src',
-        'desc'
     ];
     protected $hidden = [
         'id',
-        'src',
-        'desc'
-    ];
+        'created_at',
+        'updated_at'
+    ];*/
 
-    public function getImageFields()
-    {
-        return [
-            'bg_src' => 'directions/'
-        ];
-    }
-
-    public function imageable()
+    public function parent()
     {
         return $this->morphTo();
     }

@@ -16,7 +16,7 @@ class CreatePicturesTable extends Migration
             $table->increments('id');
             $table->string('src');
             $table->string('desc');
-            $table->string('parent_id');
+            $table->integer('parent_id');
             $table->string('parent_type');
             $table->timestamps();
         });
