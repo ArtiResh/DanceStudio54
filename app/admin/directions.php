@@ -6,13 +6,12 @@ Admin::model('App\Directions')->title('Направления')->display(functio
     $src = 'http://www.54studio.localhost:8080' . $pic->images[0];
     $display = AdminDisplay::table();
     $display->columns([
-        Column::string('id')->label('id'),
-        Column::datetime('created_at')->label('Дата создания'),
-        Column::datetime('updated_at')->label('Дата изменения'),
         Column::string('name')->label('Название'),
         Column::string('description')->label('Описание'),
         Column::string('video_link')->label('Видео'),
-        Column::image((string)$src)->label('Картинка'),
+        Column::datetime('created_at')->label('Дата создания'),
+        Column::datetime('updated_at')->label('Дата изменения'),
+//        Column::image((string)$src)->label('Картинка'),
     ]);
     return $display;
 })->createAndEdit(function () {
