@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "92374f72e7e08e3c11001327c51f6ba0",
+    "hash": "e9f7c5f3648389cc1a7ab668398bd880",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -677,52 +677,6 @@
             "time": "2015-06-24 19:55:15"
         },
         {
-            "name": "illuminate/html",
-            "version": "v5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/html.git",
-                "reference": "3d1009bb8e0f25720c914af5c1f4015dd373c9ef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/html/zipball/3d1009bb8e0f25720c914af5c1f4015dd373c9ef",
-                "reference": "3d1009bb8e0f25720c914af5c1f4015dd373c9ef",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/http": "~5.0",
-                "illuminate/session": "~5.0",
-                "illuminate/support": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Html\\": ""
-                },
-                "files": [
-                    "helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "time": "2015-01-01 16:31:18"
-        },
-        {
             "name": "intervention/image",
             "version": "2.3.1",
             "source": {
@@ -783,59 +737,6 @@
                 "watermark"
             ],
             "time": "2015-07-10 15:03:58"
-        },
-        {
-            "name": "intervention/imagecache",
-            "version": "2.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Intervention/imagecache.git",
-                "reference": "27d2ee028672c13bedf896b4ca456b7c89d84086"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/imagecache/zipball/27d2ee028672c13bedf896b4ca456b7c89d84086",
-                "reference": "27d2ee028672c13bedf896b4ca456b7c89d84086",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/cache": "~4|~5",
-                "illuminate/filesystem": "~4|~5",
-                "intervention/image": "dev-master|~2,>=2.2.0",
-                "jeremeamia/superclosure": "~1|~2",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9.2",
-                "phpunit/phpunit": "3.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Intervention\\Image\\": "src/Intervention/Image"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oliver Vogel",
-                    "email": "oliver@olivervogel.net",
-                    "homepage": "http://olivervogel.net/"
-                }
-            ],
-            "description": "Caching extension for the Intervention Image Class",
-            "homepage": "http://image.intervention.io",
-            "keywords": [
-                "cache",
-                "gd",
-                "image",
-                "imagick",
-                "laravel"
-            ],
-            "time": "2015-05-24 11:53:20"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1109,6 +1010,56 @@
                 "laravel"
             ],
             "time": "2015-07-12 02:27:36"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v5.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "c93974c835aebd1fc49d4aa897b30dd507b08a62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/c93974c835aebd1fc49d4aa897b30dd507b08a62",
+                "reference": "c93974c835aebd1fc49d4aa897b30dd507b08a62",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "5.1.*",
+                "illuminate/routing": "5.1.*",
+                "illuminate/session": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                }
+            ],
+            "time": "2015-07-11 09:34:06"
         },
         {
             "name": "league/flysystem",
@@ -1492,16 +1443,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.5.1",
+            "version": "v0.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94"
+                "reference": "aaf8772ade08b5f0f6830774a5d5c2f800415975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/e5a46a767928e85f1f47dda654beda8c680ddd94",
-                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/aaf8772ade08b5f0f6830774a5d5c2f800415975",
+                "reference": "aaf8772ade08b5f0f6830774a5d5c2f800415975",
                 "shasum": ""
             },
             "require": {
@@ -1560,43 +1511,35 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2015-07-03 16:48:00"
+            "time": "2015-07-16 15:26:57"
         },
         {
             "name": "sleeping-owl/admin",
-            "version": "2.0.43",
+            "version": "dev-development",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sleeping-owl/admin.git",
-                "reference": "4edd7a2090bcb67742344e9b6f5a08b89d063d4d"
+                "reference": "fd1fb27bc5b783575c1ddf400f832fa0d48a8b34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sleeping-owl/admin/zipball/4edd7a2090bcb67742344e9b6f5a08b89d063d4d",
-                "reference": "4edd7a2090bcb67742344e9b6f5a08b89d063d4d",
+                "url": "https://api.github.com/repos/sleeping-owl/admin/zipball/fd1fb27bc5b783575c1ddf400f832fa0d48a8b34",
+                "reference": "fd1fb27bc5b783575c1ddf400f832fa0d48a8b34",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "~2.3",
-                "illuminate/html": "~5.0",
                 "illuminate/support": "5.*",
-                "intervention/image": "2.*",
-                "intervention/imagecache": "2.*",
-                "php": ">=5.4.0",
-                "sleeping-owl/with-join": "1.*"
+                "php": ">=5.4.0"
             },
             "require-dev": {
-                "mockery/mockery": "0.9.*",
+                "orchestra/testbench": "3.*",
                 "phpunit/phpunit": "4.*"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "SleepingOwl\\Admin": "src/",
-                    "SleepingOwl\\DateFormatter": "src/",
-                    "SleepingOwl\\Html": "src/",
-                    "SleepingOwl\\Models": "src/",
-                    "SleepingOwl\\RandomFilenamer": "src/"
+                    "SleepingOwl\\Admin": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1614,57 +1557,10 @@
             "keywords": [
                 "admin",
                 "administrator",
+                "crud",
                 "laravel"
             ],
-            "time": "2015-05-18 10:32:10"
-        },
-        {
-            "name": "sleeping-owl/with-join",
-            "version": "1.0.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sleeping-owl/with-join.git",
-                "reference": "ea58bd3601c271d775cfb4e291383b00d535251c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sleeping-owl/with-join/zipball/ea58bd3601c271d775cfb4e291383b00d535251c",
-                "reference": "ea58bd3601c271d775cfb4e291383b00d535251c",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": ">=4.1",
-                "laravel/framework": ">=5.0.6",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "illuminate/database": ">=4.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "SleepingOwl\\WithJoin": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sleeping Owl",
-                    "email": "owl.sleeping@yahoo.com"
-                }
-            ],
-            "description": "Package to convert Eloquent BelongsTo subqueries into one query with left join.",
-            "keywords": [
-                "activerecord",
-                "eloquent",
-                "join",
-                "laravel",
-                "with"
-            ],
-            "time": "2015-02-21 13:48:34"
+            "time": "2015-07-15 18:25:39"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3741,7 +3637,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "sleeping-owl/admin": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

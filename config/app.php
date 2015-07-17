@@ -136,6 +136,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        'Collective\Html\HtmlServiceProvider',
+        'SleepingOwl\Admin\AdminServiceProvider',
+
 
         /*
          * Application Service Providers...
@@ -143,8 +146,9 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        SleepingOwl\Admin\AdminServiceProvider::class,
-        Illuminate\Html\HtmlServiceProvider::class,
+//        SleepingOwl\Admin\AdminServiceProvider::class,
+//        Illuminate\Html\HtmlServiceProvider::class,
+
 
     ],
 
@@ -194,15 +198,17 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
-        'Admin'             => SleepingOwl\Admin\Admin::class,
-        'AdminAuth'         => SleepingOwl\AdminAuth\Facades\AdminAuth::class,
-        'AdminRouter'       => SleepingOwl\Admin\Facades\AdminRouter::class,
-        'AssetManager'      => SleepingOwl\Admin\AssetManager\AssetManager::class,
-        'Column'            => SleepingOwl\Admin\Columns\Column::class,
-        'FormItem'          => SleepingOwl\Admin\Models\Form\FormItem::class,
-        'ModelItem'         => SleepingOwl\Admin\Models\ModelItem::class,
-        'Form'      => Illuminate\Html\FormFacade::class,
-        'Html'      => Illuminate\Html\HtmlFacade::class,
+        'Admin'         => 'SleepingOwl\Admin\Admin',
+        'AdminAuth'     => 'SleepingOwl\AdminAuth\Facades\AdminAuth',
+        'Column'        => 'SleepingOwl\Admin\Columns\Column',
+        'ColumnFilter'  => 'SleepingOwl\Admin\ColumnFilters\ColumnFilter',
+        'Filter'        => 'SleepingOwl\Admin\Filter\Filter',
+        'AdminDisplay'  => 'SleepingOwl\Admin\Display\AdminDisplay',
+        'AdminForm'     => 'SleepingOwl\Admin\Form\AdminForm',
+        'AdminTemplate' => 'SleepingOwl\Admin\Templates\Facade\AdminTemplate',
+        'FormItem'      => 'SleepingOwl\Admin\FormItems\FormItem',
+        'Form' => 'Collective\Html\FormFacade',
+        'Html' => 'Collective\Html\HtmlFacade',
 
     ],
 

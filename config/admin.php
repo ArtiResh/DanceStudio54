@@ -39,7 +39,7 @@ return [
 	 * Path to images upload directory within 'imagesDirectory'
 	 * Default: 'uploads'
 	 */
-	'imagesUploadDirectory' => 'uploads',
+	'imagesUploadDirectory' => '/images/uploads',
 
 	/*
 	 * Authentication config

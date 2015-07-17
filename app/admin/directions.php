@@ -1,41 +1,33 @@
 <?php
-Admin::model('App\Directions')->title('Направления')
-    ->columns(function ()
-    {
-        // Describing columns for table view
-        Column::count('id', 'id');
-        Column::date('created_at', 'Дата создания');
-        Column::date('updated_at', 'Дата изменения');
-        Column::string('name', 'Название');
-        Column::string('description', 'Описание');
-        Column::string('video_link', 'Видео');
-        Column::image('bg_src', 'Картинка');
-    })
-    ->form(function ()
-    {
-        // Describing elements in create and editing forms
-        FormItem::text('name', 'Название');
-        FormItem::text('description', 'Описание');
-        FormItem::text('video_link', 'Видео');
 
-        FormItem::image('bg_src', 'Картинки');
-
-
-
-        foreach(\App\Directions::get() as $item){
-
-            $directionId = \App\Directions::find($item->id);
-            $pictures = new \App\Pictures();
-
-            foreach ($directionId->getPhotos as $picture)
-            {
-            }
-        }
-
-        /*$photo->src = 'test.png';
-
-        $photo->desc = 'test desc';
-
-        $photos->photos()->save($photo);*/
-
-    });
+Admin::model('App\Directions')->title('Направления')->display(function () {
+    $res = \App\Directions::get();
+    $pic = $res->first();
+    $src = 'http://www.54studio.localhost:8080' . $pic->images[0];
+    $display = AdminDisplay::table();
+    $display->columns([
+        Column::string('id')->label('id'),
+        Column::datetime('created_at')->label('Дата создания'),
+        Column::datetime('updated_at')->label('Дата изменения'),
+        Column::string('name')->label('Название'),
+        Column::string('description')->label('Описание'),
+        Column::string('video_link')->label('Видео'),
+        Column::image((string)$src)->label('Картинка'),
+    ]);
+    return $display;
+})->createAndEdit(function () {
+    $form = AdminForm::form();
+    $form->items([
+        FormItem::columns()->columns([
+            [
+                FormItem::text('name', 'Название'),
+                FormItem::text('description', 'Описание'),
+                FormItem::text('video_link', 'Видео'),
+            ],
+            [
+                FormItem::images('images', 'Картинки')
+            ]
+        ])
+    ]);
+    return $form;
+});

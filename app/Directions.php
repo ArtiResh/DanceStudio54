@@ -1,13 +1,9 @@
 <?php
 namespace App;
+use Illuminate\Database\Eloquent\Model;
 
-use SleepingOwl\Models\Interfaces\ModelWithImageFieldsInterface;
-use SleepingOwl\Models\SleepingOwlModel;
-use SleepingOwl\Models\Traits\ModelWithImageOrFileFieldsTrait;
-
-class Directions extends SleepingOwlModel implements ModelWithImageFieldsInterface
+class Directions extends Model
 {
-    use ModelWithImageOrFileFieldsTrait;
 
     protected $table = 'directions';
 
@@ -15,7 +11,7 @@ class Directions extends SleepingOwlModel implements ModelWithImageFieldsInterfa
         'name',
         'description',
         'video_link',
-        'bg_src',
+        'images',
     ];
     protected $hidden = [
         'id',
@@ -23,15 +19,13 @@ class Directions extends SleepingOwlModel implements ModelWithImageFieldsInterfa
         'updated_at'
     ];
 
-    public function getImageFields()
+    public function getImagesAttribute($value)
     {
-        return [
-            'bg_src' => 'directions/'
-        ];
+        return preg_split('/,/', $value, -1, PREG_SPLIT_NO_EMPTY);
+    }
+    public function setImagesAttribute($images)
+    {
+        $this->attributes['images'] = implode(',', $images);
     }
 
-    public function getPhotos()
-    {
-        return $this->morphMany('\App\Pictures', 'parent');
-    }
 }

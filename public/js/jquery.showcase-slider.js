@@ -100,7 +100,9 @@
          * */
 
         getProductId: function (elem, countOfNum) {
+
             typeof(elem)=="object"? elem = elem:elem = $(this.element).find(elem);
+            console.log(elem);
             return parseInt($(elem).attr('id').substr(countOfNum));
         },
 
@@ -180,11 +182,12 @@
                     if (settings.sideOfMovement === "left") {
 
                         /** добавление в начало слайдера блока из конца (на случай если был выбран первый элемент) и смещение слайдера на его длину*/
-                        $(_mainEl).css({left: -(_this.naturalWidthFuture[_this.getProductId($(".directions__slider .backscreen:last"), settings.countOfNum)]) * 3 + "%"});
+                        $(_mainEl).css({left: -(_this.naturalWidthFuture[_this.getProductId($(".directions__slider .backscreen:last"), settings.countOfNum)]) * 3 + "%"})
+                            .prepend($(".directions__slider .backscreen:last"));
 
                         /** увеличение длины и отступов выбранного элемента*/
                         $(selected).animate({
-                            width: _this.naturalWidthFuture[_this.getProductId(selected, settings.countOfNum)] * 2 + "%",
+                            width: _this.naturalWidthFuture[_this.getProductId($(selected), settings.countOfNum)] * 2 + "%",
                             marginRight: settings.marginRight + "%",
                             marginLeft: settings.marginLeft + "%"
                         }, 500);
