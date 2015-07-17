@@ -16,9 +16,9 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
-            $table->string('description');
-            $table->string('inform');
-
+            $table->text('desc');
+            $table->text('desc_full');
+            $table->date('event_date');
         });
     }
 

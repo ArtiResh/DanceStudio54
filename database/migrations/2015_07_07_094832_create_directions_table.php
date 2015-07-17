@@ -16,9 +16,9 @@ class CreateDirectionsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
-            $table->string('description');
-            $table->string('video_link');
-            $table->string('bg_src');
+            $table->text('description');
+            $table->string('video');
+            $table->text('images');
         });
     }
 
