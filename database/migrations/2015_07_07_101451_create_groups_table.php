@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAlbumTable extends Migration
+class CreateGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class CreateAlbumTable extends Migration
      */
     public function up()
     {
-        Schema::create('album', function (Blueprint $table) {
+        Schema::create('groups', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->text('images');
+            $table->string('name');
             $table->text('desc');
         });
     }
@@ -27,6 +27,6 @@ class CreateAlbumTable extends Migration
      */
     public function down()
     {
-        Schema::drop('album');
+        Schema::drop('groups');
     }
 }

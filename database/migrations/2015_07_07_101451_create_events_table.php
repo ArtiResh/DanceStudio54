@@ -19,6 +19,8 @@ class CreateEventsTable extends Migration
             $table->text('desc');
             $table->text('desc_full');
             $table->date('event_date');
+            $table->text('images');
+            $table->text('images_desc');
         });
     }
 
