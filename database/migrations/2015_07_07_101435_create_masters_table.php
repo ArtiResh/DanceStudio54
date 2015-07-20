@@ -18,7 +18,7 @@ class CreateMastersTable extends Migration
             $table->string('name');
             $table->text('desc');
             $table->text('desc_detail');
-
+            $table->text('images');
         });
     }
 
