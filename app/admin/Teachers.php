@@ -1,14 +1,13 @@
 <?php
 
-Admin::model('App\Directions')->title('Направления')->display(function () {
+Admin::model('App\Teachers')->title('Наставники')->display(function () {
     $display = AdminDisplay::table();
     $display->columns([
         Column::string('name')->label('Название'),
-        Column::string('description')->label('Описание'),
-        Column::string('video_link')->label('Видео'),
+        Column::string('desc')->label('Описание'),
+        Column::string('desc_full')->label('Подробное описание'),
         Column::datetime('created_at')->label('Дата создания'),
         Column::datetime('updated_at')->label('Дата изменения'),
-//        Column::image((string)$src)->label('Картинка'),
     ]);
     return $display;
 })->createAndEdit(function () {
@@ -17,8 +16,8 @@ Admin::model('App\Directions')->title('Направления')->display(functio
         FormItem::columns()->columns([
             [
                 FormItem::text('name', 'Название'),
-                FormItem::textarea('description', 'Описание'),
-                FormItem::text('video_link', 'Видео'),
+                FormItem::textarea('desc', 'Описание'),
+                FormItem::textarea('desc_full', 'Подробное описание'),
             ],
             [
                 FormItem::images('images', 'Картинки')

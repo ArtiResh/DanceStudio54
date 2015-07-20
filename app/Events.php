@@ -2,16 +2,18 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class Teachers extends Model
+class Events extends Model
 {
 
-    protected $table = 'masters';
+    protected $table = 'events';
 
     protected $fillable = [
         'name',
         'desc',
         'desc_full',
+        'event_date',
         'images',
+        'images_desc'
     ];
     protected $hidden = [
         'id',
