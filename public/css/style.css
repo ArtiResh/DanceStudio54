@@ -225,7 +225,7 @@ header .h_number:before {
   margin: 0 auto;
 }
 /* line 5, ../sass/base/_main-wrapper.scss */
-.main_wrapper section {
+.main_wrapper .section {
   width: 100%;
   height: 100%;
 }
@@ -985,10 +985,20 @@ header .h_number:before {
 .main_wrapper #s_inform .line2 {
   padding-top: 3.3em;
 }
+/* line 2, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section#in_directions {
+  background: #fff;
+  color: #000;
+}
+/* line 6, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section#events, .main_wrapper .inner_section#teachers {
+  background: #000;
+  color: #fff;
+}
 /* line 1, ../sass/base/_footer.scss */
 .main_wrapper footer {
-  position: fixed;
-  top: 592%;
+  position: relative;
+  margin-top: -80px;
   z-index: 10;
   width: 100%;
   height: 80px;

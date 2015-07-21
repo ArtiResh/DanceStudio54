@@ -6,23 +6,18 @@
     </div>
     <div class="studio__information">
         @foreach($events as $event)
-            {{$event}}
-        {{--<div class="studios">
-            <div class="foto">
-                {!! HTML::image('images/temp-events.jpg', '90e' )!!}
+            <div class="studios">
+                <div class="foto">
+                    {!! HTML::image($event['images'][0], $event['name'] ) !!}
+                </div>
+                <div class="description">
+                    <h1>{{$event['name']}}</h1>
+                    <p>{{$event['desc']}}</p>
+                    <p class="data">{{$event['event_date']}}</p>
+                    <a class="more" href="javascript:void(0)">Узнать больше</a></br>
+                    </a>
+                </div>
             </div>
-            <div class="description">
-                <h1>Дискотека
-                    90-х</h1>
-
-                <p>Выступление с Иванушками.</p>
-
-                <p class="data">10.01.2014</p>
-                <a class="more" href="javascript:void(0)">Узнать больше</a></br>
-                </a>
-            </div>
-        </div>--}}
-
         @endforeach
     </div>
     <svg width="53" height="53">

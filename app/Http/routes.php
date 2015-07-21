@@ -13,6 +13,10 @@
 
 Route::get('/', 'IndexController@index');
 
+Route::get('directions', 'PagesController@directions');
+Route::get('events', 'PagesController@events');
+Route::get('teachers', 'PagesController@teachers');
+
 /*Route::get('/', function () {
 //    return view('welcome');
     return View::make('index');

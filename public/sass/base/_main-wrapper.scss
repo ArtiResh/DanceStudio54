@@ -2,7 +2,7 @@
   display: block;
   height: 100vh;
   margin: 0 auto;
-  section {
+  .section {
     width: 100%;
     height: 100%;
   }
@@ -12,5 +12,6 @@
   @import "components/studio.scss";
   @import "components/application.scss";
   @import "components/inform.scss";
+  @import "components/inner-page.scss";
   @import "base/footer";
 }

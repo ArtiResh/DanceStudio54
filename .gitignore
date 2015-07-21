@@ -1,5 +1,6 @@
 /vendor
 /node_modules
+/public/.sass-cache/
 /public/images/uploads/
 Homestead.yaml
 .env

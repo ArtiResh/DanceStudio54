@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 class IndexController extends Controller {
 
     /**
-     * Show the directions view.
+     * Show the index view.
      *
      * @return index
      */
