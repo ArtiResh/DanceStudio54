@@ -4,29 +4,22 @@
         танцоры и подготовили множество юных спортсменов к соревнованиям и выступлениям.
     </div>
     <div class="masters__teacher">
-        <?
-        for ($i = 0; $i < 6; $i++) {
-        ?>
-        <div class="teachers">
-            <div class="ico">
-                {!! HTML::image('images/foto_teacher.png', 'Учитель...' )!!}
+
+        @foreach($teachers as $teacher)
+            <div class="teachers">
+                <div class="ico">
+                    {!! HTML::image($teacher['images'][0], $teacher['name']) !!}
+                </div>
+                <div class="description">
+                    <h1>{{ $teacher['name'] }}</h1>
+
+                    <p>{{ $teacher['desc'] }}</p>
+                    <a class="more" href="javascript:void(0)">Узнать больше</a></br>
+                    <a class="applicate" href="javascript:void(0);">Записаться к этом у хореографу</a>
+                </div>
             </div>
-            <div class="description">
-                <h1>Ксения
-                    Тагильцева</h1>
+        @endforeach
 
-                <p>Замечательный хореограф, опыт более 10 лет, победительница таких соревнований
-                    как FGW Dance Competition и многих других, зарекомендовала себя как хороший лидер.</p>
-                <a class="more" href="javascript:void(0)">Узнать больше</a></br>
-                <a class="applicate" href="javascript:void(0);">Записаться к этом у хореографу
-
-                </a>
-            </div>
-        </div>
-
-        <?
-        }
-        ?>
     </div>
     <svg width="53" height="53">
         <circle r="25" cx="27" cy="27"
