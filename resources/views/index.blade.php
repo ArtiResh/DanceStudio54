@@ -36,9 +36,9 @@
     @include('sections.s_intro')
     @include('sections.s_directions')
     @include('sections.s_masters')
-    @include('sections.s_studio')
-    @include('sections.s_application')
-    @include('sections.s_inform')
+    @include('sections.s_events')
+    @include('sections.s_groups')
+    @include('sections.s_map')
     @include('base.footer')
 </div>
 

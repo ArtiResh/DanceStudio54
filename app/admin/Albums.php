@@ -2,8 +2,7 @@
 Admin::model('App\Albums')->title('Альбомы')->display(function () {
     $display = AdminDisplay::table();
     $display->columns([
-        Column::image('images')->label('Фотография'),
-        Column::string('desc')->label('Описание'),
+        Column::string('events.name')->label('Название'),
         Column::datetime('created_at')->label('Дата создания'),
         Column::datetime('updated_at')->label('Дата изменения'),
     ]);
@@ -18,10 +17,7 @@ Admin::model('App\Albums')->title('Альбомы')->display(function () {
         ]),
         FormItem::columns()->columns([
             [
-                FormItem::image('images', 'Фотография'),
-            ],
-            [
-                FormItem::text('desc', 'Описание'),
+                FormItem::images('images', 'Фотографии'),
             ]
         ]),
     ]);

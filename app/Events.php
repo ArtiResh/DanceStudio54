@@ -13,7 +13,7 @@ class Events extends Model
         'desc_full',
         'event_date',
         'images',
-        'images_desc'
+//        'images_desc'
     ];
     protected $hidden = [
         'id',
@@ -29,9 +29,10 @@ class Events extends Model
     {
         $this->attributes['images'] = implode(',', $images);
     }
+
     public function albums()
     {
-        return $this->hasMany('App\Albums');
+        return $this->hasOne('App\Albums');
     }
 
 }

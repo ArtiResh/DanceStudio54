@@ -20,7 +20,7 @@ class CreateEventsTable extends Migration
             $table->text('desc_full')->nullable();
             $table->date('event_date');
             $table->text('images');
-            $table->text('images_desc')->nullable();
+//            $table->text('images_desc')->nullable();
         });
     }
 
