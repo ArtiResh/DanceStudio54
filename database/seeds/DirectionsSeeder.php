@@ -127,7 +127,7 @@ class DirectionsTableSeeder extends Seeder
             Разнообразие движений – от легких и плавных до энергичных и резких – поможет телу обрести гибкость и
             пластичность, силу и выносливость.
             В результате занятия джаз модерном позволят Вам не только научиться владеть своим телом, но и
-            позаботиться о своей фигуре.</p>", 'created_at' => new DateTime, 'updated_at' => new DateTime, 'images'=>'images/jazz_modern10.png','video'=>'#'],
+            позаботиться о своей фигуре.</p>", 'created_at' => new DateTime, 'updated_at' => new DateTime, 'images'=>'images/jazz_modern0.png','video'=>'#'],
 
         );
 
