@@ -16,8 +16,8 @@ class CreateMastersTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
-            $table->text('desc');
-            $table->text('desc_detail');
+            $table->text('desc')->nullable();
+            $table->text('desc_detail')->nullable();
             $table->text('images');
         });
     }
