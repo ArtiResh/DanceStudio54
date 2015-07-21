@@ -1,5 +1,4 @@
 <?php
-
 Admin::model('App\Events')->title('События')->display(function () {
     $display = AdminDisplay::table();
     $display->columns([
