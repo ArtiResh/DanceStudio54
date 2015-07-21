@@ -5,7 +5,7 @@ Admin::model('App\Directions')->title('Направления')->display(functio
     $display->columns([
         Column::string('name')->label('Название'),
         Column::string('description')->label('Описание'),
-        Column::string('video_link')->label('Видео'),
+        Column::string('video')->label('Видео'),
         Column::datetime('created_at')->label('Дата создания'),
         Column::datetime('updated_at')->label('Дата изменения'),
 //        Column::image((string)$src)->label('Картинка'),
@@ -18,7 +18,7 @@ Admin::model('App\Directions')->title('Направления')->display(functio
             [
                 FormItem::text('name', 'Название'),
                 FormItem::textarea('description', 'Описание'),
-                FormItem::text('video_link', 'Видео'),
+                FormItem::text('video', 'Видео'),
             ],
             [
                 FormItem::images('images', 'Картинки')

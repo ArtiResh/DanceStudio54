@@ -6,7 +6,10 @@
         выступления на чемпионатах мирового уровня.
     </div>
     <div class="directions__nav">
-        <div class="active_dir" id="nv_1">jazz modern</div>
+        @foreach($directions as $direction)
+            <div>{{$direction['name']}}</div>
+        @endforeach
+        {{--<div class="active_dir" id="nv_1">jazz modern</div>
         <div id="nv_2">Go-Go</div>
         <div id="nv_3">jazz funk</div>
         <div id="nv_4">dance show</div>
@@ -16,8 +19,7 @@
         <div id="nv_8">pilates</div>
         <div id="nv_9">stretching</div>
         <div id="nv_10">Хореография</div>
-        <div id="nv_0">постановка Свадебного танца
-        </div>
+        <div id="nv_0">постановка Свадебного танца</div>--}}
     </div>
     <?
     $directionsName = "Jazz Modern";
