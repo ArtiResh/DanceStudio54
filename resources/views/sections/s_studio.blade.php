@@ -5,10 +5,9 @@
         моментами с соревнований или выступлений.
     </div>
     <div class="studio__information">
-        <?
-        for ($i = 0; $i < 6; $i++) {
-        ?>
-        <div class="studios">
+        @foreach($events as $event)
+            {{$event}}
+        {{--<div class="studios">
             <div class="foto">
                 {!! HTML::image('images/temp-events.jpg', '90e' )!!}
             </div>
@@ -22,11 +21,9 @@
                 <a class="more" href="javascript:void(0)">Узнать больше</a></br>
                 </a>
             </div>
-        </div>
+        </div>--}}
 
-        <?
-        }
-        ?>
+        @endforeach
     </div>
     <svg width="53" height="53">
         <circle r="25" cx="27" cy="27"

@@ -1,11 +1,9 @@
 <?php
-Admin::model('App\Events')->title('События')->display(function () {
+Admin::model('App\Albums')->title('Альбомы')->display(function () {
     $display = AdminDisplay::table();
     $display->columns([
-        Column::string('name')->label('Название'),
-        Column::datetime('event_date')->label('Дата события'),
+        Column::image('images')->label('Фотография'),
         Column::string('desc')->label('Описание'),
-        Column::string('desc_full')->label('Подробное описание'),
         Column::datetime('created_at')->label('Дата создания'),
         Column::datetime('updated_at')->label('Дата изменения'),
     ]);
@@ -15,18 +13,17 @@ Admin::model('App\Events')->title('События')->display(function () {
     $form->items([
         FormItem::columns()->columns([
             [
-                FormItem::text('name', 'Название'),
-                FormItem::date('event_date', 'Дата события'),
+                FormItem::select('events_id', 'Событие')->model('App\Events')->display('name'),
             ]
         ]),
         FormItem::columns()->columns([
             [
-                FormItem::textarea('desc', 'Описание'),
+                FormItem::image('images', 'Фотография'),
             ],
             [
-                FormItem::textarea('desc_full', 'Подробное описание'),
+                FormItem::text('desc', 'Описание'),
             ]
-        ])
+        ]),
     ]);
     return $form;
 });

@@ -29,5 +29,9 @@ class Events extends Model
     {
         $this->attributes['images'] = implode(',', $images);
     }
+    public function albums()
+    {
+        return $this->hasMany('App\Albums');
+    }
 
 }

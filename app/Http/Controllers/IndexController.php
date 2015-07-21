@@ -13,6 +13,7 @@ class IndexController extends Controller {
     public function index()
     {
         $directions = App\Directions::all();
+//        $events = App\Events::with('albums')->get();
         $events = App\Events::all();
         $teachers = App\Teachers::all();
         $groups = App\Groups::all();
