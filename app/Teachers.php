@@ -10,7 +10,7 @@ class Teachers extends Model
     protected $fillable = [
         'name',
         'desc',
-        'desc_full',
+        'desc_detail',
         'images',
     ];
     protected $hidden = [

@@ -5,7 +5,7 @@ Admin::model('App\Teachers')->title('Наставники')->display(function ()
     $display->columns([
         Column::string('name')->label('Название'),
         Column::string('desc')->label('Описание'),
-        Column::string('desc_full')->label('Подробное описание'),
+        Column::string('desc_detail')->label('Подробное описание'),
         Column::datetime('created_at')->label('Дата создания'),
         Column::datetime('updated_at')->label('Дата изменения'),
     ]);
@@ -17,7 +17,7 @@ Admin::model('App\Teachers')->title('Наставники')->display(function ()
             [
                 FormItem::text('name', 'Название'),
                 FormItem::textarea('desc', 'Описание'),
-                FormItem::textarea('desc_full', 'Подробное описание'),
+                FormItem::textarea('desc_detail', 'Подробное описание'),
             ],
             [
                 FormItem::images('images', 'Картинки')
