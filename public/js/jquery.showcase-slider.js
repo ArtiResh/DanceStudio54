@@ -61,6 +61,7 @@
             var id;
             var _this = this;
             var settings = this.options;
+            console.log("begin test");
 
             /**Цикл по всем вложенным контейнерам слайдера,
              * определяет их длину в процентах,
