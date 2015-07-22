@@ -7,6 +7,16 @@
   clear: both;
 }
 
+/* line 10, ../sass/style.scss */
+strong, b {
+  font-weight: bold !important;
+}
+
+/* line 14, ../sass/style.scss */
+em, i {
+  font-style: italic !important;
+}
+
 /* line 5, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -1010,7 +1020,7 @@ header .h_number:before {
   z-index: 5;
   left: 3.5%;
   padding: 122px 0 32px;
-  max-width: 995px;
+  max-width: 46.5%;
   line-height: 1.2em;
   font-family: "Arial";
   font-size: 0.803em;
@@ -1018,47 +1028,63 @@ header .h_number:before {
 }
 /* line 22, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .vertical_menu {
-  width: 18.28571%;
+  width: 14.5%;
   float: left;
-  margin-left: 3.5%;
+  margin-left: 4.1%;
+  margin-right: 6%;
   font: 20px "Bebas Neue Bold";
 }
-/* line 26, ../sass/components/_inner-page.scss */
+/* line 28, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .vertical_menu li {
-  margin-bottom: 9.5%;
+  margin-bottom: 12%;
   cursor: pointer;
+  position: relative;
 }
-/* line 29, ../sass/components/_inner-page.scss */
+/* line 32, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .vertical_menu li.active {
   color: #da251c;
   cursor: text;
 }
 /* line 35, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .vertical_menu li.active:after {
+  content: "";
+  position: absolute;
+  margin-left: 5px;
+  width: 50px;
+  height: 50px;
+  top: -14px;
+  display: inline-block;
+}
+/* line 45, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .vertical_menu li:hover {
+  color: #da251c;
+}
+/* line 50, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content {
   display: none;
-  width: 56.0%;
+  width: 49%;
   float: left;
 }
-/* line 37, ../sass/components/_inner-page.scss */
+/* line 54, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content.active {
   display: block;
 }
-/* line 41, ../sass/components/_inner-page.scss */
+/* line 57, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .img_wrap {
-  width: 55.10204%;
+  width: 49.74619%;
   float: left;
-  text-align: center;
 }
-/* line 44, ../sass/components/_inner-page.scss */
+/* line 59, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .img_wrap img {
   max-width: 100%;
 }
-/* line 48, ../sass/components/_inner-page.scss */
+/* line 63, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .desc_wrap {
-  width: 43.87755%;
-  float: left;
+  width: 44.16244%;
+  float: right;
+  margin-right: 0;
 }
-/* line 50, ../sass/components/_inner-page.scss */
+/* line 65, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .desc_wrap h1 {
   color: #DA251C;
   font-family: "Bebas Neue Book";
@@ -1068,13 +1094,29 @@ header .h_number:before {
   padding-bottom: 0.1em;
   padding-top: 7.5%;
 }
-/* line 59, ../sass/components/_inner-page.scss */
+/* line 74, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .desc_wrap p {
   padding: 0.7em 0 0.7em;
   line-height: 1.2em;
   font-family: "Arial";
   font-size: 0.803em;
   font-weight: 400;
+}
+/* line 82, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .video {
+  margin: 15.5% 0 11.5% 0;
+}
+/* line 85, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .video h1, .main_wrapper .inner_section .content .desc_detail h1 {
+  font: 59px "Bebas Neue Book";
+  color: #DA251C;
+  text-transform: uppercase;
+  margin-bottom: 4%;
+}
+/* line 91, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .desc_detail {
+  max-width: 92%;
+  margin-bottom: 7.5%;
 }
 /* line 1, ../sass/base/_footer.scss */
 .main_wrapper footer {

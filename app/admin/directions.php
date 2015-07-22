@@ -4,7 +4,6 @@ Admin::model('App\Directions')->title('Направления')->display(functio
     $display = AdminDisplay::table();
     $display->columns([
         Column::string('name')->label('Название'),
-        Column::string('video')->label('Видео'),
         Column::datetime('created_at')->label('Дата создания'),
         Column::datetime('updated_at')->label('Дата изменения'),
 //        Column::image((string)$src)->label('Картинка'),

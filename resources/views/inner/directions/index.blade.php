@@ -26,6 +26,19 @@
                     <h1>{{ $direction['name'] }}</h1>
                     {!! $direction['desc'] !!}
                 </div>
+                <div class="clear"></div>
+                @if($direction['video'] != "")
+                    <div class="video">
+                        <h1>Как танцуют {{ $direction['name'] }}?</h1>
+                        {!! $direction['video'] !!}
+                    </div>
+                @endif
+                @if($direction['desc_detail'] != "")
+                    <div class="desc_detail">
+                        {!! $direction['desc_detail'] !!}
+                        <div class="clear"></div>
+                    </div>
+                @endif
             </section>
         @endforeach
         <div class="clear"></div>

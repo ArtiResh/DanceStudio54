@@ -7,6 +7,14 @@
   clear: both;
 }
 
+strong, b {
+  font-weight: bold !important;
+}
+
+em, i {
+  font-style: italic !important;
+}
+
 @import "base/reset";
 @import "base/header";
 @import "base/main-wrapper";
