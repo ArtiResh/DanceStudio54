@@ -2,6 +2,11 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 6, ../sass/style.scss */
+.clear {
+  clear: both;
+}
+
 /* line 5, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -985,15 +990,91 @@ header .h_number:before {
 .main_wrapper #s_inform .line2 {
   padding-top: 3.3em;
 }
-/* line 2, ../sass/components/_inner-page.scss */
+/* line 1, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section {
+  margin-bottom: 80px;
+}
+/* line 3, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section#in_directions {
   background: #fff;
   color: #000;
 }
-/* line 6, ../sass/components/_inner-page.scss */
+/* line 7, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section#events, .main_wrapper .inner_section#teachers {
   background: #000;
   color: #fff;
+}
+/* line 11, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .text-head {
+  position: relative;
+  z-index: 5;
+  left: 3.5%;
+  padding: 122px 0 32px;
+  max-width: 995px;
+  line-height: 1.2em;
+  font-family: "Arial";
+  font-size: 0.803em;
+  font-weight: 400;
+}
+/* line 22, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .vertical_menu {
+  width: 18.28571%;
+  float: left;
+  margin-left: 3.5%;
+  font: 20px "Bebas Neue Bold";
+}
+/* line 26, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .vertical_menu li {
+  margin-bottom: 9.5%;
+  cursor: pointer;
+}
+/* line 29, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .vertical_menu li.active {
+  color: #da251c;
+  cursor: text;
+}
+/* line 35, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content {
+  display: none;
+  width: 56.0%;
+  float: left;
+}
+/* line 37, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content.active {
+  display: block;
+}
+/* line 41, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .img_wrap {
+  width: 55.10204%;
+  float: left;
+  text-align: center;
+}
+/* line 44, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .img_wrap img {
+  max-width: 100%;
+}
+/* line 48, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .desc_wrap {
+  width: 43.87755%;
+  float: left;
+}
+/* line 50, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .desc_wrap h1 {
+  color: #DA251C;
+  font-family: "Bebas Neue Book";
+  font-size: 7.7em;
+  font-weight: 300;
+  line-height: 0.95em;
+  padding-bottom: 0.1em;
+  padding-top: 7.5%;
+}
+/* line 59, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .desc_wrap p {
+  padding: 0.7em 0 0.7em;
+  line-height: 1.2em;
+  font-family: "Arial";
+  font-size: 0.803em;
+  font-weight: 400;
 }
 /* line 1, ../sass/base/_footer.scss */
 .main_wrapper footer {

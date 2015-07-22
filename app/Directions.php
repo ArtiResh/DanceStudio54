@@ -9,7 +9,8 @@ class Directions extends Model
 
     protected $fillable = [
         'name',
-        'description',
+        'desc',
+        'desc_detail',
         'video',
         'images',
     ];

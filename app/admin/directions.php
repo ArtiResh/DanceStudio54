@@ -16,7 +16,8 @@ Admin::model('App\Directions')->title('Направления')->display(functio
         FormItem::columns()->columns([
             [
                 FormItem::text('name', 'Название'),
-                FormItem::ckeditor('description', 'Описание'),
+                FormItem::ckeditor('desc', 'Описание'),
+                FormItem::ckeditor('desc_detail', 'Описание'),
                 FormItem::text('video', 'Видео'),
             ],
             [
