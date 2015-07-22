@@ -4,7 +4,6 @@ Admin::model('App\Directions')->title('Направления')->display(functio
     $display = AdminDisplay::table();
     $display->columns([
         Column::string('name')->label('Название'),
-        Column::string('description')->label('Описание'),
         Column::string('video')->label('Видео'),
         Column::datetime('created_at')->label('Дата создания'),
         Column::datetime('updated_at')->label('Дата изменения'),
@@ -17,7 +16,7 @@ Admin::model('App\Directions')->title('Направления')->display(functio
         FormItem::columns()->columns([
             [
                 FormItem::text('name', 'Название'),
-                FormItem::textarea('description', 'Описание'),
+                FormItem::ckeditor('description', 'Описание'),
                 FormItem::text('video', 'Видео'),
             ],
             [
