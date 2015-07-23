@@ -43,6 +43,7 @@
         navigationClass: "active_dir",
         countOfNum: 3,
         nameOfCenterEl: "center",
+        idOfCenterEl:1,
         sideOfMovement: "left",
         speedSlide: 200
     };
@@ -61,8 +62,6 @@
             var id;
             var _this = this;
             var settings = this.options;
-            console.log("begin test");
-
             /**Цикл по всем вложенным контейнерам слайдера,
              * определяет их длину в процентах,
              * и записывает в глобальную переменную: getWidthInPercent */
@@ -91,7 +90,7 @@
          * */
 
         on: function (elem, settings) {
-            settings.sideOfMovement = $(elem).position().left - $("." + settings.nameOfCenterEl).position().left;
+            settings.sideOfMovement = $(elem).position().left - $("#bs_" + this.options.idOfCenterEl).position().left;
             settings.sideOfMovement < 0 ? settings.sideOfMovement = "left" : settings.sideOfMovement = "right";
             this.slide(elem, settings);
         },
@@ -103,7 +102,9 @@
         getProductId: function (elem, countOfNum) {
 
             typeof(elem)=="object"? elem = elem:elem = $(this.element).find(elem);
-            console.log(elem);
+
+            ttemp = parseInt($(elem).attr('id').substr(countOfNum));
+           // console.log(ttemp);
             return parseInt($(elem).attr('id').substr(countOfNum));
         },
 
@@ -136,7 +137,7 @@
 
             /** получение номера id центрального элемента и вызываемого пункта*/
             idDir = parseInt(_this.getProductId($(elem), settings.countOfNum));
-            idCenter = parseInt(_this.getProductId(($("."+settings.nameOfCenterEl)), settings.countOfNum));
+            idCenter = _this.options.idOfCenterEl;
 
             /** рассчет на сколько небходимо сдвинуться вправо и влево для смены*/
             if(idDir<idCenter){
@@ -147,12 +148,10 @@
                 leftSide = idDir - idCenter;
                 rightSide = (idMax - idDir) + idCenter;
             }
-            console.log(rightSide+"!!!!");
 
             /** выбор кратчайшего смещения и стороны смещения*/
             itter = leftSide<rightSide?leftSide:rightSide;
             settings.sideOfMovement = rightSide<leftSide?"left":"right";
-
             /** прокрутка слайдера*/
             for(var i=0;i<itter;i++){
                 setInterval(_this.slide(("#bs_"+idDir),settings), 1000);
@@ -201,6 +200,10 @@
                         /** увеличивааем центральный элемент, добавляем класс и уменьшаем длину экс-центрального элемента*/
                         $(selected).animate({height: settings.heightTall + "%", paddingTop: 0}, 400, function () {
                             $(this).addClass(settings.nameOfCenterEl);
+
+                            /** передача id центрального элемента в массив*/
+                            _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
+
                             exTemp.css({
                                 width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
                                 marginRight: 0
@@ -228,7 +231,7 @@
 
                             /** уменьшение длины и отступов экс-центрального элемента*/
                             $("." + settings.nameOfCenterEl).animate({
-                                width: _this.naturalWidthFuture[_this.getProductId("." + settings.nameOfCenterEl, settings.countOfNum)] + "%",
+                                width: _this.naturalWidthFuture[_this.getProductId("#bs_" + _this.options.idOfCenterEl, settings.countOfNum)] + "%",
                                 marginRight: "0",
                                 marginLeft: "0"
                             }, settings.speedSlide,"linear", function () {
@@ -244,6 +247,10 @@
 
                                     /** Добавление класса */
                                     $(this).addClass(settings.nameOfCenterEl);
+
+                                    /** передача id центрального элемента в массив*/
+                                    _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
+
                                     exTemp.css({
                                         width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
                                         marginRight: 0
