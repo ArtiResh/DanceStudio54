@@ -15,7 +15,7 @@ Admin::model('App\Teachers')->title('Наставники')->display(function ()
             [
                 FormItem::text('name', 'Название'),
                 FormItem::textarea('desc', 'Описание'),
-                FormItem::textarea('desc_detail', 'Подробное описание'),
+                FormItem::ckeditor('desc_detail', 'Подробное описание'),
             ],
             [
                 FormItem::images('images', 'Фотографии')

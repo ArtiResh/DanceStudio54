@@ -13,14 +13,20 @@
         <section class="vertical_menu">
             <ul>
                 @foreach($directions as $key => $direction)
-                    <li id="dir_{{$key}}">{{$direction['name']}}</li>
+                    <li class="white_arrow" id="menu_{{$key}}">{{$direction['name']}}</li>
                 @endforeach
             </ul>
         </section>
         @foreach($directions as $key => $direction)
             <section class="content" id="cont_{{$key}}">
                 <div class="img_wrap">
-                    {!! HTML::Image($direction['images'][0], $direction['name']) !!}
+                    @foreach($direction['images'] as $key => $image)
+                        @if($key == 0)
+                            <div class="active" id="img_{{$key}}" style="opacity: 1">{!! HTML::Image($image, $direction['name']) !!}</div>
+                        @else
+                            <div id="img_{{$key}}">{!! HTML::Image($image, $direction['name']) !!}</div>
+                        @endif
+                    @endforeach
                 </div>
                 <div class="desc_wrap">
                     <h1>{{ $direction['name'] }}</h1>
@@ -30,7 +36,7 @@
                 @if($direction['video'] != "")
                     <div class="video">
                         <h1>Как танцуют {{ $direction['name'] }}?</h1>
-                        {!! $direction['video'] !!}
+                        <iframe width="960" height="540" src="{{$direction['video']}}" frameborder="0" allowfullscreen></iframe>
                     </div>
                 @endif
                 @if($direction['desc_detail'] != "")

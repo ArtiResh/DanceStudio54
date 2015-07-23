@@ -5,7 +5,7 @@
     </div>
     <div class="masters__teacher">
 
-        @foreach($teachers as $teacher)
+        @foreach($teachers as $key => $teacher)
             <div class="teachers">
                 <div class="ico">
                     {!! HTML::image($teacher['images'][0], $teacher['name']) !!}
@@ -14,7 +14,7 @@
                     <h1>{{ $teacher['name'] }}</h1>
 
                     <p>{{ $teacher['desc'] }}</p>
-                    <a class="more" href="javascript:void(0)">Узнать больше</a></br>
+                    <a class="more" href="/teachers?id={{$key}}">Узнать больше</a></br>
                     <a class="applicate" href="javascript:void(0);">Записаться к этом у хореографу</a>
                 </div>
             </div>
