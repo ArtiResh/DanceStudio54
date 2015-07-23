@@ -69,7 +69,6 @@
                 id = _this.getProductId(this, settings.countOfNum);
                 _this.naturalWidthFuture[id] = _this.getWidthInPercent(this);
                 if ($(this).hasClass(settings.nameOfCenterEl))_this.naturalWidthFuture[id] = _this.naturalWidthFuture[id] / 2;
-
                 /**определение обработчиков событий на блоки с картинками */
                 this.onclick = function () {
                     _this.on(this, settings);
@@ -104,7 +103,7 @@
             typeof(elem)=="object"? elem = elem:elem = $(this.element).find(elem);
 
             ttemp = parseInt($(elem).attr('id').substr(countOfNum));
-           // console.log(ttemp);
+
             return parseInt($(elem).attr('id').substr(countOfNum));
         },
 
@@ -152,11 +151,14 @@
             /** выбор кратчайшего смещения и стороны смещения*/
             itter = leftSide<rightSide?leftSide:rightSide;
             settings.sideOfMovement = rightSide<leftSide?"left":"right";
+
+            /** костыль на неведомый баг, если середина и смещение с правой стороны происходит схлопывание*/
+            if(settings.sideOfMovement==="right"&&itter===5){settings.sideOfMovement="left";itter=6;}
+
             /** прокрутка слайдера*/
             for(var i=0;i<itter;i++){
-                setInterval(_this.slide(("#bs_"+idDir),settings), 1000);
+                _this.slide(("#bs_"+idDir),settings);
             }
-
         },
 
         /**
@@ -164,7 +166,7 @@
          * */
 
         slide: function (elem, settings) {
-
+            console.log(settings);
             /** определение переменных, и сброс если был клинкнут центральный элемент*/
             var selected = elem;
             var _this = this;
@@ -214,7 +216,6 @@
 
                     /** реализация движения при выборе вправого элемента*/
                     else {
-
                         /** увеличение длины и отступов выбранного элемента*/
                         $(selected).css({
                             width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] * 2 + "%",
@@ -231,7 +232,7 @@
 
                             /** уменьшение длины и отступов экс-центрального элемента*/
                             $("." + settings.nameOfCenterEl).animate({
-                                width: _this.naturalWidthFuture[_this.getProductId("#bs_" + _this.options.idOfCenterEl, settings.countOfNum)] + "%",
+                                width: _this.naturalWidthFuture[_this.options.idOfCenterEl] + "%",
                                 marginRight: "0",
                                 marginLeft: "0"
                             }, settings.speedSlide,"linear", function () {
@@ -250,7 +251,6 @@
 
                                     /** передача id центрального элемента в массив*/
                                     _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
-
                                     exTemp.css({
                                         width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
                                         marginRight: 0
@@ -259,14 +259,9 @@
                             });
 
                         });
-
-
                     }
-
                 });
-
         }
-
     };
 
     /**
