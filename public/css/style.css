@@ -1043,7 +1043,7 @@ header .h_number:before {
   max-width: 46.5%;
   line-height: 1.2em;
   font-family: "Arial";
-  font-size: 0.803em;
+  font-size: 13px;
   font-weight: 400;
 }
 /* line 42, ../sass/components/_inner-page.scss */
@@ -1113,7 +1113,7 @@ header .h_number:before {
 }
 /* line 102, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content {
-  font: 14px "Arial", sans-serif;
+  font: 13px "Arial", sans-serif;
   display: none;
   width: 49%;
   float: left;
@@ -1158,36 +1158,50 @@ header .h_number:before {
   font-size: 125px;
   font-weight: 300;
   line-height: 0.95em;
-  padding-bottom: 0.1em;
   padding-top: 7.5%;
+  margin-bottom: 2%;
 }
 /* line 138, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .desc_wrap p {
-  padding: 0.7em 0 0.7em;
+  padding-top: 1.4em;
   line-height: 1.2em;
-  font-family: "Arial";
-  font-size: 0.803em;
   font-weight: 400;
 }
-/* line 146, ../sass/components/_inner-page.scss */
+/* line 143, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .desc_wrap a {
+  color: #4491F9;
+  font-size: 19px;
+  margin-left: -8px;
+}
+/* line 147, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .desc_wrap a.applicate:before {
+  content: '';
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  position: relative;
+  top: 20.5px;
+  background: url("/images/button_small_check_white.png") no-repeat;
+}
+/* line 158, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .video, .main_wrapper .inner_section .content .gallery {
   margin: 15.5% 0 11.5% 0;
 }
-/* line 149, ../sass/components/_inner-page.scss */
+/* line 161, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .desc_detail {
   max-width: 92%;
   margin-bottom: 7.5%;
 }
-/* line 153, ../sass/components/_inner-page.scss */
+/* line 165, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .gallery_img {
   width: 14%;
   display: inline-block;
 }
-/* line 156, ../sass/components/_inner-page.scss */
+/* line 168, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .gallery_img:not(:nth-of-type(6n)) {
   margin: 0 2.7% 2% 0;
 }
-/* line 159, ../sass/components/_inner-page.scss */
+/* line 171, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .gallery_img img {
   max-width: 100%;
 }

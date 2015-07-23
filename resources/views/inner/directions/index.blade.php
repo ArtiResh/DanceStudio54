@@ -31,6 +31,8 @@
                 <div class="desc_wrap">
                     <h1>{{ $direction['name'] }}</h1>
                     {!! $direction['desc'] !!}
+                    <div class="clear"></div>
+                    <a href="javascript:void(0);" class="applicate">Записаться на {{ $direction['name'] }}</a>
                 </div>
                 <div class="clear"></div>
                 @if($direction['video'] != "")

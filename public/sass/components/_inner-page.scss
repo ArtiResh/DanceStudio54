@@ -36,7 +36,7 @@
     max-width: 46.5%;
     line-height: 1.2em;
     font-family: "Arial";
-    font-size: 0.803em;
+    font-size: 13px;
     font-weight: 400;
   }
   .vertical_menu {
@@ -100,7 +100,7 @@
     }
   }
   .content {
-    font: 14px "Arial", sans-serif;
+    font: 13px "Arial", sans-serif;
     display: none;
     width: 49%;
     float:left;
@@ -132,15 +132,27 @@
         font-size: 125px;
         font-weight: 300;
         line-height: 0.95em;
-        padding-bottom: 0.1em;
         padding-top: 7.5%;
+        margin-bottom: 2%;
       }
       p {
-        padding: 0.7em 0 0.7em;
+        padding-top: 1.4em;
         line-height: 1.2em;
-        font-family: "Arial";
-        font-size: 0.803em;
         font-weight: 400;
+      }
+      a {
+        color: #4491F9;
+        font-size: 19px;
+        margin-left: -8px;
+        &.applicate:before {
+          content: '';
+          display: inline-block;
+          height: 45px;
+          width: 45px;
+          position: relative;
+          top: 20.5px;
+          background: url("/images/button_small_check_white.png") no-repeat;
+        }
       }
     }
     .video, .gallery {
