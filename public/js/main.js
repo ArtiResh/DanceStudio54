@@ -22,8 +22,8 @@ function initializeMap() {
 }
 google.maps.event.addDomListener(window, 'load', initializeMap);
 $(document).ready(function () {
-    $(".directions__slider").showcaseSlider(this);
-
-    $('.main_wrapper').fullpage();
+    $("#bs_1").addClass("center");
+    $(".directions__slider").prepend($(".directions__slider .backscreen:last")).showcaseSlider(this);
+ //   $('.main_wrapper').fullpage();
 
 });
