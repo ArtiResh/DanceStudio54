@@ -25,8 +25,6 @@
                 <div class="desc_wrap">
                     <h1>{{ $teacher['name'] }}</h1>
                     {!! $teacher['desc'] !!}
-                    <div class="clear"></div>
-                    <a href="javascript:void(0);" class="applicate">Записаться к этому хореографу</a>
                 </div>
                 <div class="clear"></div>
                 @if($teacher['desc_detail'] != "")
