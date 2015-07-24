@@ -1063,12 +1063,15 @@ header .h_number:before {
 .main_wrapper .inner_section .content {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   font: 14px "Arial", sans-serif;
 >>>>>>> parent of 90b40f3... Inner pages update
 =======
   font: 14px "Arial", sans-serif;
 >>>>>>> parent of 90b40f3... Inner pages update
+=======
+>>>>>>> parent of 8f2e98e... Inner pages templates update
   display: none;
   width: 49%;
   float: left;
@@ -1112,6 +1115,7 @@ header .h_number:before {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 82, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .video {
   margin: 15.5% 0 11.5% 0;
@@ -1136,10 +1140,25 @@ header .h_number:before {
 >>>>>>> parent of 90b40f3... Inner pages update
 =======
 >>>>>>> parent of 90b40f3... Inner pages update
+=======
+/* line 82, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .video {
+  margin: 15.5% 0 11.5% 0;
+}
+/* line 85, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .video h1, .main_wrapper .inner_section .content .desc_detail h1 {
+  font: 59px "Bebas Neue Book";
+  color: #DA251C;
+  text-transform: uppercase;
+  margin-bottom: 4%;
+}
+/* line 91, ../sass/components/_inner-page.scss */
+>>>>>>> parent of 8f2e98e... Inner pages templates update
 .main_wrapper .inner_section .content .desc_detail {
   max-width: 92%;
   margin-bottom: 7.5%;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1159,6 +1178,8 @@ header .h_number:before {
   max-width: 100%;
 }
 >>>>>>> parent of 90b40f3... Inner pages update
+=======
+>>>>>>> parent of 8f2e98e... Inner pages templates update
 /* line 1, ../sass/base/_footer.scss */
 .main_wrapper footer {
   position: relative;

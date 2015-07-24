@@ -5,7 +5,7 @@
         моментами с соревнований или выступлений.
     </div>
     <div class="studio__information">
-        @foreach($events as $event)
+        @foreach($events as $key => $event)
             <div class="studios">
                 <div class="foto">
                     {!! HTML::image($event['images'][0], $event['name'] ) !!}
@@ -14,7 +14,7 @@
                     <h1>{{$event['name']}}</h1>
                     <p>{{$event['desc']}}</p>
                     <p class="data">{{$event['event_date']}}</p>
-                    <a class="more" href="javascript:void(0)">Узнать больше</a></br>
+                    <a class="more" href="/events?id={{$key}}">Узнать больше</a></br>
                     </a>
                 </div>
             </div>

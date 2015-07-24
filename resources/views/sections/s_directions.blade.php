@@ -66,11 +66,15 @@
 
     <div class="directions__slider">
 
-
+        <div class="backscreen" id="bs_{{$direction['id']}}">
+            {!! HTML::image($direction['images'][0], 'Танцуют '.$direction['name'].' в Калининграде' )!!}
+        </div>
         @foreach($directions as $direct)
-            <div class="backscreen" id="bs_{{$direct['id']}}">
+            @if($direct['id']!=$direction['id'])
+            <div class="backscreen center" id="bs_{{$direct['id']}}">
                 {!! HTML::image($direct['images'][0], 'Танцуют '.$direct['name'].' в Калининграде' )!!}
             </div>
+            @endif
         @endforeach
 
         {{--<div class="backscreen" id="bs_2">--}}

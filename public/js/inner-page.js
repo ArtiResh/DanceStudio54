@@ -1,65 +1,23 @@
-var getUrlParams = function(name){
+var setInnerSection = function(name){
     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-    if (results==null || $("#menu_" + results[1]).length < 1){
-        return false;
+    if (results==null){
+        return null;
     } else {
         return results[1] || 0
     }
 };
-var changeSection = function(id){
-    if(id === false){
-        $("#menu_0").removeClass('hide').addClass('active show');
-        $("#cont_0").addClass('active').animate({opacity:'1'}, 250);
-    } else {
-        $(".vertical_menu li.active").removeClass('active show').addClass('hide');
-        $(".content.active").animate({opacity:'0'}, 250, function(){
-            $(this).removeClass('active');
-        });
-        setTimeout(function(){
-            $("#menu_" + id).removeClass('hide').addClass('active show');
-            $("#cont_" + id).addClass('active').animate({opacity:'1'}, 250, function(){
-                changeKey = true;
-            });
-            clearInterval(mainImgTimer);
-            console.log($("#cont_" + id + " .img_wrap > div").length);
-            if($("#cont_" + id + " .img_wrap > div").length > 1) {
-                mainImgTimer = setInterval(function () {
-                    changeMainImages(id)
-                }, 6000);
-            }
-        }, 250);
-    }
+var changeSection = function(i){
+    $(".vertical_menu li.active").removeClass('active');
+    $(".content.active").removeClass('active');
+    $("#dir_" + i).addClass('active');
+    $("#cont_" + i).addClass('active');
 };
-var getElementIntId = function(elem){
-    return parseInt(elem.attr('id').substr(-1));
+var getSectionId = function(elem){
+    return elem.attr('id').substr(-1);
 };
-
-var changeMainImages = function(sectId){
-    var images = $("#cont_" + sectId).children('.img_wrap');
-    var currentImg = images.find('.active');
-    var nextImg = images.find("#img_" + (getElementIntId(currentImg) + 1));
-    if(nextImg.length == 0){
-        nextImg = images.find("#img_0");
-    }
-    currentImg.animate({opacity:'0'}, 250, function(){
-        $(this).removeClass('active');
-        nextImg.addClass('active').animate({opacity:'1'});
-    });
-};
-
 $(document).ready(function(){
-    changeKey = true;
-    changeSection(getUrlParams('id'));
-    if($(".content.active .img_wrap > div").length > 1) {
-        mainImgTimer = setInterval(function(){
-            changeMainImages(getElementIntId($(".content.active")));
-        }, 6000);
-    }
+    changeSection(setInnerSection('dir'));
     $(".vertical_menu li").on('click', function(){
-        if(changeKey == true){
-            changeKey = false;
-            var sect_id = getElementIntId($(this));
-            changeSection(sect_id);
-        }
+        changeSection(getSectionId($(this)));
     });
 });
