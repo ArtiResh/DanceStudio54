@@ -186,14 +186,6 @@
             var _mainEl = this.element;
             if($(selected).hasClass(settings.nameOfCenterEl))return this;
 
-            /****************** блок иссчезания текста **********************/
-
-            $("#desc_"+ this.options.idOfCenterEl).animate({opacity:0},700,function(){
-                $(this).css({display:"none"});
-            });
-
-            /****************** **********************/
-
             /** уменьшение центральной картинки*/
             $("." + settings.nameOfCenterEl).animate(
                 {
@@ -220,7 +212,7 @@
                               width: _this.naturalWidthFuture[_this.getProductId($(selected), settings.countOfNum)] * 2 + "%",
                               marginRight: settings.marginRight + "%",
                               marginLeft: settings.marginLeft + "%"
-                        }, 400,"linear");
+                        }, 500);
 
 
                         /** убираем класс с экс-центрального элемента*/
@@ -266,7 +258,7 @@
                                     height: settings.heightTall + "%",
                                     paddingTop: 0,
                                     marginLeft: settings.marginLeft + "%"
-                                }, 400,"linear", function () {
+                                }, 400, function () {
 
                                     /** Добавление класса */
                                     $(this).addClass(settings.nameOfCenterEl);
@@ -286,12 +278,6 @@
                             });
                     }
                 });
-
-            /****************** блок проявления текста **********************/
-
-            $("#desc_"+ _this.getProductId($(selected), settings.countOfNum)).css({display:"block"}).animate({opacity:1},2000);
-
-            /****************** **********************/
         }
     };
 

@@ -15,21 +15,21 @@
                 >{{$direction['name']}}</div>
         @endforeach
     </div>
-    @foreach($directions as $direction)
-        <div class="directions_text" id="desc_{{$direction['id']}}">
-            <h1>{{$direction['name']}}</h1>
+    {{--@foreach($directions as $direction)--}}
+        {{--<div class="directions_text">--}}
+            {{--<h1>{{$direction['name']}}</h1>--}}
 
-            {{$direction['desc']}}
-            <ul>
-                <a href="{{$direction['video']}}">
-                    <li class="video">Смотреть видео</li>
-                </a>
-                <a href="javascript:void(0);">
-                    <li class="applicate">Записаться на {{$direction['name']}}</li>
-                </a>
-            </ul>
-        </div>
-    @endforeach
+            {{--{{$direction['description']}}--}}
+            {{--<ul>--}}
+                {{--<a href="javascript:void(0);">--}}
+                    {{--<li class="video">Смотреть видео</li>--}}
+                {{--</a>--}}
+                {{--<a href="javascript:void(0);">--}}
+                    {{--<li class="applicate">Записаться на Jazz Modern</li>--}}
+                {{--</a>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+    {{--@endforeach--}}
     <div class="directions_text">
         <h1>Jazz Modern</h1>
 
