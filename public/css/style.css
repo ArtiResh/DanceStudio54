@@ -1061,6 +1061,10 @@ header .h_number:before {
 }
 /* line 50, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content {
+<<<<<<< HEAD
+=======
+  font: 14px "Arial", sans-serif;
+>>>>>>> parent of 90b40f3... Inner pages update
   display: none;
   width: 49%;
   float: left;
@@ -1102,6 +1106,7 @@ header .h_number:before {
   font-size: 0.803em;
   font-weight: 400;
 }
+<<<<<<< HEAD
 /* line 82, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .video {
   margin: 15.5% 0 11.5% 0;
@@ -1114,10 +1119,33 @@ header .h_number:before {
   margin-bottom: 4%;
 }
 /* line 91, ../sass/components/_inner-page.scss */
+=======
+/* line 146, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .video, .main_wrapper .inner_section .content .gallery {
+  margin: 15.5% 0 11.5% 0;
+}
+/* line 149, ../sass/components/_inner-page.scss */
+>>>>>>> parent of 90b40f3... Inner pages update
 .main_wrapper .inner_section .content .desc_detail {
   max-width: 92%;
   margin-bottom: 7.5%;
 }
+<<<<<<< HEAD
+=======
+/* line 153, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .gallery_img {
+  width: 14%;
+  display: inline-block;
+}
+/* line 156, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .gallery_img:not(:nth-of-type(6n)) {
+  margin: 0 2.7% 2% 0;
+}
+/* line 159, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .gallery_img img {
+  max-width: 100%;
+}
+>>>>>>> parent of 90b40f3... Inner pages update
 /* line 1, ../sass/base/_footer.scss */
 .main_wrapper footer {
   position: relative;
