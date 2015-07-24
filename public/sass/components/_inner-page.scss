@@ -1,0 +1,96 @@
+.inner_section {
+  margin-bottom: 80px;
+  &#in_directions{
+    background: #fff;
+    color: #000;
+  }
+  &#events, &#teachers {
+    background: #000;
+    color: #fff;
+  }
+  .text-head {
+    position: relative;
+    z-index: 5;
+    left: 3.5%;
+    padding: 122px 0 32px;
+    max-width: 46.5%;
+    line-height: 1.2em;
+    font-family: "Arial";
+    font-size: 0.803em;
+    font-weight: 400;
+  }
+  .vertical_menu {
+    width: 14.5%;
+    float: left;
+    margin-left: 4.1%;
+    margin-right: 6%;
+    font: 20px "Bebas Neue Bold";
+    li {
+      margin-bottom: 12%;
+      cursor: pointer;
+      position: relative;
+      &.active {
+        color: #da251c;
+        cursor: text;
+        &:after {
+          content: "";
+          position: absolute;
+          margin-left: 5px;
+          width: 50px;
+          height: 50px;
+          top: -14px;
+          display: inline-block;
+        }
+      }
+      &:hover {
+        color: #da251c;
+      }
+    }
+  }
+  .content {
+    display: none;
+    width: 49%;
+    float:left;
+    &.active {
+      display: block;
+    }
+    .img_wrap {
+      @include span(9 of 18 no-gutters);
+      img {
+        max-width: 100%;
+      }
+    }
+    .desc_wrap {
+      @include span(8 of 18 no-gutters last);
+      h1 {
+        color: #DA251C;
+        font-family: "Bebas Neue Book";
+        font-size: 7.7em;
+        font-weight: 300;
+        line-height: 0.95em;
+        padding-bottom: 0.1em;
+        padding-top: 7.5%;
+      }
+      p {
+        padding: 0.7em 0 0.7em;
+        line-height: 1.2em;
+        font-family: "Arial";
+        font-size: 0.803em;
+        font-weight: 400;
+      }
+    }
+    .video {
+      margin: 15.5% 0 11.5% 0;
+    }
+    .video h1, .desc_detail h1 {
+      font: 59px "Bebas Neue Book";
+      color: #DA251C;
+      text-transform: uppercase;
+      margin-bottom: 4%;
+    }
+    .desc_detail {
+      max-width: 92%;
+      margin-bottom: 7.5%;
+    }
+  }
+}
