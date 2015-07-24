@@ -1,10 +1,30 @@
+@keyframes hideArrow {
+  from {
+    margin-left: 5px;
+    opacity: 1;
+  }
+  to {
+    margin-left: 15px;
+    opacity: 0;
+  }
+}
+@keyframes showArrow {
+  from {
+    margin-left: 15px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 5px;
+    opacity: 1;
+  }
+}
 .inner_section {
   margin-bottom: 80px;
   &#in_directions{
     background: #fff;
     color: #000;
   }
-  &#events, &#teachers {
+  &#in_events, &#in_teachers {
     background: #000;
     color: #fff;
   }
@@ -29,18 +49,50 @@
       margin-bottom: 12%;
       cursor: pointer;
       position: relative;
+      letter-spacing: 1px;
+      -webkit-transition: color .15s linear;
+      -moz-transition: color .15s linear;
+      -ms-transition: color .15s linear;
+      -o-transition: color .15s linear;
+      transition: color .15s linear;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 53px;
+        top: -9px;
+        display: inline-block;
+        margin-left: 15px;
+        opacity: 0;
+      }
+      &.show {
+        &:after {
+          -webkit-animation: showArrow .15s linear 1 forwards;
+          -moz-animation: showArrow .15s linear 1 forwards;
+          -ms-animation: showArrow .15s linear 1 forwards;
+          -o-animation: showArrow .15s linear 1 forwards;
+          animation: showArrow .15s linear 1 forwards;
+        }
+      }
+      &.hide {
+        &:after {
+          -webkit-animation: hideArrow .15s linear 1 forwards;
+          -moz-animation: hideArrow .15s linear 1 forwards;
+          -ms-animation: hideArrow .15s linear 1 forwards;
+          -o-animation: hideArrow .15s linear 1 forwards;
+          animation: hideArrow .15s linear 1 forwards;
+        }
+      }
+      &.white_arrow:after {
+        background: url('/images/inner_pages/arrow_white.png') no-repeat;
+      }
+      &.black_arrow:after {
+        background: url('/images/inner_pages/arrow_black.png') no-repeat;
+        top: -14px;
+      }
       &.active {
         color: #da251c;
         cursor: text;
-        &:after {
-          content: "";
-          position: absolute;
-          margin-left: 5px;
-          width: 50px;
-          height: 50px;
-          top: -14px;
-          display: inline-block;
-        }
       }
       &:hover {
         color: #da251c;
@@ -48,6 +100,7 @@
     }
   }
   .content {
+    font: 14px "Arial", sans-serif;
     display: none;
     width: 49%;
     float:left;
@@ -56,16 +109,27 @@
     }
     .img_wrap {
       @include span(9 of 18 no-gutters);
-      img {
-        max-width: 100%;
+      div {
+        display: none;
+        text-align: center;
+        &.active {
+          display: block;
+        }
+        img {
+          max-width: 100%;
+        }
       }
+    }
+    h1 {
+      font: 59px "Bebas Neue Book";
+      color: #DA251C;
+      text-transform: uppercase;
+      margin-bottom: 4%;
     }
     .desc_wrap {
       @include span(8 of 18 no-gutters last);
       h1 {
-        color: #DA251C;
-        font-family: "Bebas Neue Book";
-        font-size: 7.7em;
+        font-size: 125px;
         font-weight: 300;
         line-height: 0.95em;
         padding-bottom: 0.1em;
@@ -79,18 +143,22 @@
         font-weight: 400;
       }
     }
-    .video {
+    .video, .gallery {
       margin: 15.5% 0 11.5% 0;
-    }
-    .video h1, .desc_detail h1 {
-      font: 59px "Bebas Neue Book";
-      color: #DA251C;
-      text-transform: uppercase;
-      margin-bottom: 4%;
     }
     .desc_detail {
       max-width: 92%;
       margin-bottom: 7.5%;
+    }
+    .gallery_img {
+      width: 14%;
+      display: inline-block;
+      &:not(:nth-of-type(6n)) {
+        margin: 0 2.7% 2% 0;
+      }
+      img {
+        max-width: 100%;
+      }
     }
   }
 }

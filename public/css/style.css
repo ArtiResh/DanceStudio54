@@ -1000,21 +1000,41 @@ header .h_number:before {
 .main_wrapper #s_inform .line2 {
   padding-top: 3.3em;
 }
-/* line 1, ../sass/components/_inner-page.scss */
+@keyframes hideArrow {
+  from {
+    margin-left: 5px;
+    opacity: 1;
+  }
+  to {
+    margin-left: 15px;
+    opacity: 0;
+  }
+}
+@keyframes showArrow {
+  from {
+    margin-left: 15px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 5px;
+    opacity: 1;
+  }
+}
+/* line 21, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section {
   margin-bottom: 80px;
 }
-/* line 3, ../sass/components/_inner-page.scss */
+/* line 23, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section#in_directions {
   background: #fff;
   color: #000;
 }
-/* line 7, ../sass/components/_inner-page.scss */
-.main_wrapper .inner_section#events, .main_wrapper .inner_section#teachers {
+/* line 27, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section#in_events, .main_wrapper .inner_section#in_teachers {
   background: #000;
   color: #fff;
 }
-/* line 11, ../sass/components/_inner-page.scss */
+/* line 31, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .text-head {
   position: relative;
   z-index: 5;
@@ -1026,7 +1046,7 @@ header .h_number:before {
   font-size: 0.803em;
   font-weight: 400;
 }
-/* line 22, ../sass/components/_inner-page.scss */
+/* line 42, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .vertical_menu {
   width: 14.5%;
   float: left;
@@ -1034,78 +1054,114 @@ header .h_number:before {
   margin-right: 6%;
   font: 20px "Bebas Neue Bold";
 }
-/* line 28, ../sass/components/_inner-page.scss */
+/* line 48, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .vertical_menu li {
   margin-bottom: 12%;
   cursor: pointer;
   position: relative;
+  letter-spacing: 1px;
+  -webkit-transition: color .15s linear;
+  -moz-transition: color .15s linear;
+  -ms-transition: color .15s linear;
+  -o-transition: color .15s linear;
+  transition: color .15s linear;
 }
-/* line 32, ../sass/components/_inner-page.scss */
+/* line 58, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .vertical_menu li:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 53px;
+  top: -9px;
+  display: inline-block;
+  margin-left: 15px;
+  opacity: 0;
+}
+/* line 69, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .vertical_menu li.show:after {
+  -webkit-animation: showArrow .15s linear 1 forwards;
+  -moz-animation: showArrow .15s linear 1 forwards;
+  -ms-animation: showArrow .15s linear 1 forwards;
+  -o-animation: showArrow .15s linear 1 forwards;
+  animation: showArrow .15s linear 1 forwards;
+}
+/* line 78, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .vertical_menu li.hide:after {
+  -webkit-animation: hideArrow .15s linear 1 forwards;
+  -moz-animation: hideArrow .15s linear 1 forwards;
+  -ms-animation: hideArrow .15s linear 1 forwards;
+  -o-animation: hideArrow .15s linear 1 forwards;
+  animation: hideArrow .15s linear 1 forwards;
+}
+/* line 86, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .vertical_menu li.white_arrow:after {
+  background: url("/images/inner_pages/arrow_white.png") no-repeat;
+}
+/* line 89, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .vertical_menu li.black_arrow:after {
+  background: url("/images/inner_pages/arrow_black.png") no-repeat;
+  top: -14px;
+}
+/* line 93, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .vertical_menu li.active {
   color: #da251c;
   cursor: text;
 }
-/* line 35, ../sass/components/_inner-page.scss */
-.main_wrapper .inner_section .vertical_menu li.active:after {
-  content: "";
-  position: absolute;
-  margin-left: 5px;
-  width: 50px;
-  height: 50px;
-  top: -14px;
-  display: inline-block;
-}
-/* line 45, ../sass/components/_inner-page.scss */
+/* line 97, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .vertical_menu li:hover {
   color: #da251c;
 }
-/* line 50, ../sass/components/_inner-page.scss */
+/* line 102, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   font: 14px "Arial", sans-serif;
->>>>>>> parent of 90b40f3... Inner pages update
-=======
-  font: 14px "Arial", sans-serif;
->>>>>>> parent of 90b40f3... Inner pages update
-=======
->>>>>>> parent of 8f2e98e... Inner pages templates update
   display: none;
   width: 49%;
   float: left;
 }
-/* line 54, ../sass/components/_inner-page.scss */
+/* line 107, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content.active {
   display: block;
 }
-/* line 57, ../sass/components/_inner-page.scss */
+/* line 110, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .img_wrap {
   width: 49.74619%;
   float: left;
 }
-/* line 59, ../sass/components/_inner-page.scss */
-.main_wrapper .inner_section .content .img_wrap img {
+/* line 112, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .img_wrap div {
+  display: none;
+  text-align: center;
+}
+/* line 115, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .img_wrap div.active {
+  display: block;
+}
+/* line 118, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .img_wrap div img {
   max-width: 100%;
 }
-/* line 63, ../sass/components/_inner-page.scss */
+/* line 123, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content h1 {
+  font: 59px "Bebas Neue Book";
+  color: #DA251C;
+  text-transform: uppercase;
+  margin-bottom: 4%;
+}
+/* line 129, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .desc_wrap {
   width: 44.16244%;
   float: right;
   margin-right: 0;
 }
-/* line 65, ../sass/components/_inner-page.scss */
+/* line 131, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .desc_wrap h1 {
-  color: #DA251C;
-  font-family: "Bebas Neue Book";
-  font-size: 7.7em;
+  font-size: 125px;
   font-weight: 300;
   line-height: 0.95em;
   padding-bottom: 0.1em;
   padding-top: 7.5%;
 }
-/* line 74, ../sass/components/_inner-page.scss */
+/* line 138, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .desc_wrap p {
   padding: 0.7em 0 0.7em;
   line-height: 1.2em;
@@ -1113,57 +1169,15 @@ header .h_number:before {
   font-size: 0.803em;
   font-weight: 400;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* line 82, ../sass/components/_inner-page.scss */
-.main_wrapper .inner_section .content .video {
-  margin: 15.5% 0 11.5% 0;
-}
-/* line 85, ../sass/components/_inner-page.scss */
-.main_wrapper .inner_section .content .video h1, .main_wrapper .inner_section .content .desc_detail h1 {
-  font: 59px "Bebas Neue Book";
-  color: #DA251C;
-  text-transform: uppercase;
-  margin-bottom: 4%;
-}
-/* line 91, ../sass/components/_inner-page.scss */
-=======
-=======
->>>>>>> parent of 90b40f3... Inner pages update
 /* line 146, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .video, .main_wrapper .inner_section .content .gallery {
   margin: 15.5% 0 11.5% 0;
 }
 /* line 149, ../sass/components/_inner-page.scss */
-<<<<<<< HEAD
->>>>>>> parent of 90b40f3... Inner pages update
-=======
->>>>>>> parent of 90b40f3... Inner pages update
-=======
-/* line 82, ../sass/components/_inner-page.scss */
-.main_wrapper .inner_section .content .video {
-  margin: 15.5% 0 11.5% 0;
-}
-/* line 85, ../sass/components/_inner-page.scss */
-.main_wrapper .inner_section .content .video h1, .main_wrapper .inner_section .content .desc_detail h1 {
-  font: 59px "Bebas Neue Book";
-  color: #DA251C;
-  text-transform: uppercase;
-  margin-bottom: 4%;
-}
-/* line 91, ../sass/components/_inner-page.scss */
->>>>>>> parent of 8f2e98e... Inner pages templates update
 .main_wrapper .inner_section .content .desc_detail {
   max-width: 92%;
   margin-bottom: 7.5%;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 90b40f3... Inner pages update
 /* line 153, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .gallery_img {
   width: 14%;
@@ -1177,9 +1191,6 @@ header .h_number:before {
 .main_wrapper .inner_section .content .gallery_img img {
   max-width: 100%;
 }
->>>>>>> parent of 90b40f3... Inner pages update
-=======
->>>>>>> parent of 8f2e98e... Inner pages templates update
 /* line 1, ../sass/base/_footer.scss */
 .main_wrapper footer {
   position: relative;
