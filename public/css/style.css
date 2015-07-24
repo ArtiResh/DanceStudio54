@@ -1062,6 +1062,10 @@ header .h_number:before {
 /* line 50, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  font: 14px "Arial", sans-serif;
+>>>>>>> parent of 90b40f3... Inner pages update
 =======
   font: 14px "Arial", sans-serif;
 >>>>>>> parent of 90b40f3... Inner pages update
@@ -1107,6 +1111,7 @@ header .h_number:before {
   font-weight: 400;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* line 82, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .video {
   margin: 15.5% 0 11.5% 0;
@@ -1120,18 +1125,26 @@ header .h_number:before {
 }
 /* line 91, ../sass/components/_inner-page.scss */
 =======
+=======
+>>>>>>> parent of 90b40f3... Inner pages update
 /* line 146, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .video, .main_wrapper .inner_section .content .gallery {
   margin: 15.5% 0 11.5% 0;
 }
 /* line 149, ../sass/components/_inner-page.scss */
+<<<<<<< HEAD
+>>>>>>> parent of 90b40f3... Inner pages update
+=======
 >>>>>>> parent of 90b40f3... Inner pages update
 .main_wrapper .inner_section .content .desc_detail {
   max-width: 92%;
   margin-bottom: 7.5%;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 90b40f3... Inner pages update
 /* line 153, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .gallery_img {
   width: 14%;
