@@ -89,9 +89,29 @@
          * */
 
         on: function (elem, settings) {
+
             settings.sideOfMovement = $(elem).position().left - $("#bs_" + this.options.idOfCenterEl).position().left;
-            settings.sideOfMovement < 0 ? settings.sideOfMovement = "left" : settings.sideOfMovement = "right";
-            this.slide(elem, settings);
+            if(settings.sideOfMovement<0){
+                settings.sideOfMovement = "left";
+                navVar = -1;
+                this.options.idOfCenterEl == 1? navVar = 10: navVar = navVar;
+            }
+            else if(settings.sideOfMovement>0){
+                settings.sideOfMovement = "right";
+                navVar = 1;
+                this.options.idOfCenterEl == 11? navVar = -10: navVar = navVar;
+            }
+            else{
+                navVar = 0;
+            }
+
+            /** изменение пункта меню*/
+            $(settings.navigationPanel).children().removeClass(settings.navigationClass);
+            $("#nv_"+(this.options.idOfCenterEl+navVar)).addClass(settings.navigationClass);
+
+            /** запуск движения*/
+            this.slide(elem, settings, 1);
+
         },
 
         /**
@@ -101,9 +121,6 @@
         getProductId: function (elem, countOfNum) {
 
             typeof(elem)=="object"? elem = elem:elem = $(this.element).find(elem);
-
-            ttemp = parseInt($(elem).attr('id').substr(countOfNum));
-
             return parseInt($(elem).attr('id').substr(countOfNum));
         },
 
@@ -152,21 +169,17 @@
             itter = leftSide<rightSide?leftSide:rightSide;
             settings.sideOfMovement = rightSide<leftSide?"left":"right";
 
-            /** костыль на неведомый баг, если середина и смещение с правой стороны происходит схлопывание*/
-            if(settings.sideOfMovement==="right"&&itter===5){settings.sideOfMovement="left";itter=6;}
-
             /** прокрутка слайдера*/
-            for(var i=0;i<itter;i++){
-                _this.slide(("#bs_"+idDir),settings);
-            }
+
+                _this.slide(("#bs_"+idDir),settings, itter);
+
         },
 
         /**
          * Метод — "Реализация слайдера"
          * */
 
-        slide: function (elem, settings) {
-            console.log(settings);
+        slide: function (elem, settings, steps) {
             /** определение переменных, и сброс если был клинкнут центральный элемент*/
             var selected = elem;
             var _this = this;
@@ -183,21 +196,28 @@
                     /** реализиция движения при выборе левого элемента*/
                     if (settings.sideOfMovement === "left") {
 
-                        /** добавление в начало слайдера блока из конца (на случай если был выбран первый элемент) и смещение слайдера на его длину*/
-                        $(_mainEl).css({left: -(_this.naturalWidthFuture[_this.getProductId($(".directions__slider .backscreen:last"), settings.countOfNum)]) * 3 + "%"})
-                            .prepend($(".directions__slider .backscreen:last"));
+                        /** цикл, смещающий на количество позиций переданное через steps*/
+                        for(var loops = 0;loops<steps;loops++) {
+
+                            /** добавление в начало слайдера блока из конца (на случай если был выбран первый элемент) и смещение слайдера на его длину*/
+                            $(_mainEl).css({left: -(_this.naturalWidthFuture[_this.getProductId($(".directions__slider .backscreen:last"), settings.countOfNum)]) * 3*steps + "%"})
+                                .prepend($(".directions__slider .backscreen:last"));
+                        }
+
+                        /** двигаем слайдер*/
+                        $(_mainEl).animate({left: "0"}, (settings.speedSlide * 2.5));
 
                         /** увеличение длины и отступов выбранного элемента*/
                         $(selected).animate({
-                            width: _this.naturalWidthFuture[_this.getProductId($(selected), settings.countOfNum)] * 2 + "%",
-                            marginRight: settings.marginRight + "%",
-                            marginLeft: settings.marginLeft + "%"
+                              width: _this.naturalWidthFuture[_this.getProductId($(selected), settings.countOfNum)] * 2 + "%",
+                              marginRight: settings.marginRight + "%",
+                              marginLeft: settings.marginLeft + "%"
                         }, 500);
 
-                        /** убираем класс с экс-центрального элемента и двигаем слайдер*/
+
+                        /** убираем класс с экс-центрального элемента*/
                         var exTemp = $(this);
                         $(this).removeClass(settings.nameOfCenterEl);
-                        $(_mainEl).animate({left: "0"}, (settings.speedSlide*2.5));
 
                         /** увеличивааем центральный элемент, добавляем класс и уменьшаем длину экс-центрального элемента*/
                         $(selected).animate({height: settings.heightTall + "%", paddingTop: 0}, 400, function () {
@@ -222,24 +242,18 @@
                             marginRight: settings.marginRight + "%",
                             marginLeft: settings.marginLeft + "%"
                         });
+                        $("." + settings.nameOfCenterEl).animate({
+                            width: _this.naturalWidthFuture[_this.options.idOfCenterEl] + "%",
+                            marginRight: "0",
+                            marginLeft: "0"
+                        }, settings.speedSlide);
+                        /** смещение слайдера на 3ую длину выбранного блока*/
+                        /** цикл, смещающий на количество позиций переданное через steps*/
 
-                        /** смещение слайдера на 2ую длину выбранного блока*/
-                        offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 3);
-                        $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide*1.25),"linear", function () {
-
-                            /** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину*/
-                            $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
-
-                            /** уменьшение длины и отступов экс-центрального элемента*/
-                            $("." + settings.nameOfCenterEl).animate({
-                                width: _this.naturalWidthFuture[_this.options.idOfCenterEl] + "%",
-                                marginRight: "0",
-                                marginLeft: "0"
-                            }, settings.speedSlide,"linear", function () {
-
-                                /** увеличение выбранного элемента*/
-                                var exTemp = $(this);
-                                $(this).removeClass(settings.nameOfCenterEl);
+                            offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 3*steps);
+                            $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide * 2), "linear", function () {
+                                var exTemp = $("." + settings.nameOfCenterEl);
+                                exTemp.removeClass(settings.nameOfCenterEl);
                                 $(selected).animate({
                                     height: settings.heightTall + "%",
                                     paddingTop: 0,
@@ -256,9 +270,12 @@
                                         marginRight: 0
                                     });
                                 });
-                            });
 
-                        });
+                                /** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину, по очередно*/
+                                for(var loops = 0;loops<steps;loops++) {
+                                    $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
+                                }
+                            });
                     }
                 });
         }
