@@ -15,13 +15,13 @@
         <div class="text-head">Мы находимся в постоянном развитии и самосовершенствовании. Жизнь в студии кипит и пополняет наши альбомы отличными моментами с соревнований или выступлений.</div>
         <section class="vertical_menu">
             <ul>
-                @foreach($events as $key => $event)
-                    <li class="black_arrow" id="menu_{{$key}}">{{$event['name']}}</li>
+                @foreach($events as $event)
+                    <li class="black_arrow" id="menu_{{$event['id']}}">{{$event['name']}}</li>
                 @endforeach
             </ul>
         </section>
         @foreach($events as $key => $event)
-            <section class="content" id="cont_{{$key}}">
+            <section class="content" id="cont_{{$event['id']}}">
                 <div class="img_wrap">
                     <div class="active">{!! HTML::Image($event['images'][0], $event['name']) !!}</div>
                 </div>

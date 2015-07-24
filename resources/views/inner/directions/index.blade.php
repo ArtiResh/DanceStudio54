@@ -12,13 +12,13 @@
         <div class="text-head">Мы предлагаем запись на обучение по множеству танцевальных направлений. Наши педагоги проводят тренировки как по современным танцам, так и по классической хореографии. В нашей студии можно подготовится к мероприятиям различного уровня, от танца в клубе, до профессионального выступления на чемпионатах мирового уровня.</div>
         <section class="vertical_menu">
             <ul>
-                @foreach($directions as $key => $direction)
-                    <li class="white_arrow" id="menu_{{$key}}">{{$direction['name']}}</li>
+                @foreach($directions as $direction)
+                    <li class="white_arrow" id="menu_{{$direction['id']}}">{{$direction['name']}}</li>
                 @endforeach
             </ul>
         </section>
         @foreach($directions as $key => $direction)
-            <section class="content" id="cont_{{$key}}">
+            <section class="content" id="cont_{{$direction['id']}}">
                 <div class="img_wrap">
                     @foreach($direction['images'] as $key => $image)
                         @if($key == 0)

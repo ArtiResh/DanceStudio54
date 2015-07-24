@@ -8,8 +8,8 @@ var getUrlParams = function(name){
 };
 var changeSection = function(id){
     if(id === false){
-        $("#menu_0").removeClass('hide').addClass('active show');
-        $("#cont_0").addClass('active').animate({opacity:'1'}, 250);
+        $(".vertical_menu li:first").removeClass('hide').addClass('active show');
+        $(".content:first").addClass('active').animate({opacity:'1'}, 250);
     } else {
         $(".vertical_menu li.active").removeClass('active show').addClass('hide');
         $(".content.active").animate({opacity:'0'}, 250, function(){
@@ -21,7 +21,6 @@ var changeSection = function(id){
                 changeKey = true;
             });
             clearInterval(mainImgTimer);
-            console.log($("#cont_" + id + " .img_wrap > div").length);
             if($("#cont_" + id + " .img_wrap > div").length > 1) {
                 mainImgTimer = setInterval(function () {
                     changeMainImages(id)
@@ -49,6 +48,7 @@ var changeMainImages = function(sectId){
 
 $(document).ready(function(){
     changeKey = true;
+    mainImgTimer = false;
     changeSection(getUrlParams('id'));
     if($(".content.active .img_wrap > div").length > 1) {
         mainImgTimer = setInterval(function(){

@@ -12,13 +12,13 @@
         <div class="text-head">В нашей студии преподаванием занимаются опытные хореографы, которые прошли не один десяток мастер-классов, состоялись как профессиональные танцоры и подготовили множество юных спортсменов к соревнованиям и выступлениям.</div>
         <section class="vertical_menu">
             <ul>
-                @foreach($teachers as $key => $teacher)
-                    <li class="black_arrow" id="menu_{{$key}}">{{$teacher['name']}}</li>
+                @foreach($teachers as $teacher)
+                    <li class="black_arrow" id="menu_{{$teacher['id']}}">{{$teacher['name']}}</li>
                 @endforeach
             </ul>
         </section>
         @foreach($teachers as $key => $teacher)
-            <section class="content" id="cont_{{$key}}">
+            <section class="content" id="cont_{{$teacher['id']}}">
                 <div class="img_wrap">
                     <div class="active">{!! HTML::Image($teacher['images'][1], $teacher['name']) !!}</div>
                 </div>
