@@ -455,6 +455,13 @@ header .h_number:before {
 .main_wrapper #s_directions svg line {
   stroke: #dc241c;
 }
+/* line 120, ../sass/components/_directions.scss */
+.main_wrapper .blur {
+  -webkit-filter: blur(9px) !important;
+  -moz-filter: blur(9px) !important;
+  -o-filter: blur(9px) !important;
+  -ms-filter: blur(9px) !important;
+}
 /* line 1, ../sass/components/_masters.scss */
 .main_wrapper #s_masters {
   position: relative;

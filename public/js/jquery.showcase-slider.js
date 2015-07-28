@@ -245,6 +245,7 @@
 
                     /** реализация движения при выборе вправого элемента*/
                     else {
+                        $("." + settings.nameOfCenterEl).addClass("blur");
                         /** увеличение длины и отступов выбранного элемента*/
                         $(selected).css({
                             width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] * 2 + "%",
@@ -263,6 +264,8 @@
                             $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide * 2), "linear", function () {
                                 var exTemp = $("." + settings.nameOfCenterEl);
                                 exTemp.removeClass(settings.nameOfCenterEl);
+                                exTemp.removeClass("blur");
+
                                 $(selected).animate({
                                     height: settings.heightTall + "%",
                                     paddingTop: 0,

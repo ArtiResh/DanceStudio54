@@ -117,3 +117,9 @@
   }
   @include var_SvgSwitcher(#dc241c)
 }
+.blur{
+  -webkit-filter: blur(9px) !important;
+  -moz-filter: blur(9px) !important;
+  -o-filter: blur(9px) !important;
+  -ms-filter: blur(9px) !important;
+}
