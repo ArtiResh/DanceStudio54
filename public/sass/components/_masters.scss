@@ -19,6 +19,9 @@
       .ico{
         float: left;
         @include span (7 of 15 split);
+        img{
+          max-width: 100%;
+        }
       }
       .description{
         @include span (8 of 15 split);
