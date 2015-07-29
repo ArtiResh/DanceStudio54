@@ -34,15 +34,22 @@
           padding-bottom: 5%;
         }
   }
-  .intro__backscreen {
-        position: absolute;
-        z-index: 2;
-        float: right;
-        height: 100%;
-        width: 80%;
-        left: 21%;
-        background: url(../images/main.png) no-repeat;
-        -webkit-background-size:cover;
-        background-size:cover;
+  .intro__backscreen{
+    .intro_1,.intro_2 {
+      position: absolute;
+      z-index: 2;
+      float: right;
+      height: 100%;
+      width: 80%;
+      left: 21%;
+      background: url(../images/main.png) no-repeat;
+      -webkit-background-size:cover;
+      background-size:cover;
+    }
+    .intro_2{
+      background: url(../images/main2.png) no-repeat;
+      z-index: 1;
+      opacity: 0;
+    }
   }
 }

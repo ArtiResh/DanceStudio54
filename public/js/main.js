@@ -30,10 +30,16 @@ $(document).ready(function () {
     imgInterval = setInterval(function(){
         changeImg($("#bs_1"));
     }, 7000);
-    /*$('.center').ready(function(){
-        if($('.center').is('secondimg')){
-            setInterval(changeImg($(this)),500);
-            $(this).children(.)
-        }
-    });*/
+    imgIntroInterval = setInterval(function(){
+        $(".intro__backscreen").children().first()
+                .animate({opacity: 0}, 750, function () {
+                    $(this).css({zIndex: "1"});
+                $(".intro__backscreen").append($(this)).children().first()
+                        .css({zIndex: "2"})
+                        .animate({opacity: 1}).delay(7000);
+
+                });
+
+
+    }, 7000);
 });

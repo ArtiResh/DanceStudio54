@@ -8,13 +8,15 @@
 var imgInterval = 0;
 
 changeImg = function (element) {
-    element.children().first()
-        .animate({opacity: 0}, 250, function () {
-            $(this).css({display: "none"});
-            element.append($(this)).children().first()
-                .css({display: "block"})
-                .animate({opacity: 1});
-        });
+    if(element.children('img').length>1) {
+        element.children().first()
+            .animate({opacity: 0}, 250, function () {
+                $(this).css({display: "none"});
+                element.append($(this)).children().first()
+                    .css({display: "block"})
+                    .animate({opacity: 1});
+            });
+    }
 };
 
 (function ($, window, document, element, options) {

@@ -16,5 +16,9 @@
             Мы рады всем, кто любит танцы так же сильно, как любим мы.</p>
 
     </article>
-    <div class="intro__backscreen"></div>
+    <div class="intro__backscreen">
+        <div class="intro_1"></div>
+        <div class="intro_2"></div>
+    </div>
+
 </section>
