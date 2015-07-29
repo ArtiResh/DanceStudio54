@@ -21,26 +21,19 @@ function initializeMap() {
     });
 }
 
-changeImg = function (element) {
-    element.children().first()
-        .animate({opacity: 0}, 250, function () {
-            $(this).css({display: "none"});
-            element.append($(this)).children().first()
-                .css({display: "block"})
-                .animate({opacity: 1});
-        });
-};
-
 
 google.maps.event.addDomListener(window, 'load', initializeMap);
 $(document).ready(function () {
     $("#desc_1").css({display:"block",opacity:1});
     $("#bs_1").addClass("center");
     $(".directions__slider").prepend($(".directions__slider .backscreen:last")).showcaseSlider(this);
-    $('.center').ready(function(){
+    imgInterval = setInterval(function(){
+        changeImg($("#bs_1"));
+    }, 7000);
+    /*$('.center').ready(function(){
         if($('.center').is('secondimg')){
             setInterval(changeImg($(this)),500);
-            //$(this).children(.)
+            $(this).children(.)
         }
-    });
+    });*/
 });

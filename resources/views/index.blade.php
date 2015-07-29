@@ -42,7 +42,7 @@
     @include('base.footer')
 </div>
 
-{!! Html::script('js/jquery-1.7.2.min.js') !!}
+{!! Html::script('js/jquery-1.11.3.min.js') !!}
 {!! Html::script('js/jquery.fullPage.min.js') !!}
 {!! Html::script('https://maps.googleapis.com/maps/api/js?v=3.exp') !!}
 {!! Html::script('js/jquery.showcase-slider.js') !!}

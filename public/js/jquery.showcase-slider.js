@@ -5,7 +5,18 @@
  *
  */
 
-;
+var imgInterval = 0;
+
+changeImg = function (element) {
+    element.children().first()
+        .animate({opacity: 0}, 250, function () {
+            $(this).css({display: "none"});
+            element.append($(this)).children().first()
+                .css({display: "block"})
+                .animate({opacity: 1});
+        });
+};
+
 (function ($, window, document, element, options) {
 
     var pluginName = 'showcaseSlider';
@@ -202,6 +213,7 @@
                     height: settings.heightLow + "%"
                 }, 150, function () {
 
+                    clearInterval(imgInterval);
                     /** реализиция движения при выборе левого элемента*/
                     if (settings.sideOfMovement === "left") {
 
@@ -230,7 +242,12 @@
 
                         /** увеличивааем центральный элемент, добавляем класс и уменьшаем длину экс-центрального элемента*/
                         $(selected).animate({height: settings.heightTall + "%", paddingTop: 0}, 250, function () {
+
                             $(this).addClass(settings.nameOfCenterEl);
+
+                            imgInterval = setInterval(function(){
+                                changeImg($(selected));
+                            }, 7000);
 
                             /** передача id центрального элемента в массив*/
                             _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
@@ -274,6 +291,10 @@
 
                                     /** Добавление класса */
                                     $(this).addClass(settings.nameOfCenterEl);
+
+                                    imgInterval = setInterval(function(){
+                                        changeImg($(selected));
+                                    }, 7000);
 
                                     /** передача id центрального элемента в массив*/
                                     _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
