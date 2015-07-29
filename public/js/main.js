@@ -20,10 +20,34 @@ function initializeMap() {
         title: 'Hello World!'
     });
 }
+var changeImg = setInterval(function(){
+
+},300);
+
+
+
+;(function ($, window, document, element) {
+    jQuery.fn.changeImg = function () {
+
+            $(this).children().first()
+                .animate({opacity:0},250,function(){
+                    this.css({display: "none"});
+                    element.append(this).children().first()
+                        .css({display:"block"})
+                        .animate({opacity:1});
+        });
+  }
+})(jQuery, window, document);
+
 google.maps.event.addDomListener(window, 'load', initializeMap);
 $(document).ready(function () {
     $("#desc_1").css({display:"block",opacity:1});
     $("#bs_1").addClass("center");
     $(".directions__slider").prepend($(".directions__slider .backscreen:last")).showcaseSlider(this);
-
+    $('.center').ready(function(){
+        if($('.center').is('secondimg')){
+            setInterval(this.changeImg(),500);
+            //$(this).children(.)
+        };
+    });
 });

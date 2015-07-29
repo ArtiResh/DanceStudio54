@@ -35,7 +35,10 @@
 
         @foreach($directions as $direct)
             <div class="backscreen" id="bs_{{$direct['id']}}">
-                {!! HTML::image($direct['images'][0], 'Танцуют '.$direct['name'].' в Калининграде' )!!}
+                {!! HTML::image($direct['images'][0], 'Танцуют '.$direct['name'].' в Калининграде', ['class' => 'mainimg'] )!!}
+                @if(isset($direct['images'][1]))
+                    {!! HTML::image($direct['images'][1], 'Танцуют '.$direct['name'].' в Калининграде', ['class' => 'secondimg'] )!!}
+                    @endif
             </div>
         @endforeach
     </div>

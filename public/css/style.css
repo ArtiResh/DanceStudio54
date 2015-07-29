@@ -17,7 +17,7 @@ em, i {
   font-style: italic !important;
 }
 
-/* line 5, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -39,45 +39,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -101,19 +101,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @font-face {
   font-family: "Bebas Neue Bold";
-  src: url('../fonts/bebas/BebasNeue Bold.ttf?1389691026') format('truetype'), url('../fonts/bebas/BebasNeue Bold.otf?1389690978') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Bold.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Bold.otf?1437395161') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Book";
-  src: url('../fonts/bebas/BebasNeue Book.ttf?1389998578') format('truetype'), url('../fonts/bebas/BebasNeue Book.otf?1389998438') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Book.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Book.otf?1437395161') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Light";
-  src: url('../fonts/bebas/BebasNeue Light.ttf?1389998708') format('truetype'), url('../fonts/bebas/BebasNeue Light.otf?1389998678') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Light.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Light.otf?1437395161') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Regular";
-  src: url('../fonts/bebas/BebasNeue Regular.ttf?1389998908') format('truetype'), url('../fonts/bebas/BebasNeue Regular.otf?1389998860') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Regular.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Regular.otf?1437395161') format('opentype');
 }
 /* line 4, ../sass/base/_reset.scss */
 body, .main-wrapper, html {
@@ -381,7 +381,12 @@ header .h_number:before {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 72, ../sass/components/_directions.scss */
+/* line 68, ../sass/components/_directions.scss */
+.main_wrapper #s_directions .directions__slider div .secondimg {
+  opacity: 0;
+  display: none;
+}
+/* line 76, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__slider .center {
   padding-top: 0;
   width: 15.38462%;
@@ -395,7 +400,7 @@ header .h_number:before {
   -o-filter: blur(0);
   -ms-filter: blur(0);
 }
-/* line 87, ../sass/components/_directions.scss */
+/* line 91, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text {
   position: absolute;
   display: none;
@@ -405,7 +410,7 @@ header .h_number:before {
   left: 55%;
   max-width: 430px;
 }
-/* line 95, ../sass/components/_directions.scss */
+/* line 99, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text h1 {
   color: #DA251C;
   font-family: "Bebas Neue Book";
@@ -414,12 +419,12 @@ header .h_number:before {
   line-height: 0.95em;
   padding-bottom: 0.1em;
 }
-/* line 100, ../sass/components/_directions.scss */
+/* line 104, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text p {
   padding: 0.7em 0 0.7em;
   line-height: 1.2em;
 }
-/* line 106, ../sass/components/_directions.scss */
+/* line 110, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text a {
   color: #4491F9;
   font-size: 1.2em;
@@ -455,7 +460,7 @@ header .h_number:before {
 .main_wrapper #s_directions svg line {
   stroke: #dc241c;
 }
-/* line 120, ../sass/components/_directions.scss */
+/* line 124, ../sass/components/_directions.scss */
 .main_wrapper .blur {
   -webkit-filter: blur(9px) !important;
   -moz-filter: blur(9px) !important;
@@ -478,7 +483,7 @@ header .h_number:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
 .main_wrapper #s_masters .masters__teacher:after {
   content: " ";
   display: block;
@@ -637,7 +642,7 @@ header .h_number:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
 .main_wrapper #s_studio .studio__information:after {
   content: " ";
   display: block;
