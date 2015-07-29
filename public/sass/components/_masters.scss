@@ -19,9 +19,6 @@
       .ico{
         float: left;
         @include span (7 of 15 split);
-        img{
-          width: 90%;
-        }
       }
       .description{
         @include span (8 of 15 split);
@@ -48,4 +45,55 @@
     }
   }
   @include var_SvgSwitcher(#ffffff)
+}
+
+
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all .35s linear;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: all .35s linear;
+  -o-transform-style: preserve-3d;
+  -o-transition: all .35s linear;
+  transform-style: preserve-3d;
+  transition: all .35s linear;
+}
+#f1_container:hover #f1_card {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  -webkit-transform: rotateY(180deg);
+  -webkit-box-sizing: border-box;
+  -moz-transform: rotateY(180deg);
+  -moz-box-sizing: border-box;
+  -o-transform: rotateY(180deg);
+  -o-box-sizing: border-box;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
 }

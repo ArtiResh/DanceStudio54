@@ -8,7 +8,20 @@
         @foreach($teachers as $teacher)
             <div class="teachers">
                 <div class="ico">
-                    {!! HTML::image($teacher['images'][0], $teacher['name']) !!}
+                    @if (count($teacher['images']) > 1)
+                        <div id="f1_container">
+                            <div id="f1_card" class="shadow">
+                                <div class="front face">
+                                    {!! HTML::image($teacher['images'][0], $teacher['name']) !!}
+                                </div>
+                                <div class="back face center">
+                                    {!! HTML::image($teacher['images'][1], $teacher['name']) !!}
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        {!! HTML::image($teacher['images'][0], $teacher['name']) !!}
+                    @endif
                 </div>
                 <div class="description">
                     <h1>{{ $teacher['name'] }}</h1>
