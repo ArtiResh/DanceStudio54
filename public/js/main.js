@@ -39,7 +39,11 @@ $(document).ready(function () {
                         .animate({opacity: 1}).delay(7000);
 
                 });
-
-
     }, 7000);
+    $(".main_wrapper").fullpage(
+        {
+            anchors: ['intro', 'directions', 'masters', 'studio', 'application', 'inform'],
+            menu: '#fp_menu'
+        }
+    );
 });

@@ -8,7 +8,20 @@
         @foreach($events as $event)
             <div class="studios">
                 <div class="foto">
-                    {!! HTML::image($event['images'][0], $event['name'] ) !!}
+                    @if (count($event['images']) > 1)
+                        <div id="f1_container">
+                            <div id="f1_card" class="shadow">
+                                <div class="front face">
+                                    {!! HTML::image($event['images'][0], $event['name']) !!}
+                                </div>
+                                <div class="back face center">
+                                    {!! HTML::image($event['images'][1], $event['name']) !!}
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        {!! HTML::image($event['images'][0], $event['name']) !!}
+                    @endif
                 </div>
                 <div class="description">
                     <h1>{{$event['name']}}</h1>

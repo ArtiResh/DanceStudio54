@@ -5,10 +5,10 @@ header{
       background-color: #DA251C;
       z-index:20;
       > *{
-          padding-top: 19px;
-          height: auto;
-          display: inline-block;
-          vertical-align: middle;
+        padding-top: 19px;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
       }
       .h_divider{
         position: relative;
@@ -18,46 +18,56 @@ header{
         height: 26px;
       }
       .h_logo{
-          width: 12%;
-          text-align: center;
+        width: 21.1%;
+        text-align: center;
       }
       nav{
-          width: 44.2%;
-          a{
-              display: inline-block;
-              text-align: center;
-            letter-spacing: 2px;
-            color: #FFF;
-            font-family: "Bebas Neue Bold";
-            font-size: 18px;
-            font-weight: 400;
-            text-decoration: none;
+        width: 57.8%;
+        .h_divider{
+          top: 0;
+          float: left;
+          height: 45px;
+        }
+        a {
+          display: inline-block;
+          text-align: center;
+          letter-spacing: 2px;
+          color: #FFF;
+          font-family: "Bebas Neue Bold";
+          font-size: 18px;
+          font-weight: 400;
+          text-decoration: none;
+          float: left;
+          line-height: 45px;
+          padding-right: 4.09%;
+          &:not(:first-of-type):before{
+            content: "\2605";
+            position: relative;
+            top: -1px;
+            right: 2px;
+            display: none;
           }
-          .link_01{
-
-            @include span(4 of 20 split);
-            margin-left: 5%;
+          &:not(:first-of-type).active:before {
+            display: inline-block;
           }
-          .link_02{
-            @include span(3 of 20 split);
+          /*.star {
+            position: relative;
+            top: -1px;
+            right: 2px;
+          }*/
+          &.link_01{
+            margin-left: 5.4%;
           }
-          .link_03{
-            @include span(3 of 20 split);
-          }
-          .link_04{
-            @include span(4 of 20 split);
-          }
-          .link_05{
-            @include span(4 of 20 split);
-          }
+        }
       }
       .h_number{
-          width: 33%;
-          font-family: "Arial Black";
-          font-size: 1.250em;
-          color: #FFFFFF;
-          @include var_BeforeImage(35px,'../images/tel_ico.png');
-          padding: 0 0 0 4%;
+        width: 33%;
+        font-family: "Arial Black";
+        font-size: 20px;
+        color: #FFFFFF;
+        padding: 0 0 0 4%;
+        line-height: 45px;
+        @include var_BeforeImage(35px,'../images/tel_ico.png');
           &:before{
             padding: 0;
             margin-right: 10px;

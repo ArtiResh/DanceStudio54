@@ -17,7 +17,7 @@ em, i {
   font-style: italic !important;
 }
 
-/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -39,45 +39,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -101,19 +101,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @font-face {
   font-family: "Bebas Neue Bold";
-  src: url('../fonts/bebas/BebasNeue Bold.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Bold.otf?1437395161') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Bold.ttf?1389691026') format('truetype'), url('../fonts/bebas/BebasNeue Bold.otf?1389690978') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Book";
-  src: url('../fonts/bebas/BebasNeue Book.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Book.otf?1437395161') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Book.ttf?1389998578') format('truetype'), url('../fonts/bebas/BebasNeue Book.otf?1389998438') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Light";
-  src: url('../fonts/bebas/BebasNeue Light.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Light.otf?1437395161') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Light.ttf?1389998708') format('truetype'), url('../fonts/bebas/BebasNeue Light.otf?1389998678') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Regular";
-  src: url('../fonts/bebas/BebasNeue Regular.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Regular.otf?1437395161') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Regular.ttf?1389998908') format('truetype'), url('../fonts/bebas/BebasNeue Regular.otf?1389998860') format('opentype');
 }
 /* line 4, ../sass/base/_reset.scss */
 body, .main-wrapper, html {
@@ -154,14 +154,20 @@ header .h_divider {
 }
 /* line 20, ../sass/base/_header.scss */
 header .h_logo {
-  width: 12%;
+  width: 21.1%;
   text-align: center;
 }
 /* line 24, ../sass/base/_header.scss */
 header nav {
-  width: 44.2%;
+  width: 57.8%;
 }
 /* line 26, ../sass/base/_header.scss */
+header nav .h_divider {
+  top: 0;
+  float: left;
+  height: 45px;
+}
+/* line 31, ../sass/base/_header.scss */
 header nav a {
   display: inline-block;
   text-align: center;
@@ -171,50 +177,39 @@ header nav a {
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
-}
-/* line 36, ../sass/base/_header.scss */
-header nav .link_01 {
-  width: 19.54545%;
   float: left;
-  margin-left: 0.22727%;
-  margin-right: 0.22727%;
-  margin-left: 5%;
+  line-height: 45px;
+  padding-right: 4.09%;
+  /*.star {
+    position: relative;
+    top: -1px;
+    right: 2px;
+  }*/
 }
-/* line 41, ../sass/base/_header.scss */
-header nav .link_02 {
-  width: 14.54545%;
-  float: left;
-  margin-left: 0.22727%;
-  margin-right: 0.22727%;
-}
-/* line 44, ../sass/base/_header.scss */
-header nav .link_03 {
-  width: 14.54545%;
-  float: left;
-  margin-left: 0.22727%;
-  margin-right: 0.22727%;
-}
-/* line 47, ../sass/base/_header.scss */
-header nav .link_04 {
-  width: 19.54545%;
-  float: left;
-  margin-left: 0.22727%;
-  margin-right: 0.22727%;
+/* line 43, ../sass/base/_header.scss */
+header nav a:not(:first-of-type):before {
+  content: "\2605";
+  position: relative;
+  top: -1px;
+  right: 2px;
+  display: none;
 }
 /* line 50, ../sass/base/_header.scss */
-header nav .link_05 {
-  width: 19.54545%;
-  float: left;
-  margin-left: 0.22727%;
-  margin-right: 0.22727%;
+header nav a:not(:first-of-type).active:before {
+  display: inline-block;
 }
-/* line 54, ../sass/base/_header.scss */
+/* line 58, ../sass/base/_header.scss */
+header nav a.link_01 {
+  margin-left: 5.4%;
+}
+/* line 63, ../sass/base/_header.scss */
 header .h_number {
   width: 33%;
   font-family: "Arial Black";
-  font-size: 1.250em;
+  font-size: 20px;
   color: #FFFFFF;
   padding: 0 0 0 4%;
+  line-height: 45px;
 }
 /* line 37, ../sass/base/_variables.scss */
 header .h_number:before {
@@ -226,7 +221,7 @@ header .h_number:before {
   top: 15.5px;
   background: url("../images/tel_ico.png") no-repeat;
 }
-/* line 61, ../sass/base/_header.scss */
+/* line 71, ../sass/base/_header.scss */
 header .h_number:before {
   padding: 0;
   margin-right: 10px;
@@ -489,7 +484,7 @@ header .h_number:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
 .main_wrapper #s_masters .masters__teacher:after {
   content: " ";
   display: block;
@@ -648,7 +643,7 @@ header .h_number:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
 .main_wrapper #s_studio .studio__information:after {
   content: " ";
   display: block;
