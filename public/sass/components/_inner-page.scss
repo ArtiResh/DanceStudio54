@@ -160,5 +160,161 @@
         max-width: 100%;
       }
     }
+    .application__form {
+      width: 100%;
+      #send_form {
+        border: 1px solid #FFFFFF;
+        position: relative;
+        color: #ffffff;
+        width: 100%;
+        margin-bottom: 15%;
+        @extend %var_text-arial;
+        font-size: 1em;
+        height: 41vh;
+
+        .form-subheader {
+          width: 96.5%;
+          background: #FFFFFF;
+          @include var_TextBebasNew(#DA251C, 2.5em, " Book");
+          padding: 1% 0 1% 3.5%;
+          height: 10%;
+        }
+        .form-left {
+          display: inline;
+          height: 85%;
+          @include span(5 of 13 no-gutters);
+
+          background: #150303;
+          div{
+            padding: 7% 12% 5% 9.5%;
+            width: 78.5%;
+            input{
+              border-right: 1px solid #fff;
+              background: #150303;
+              color: #fff;
+              padding: 0.3em;
+            }
+          }
+          div~*{
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .line_1 {
+            padding-top: 27%;
+            p {
+              padding-top: 1.5%;
+              @include span(2 of 12 no-gutters);
+            }
+            input {
+              @include span(4 of 5 no-gutters last);
+            }
+          }
+          .line_2 {
+            padding-top: 10%;
+            p {
+              padding-top: 1.5%;
+              @include span(10 of 23 no-gutters);
+            }
+            input {
+              @include span(10 of 20 no-gutters last);
+              text-align: right;
+              &::-webkit-datetime-edit {
+                text-align: center;
+              }
+              &::-webkit-calendar-picker-indicator{
+                opacity:1;
+                background: url('../images/date_form_button.png') no-repeat;
+                padding-left: 21%;
+                margin-right: -16%;
+                -webkit-appearance: none;
+
+              }
+              &::-webkit-inner-spin-button {
+                display: none;
+              }
+            }
+          }
+          .line_3 {
+            padding-top: 5%;
+            #l_31 {
+              padding-top: 1.5%;
+              @include span(11 of 36 no-gutters);
+            }
+            #l_32 {
+              @include span(5 of 24 no-gutters);
+              text-align: right;
+            }
+            #l_33 {
+              padding-top: 1.5%;
+              @include span(2 of 7 no-gutters);
+              text-align: center;
+
+
+            }
+            #l_34 {
+              @include span(1 of 7 no-gutters last);
+            }
+          }
+          .line_4 {
+            padding-top: 5%;
+            p {
+              padding-top: 1.5%;
+              @include span(13 of 24 no-gutters);
+            }
+            input {
+              @include span(13 of 32 no-gutters last);
+              text-align: center;
+            }
+          }
+        }
+        .form-middle {
+          padding-right: 1.4%;
+          display: inline;
+          @include span(5 of 13 no-gutters);
+          height: 85%;
+
+          background: #1c0404;
+          div{
+            margin: 24% 9.5% 5% 12%;
+            select{
+              width: 100%;
+              border-right: 1px solid #fff;
+              background: #1c0404;
+              color: #ffffff;
+              margin-top: 6%;
+              padding: 0.3em;
+            }
+            &:last-child{
+              margin-top: 10%;
+            }
+          }
+        }
+        .form-right {
+          display: inline;
+          @include span(3 of 13 no-gutters);
+          text-align: center;
+          background: #260705;
+          height: 85%;
+
+          a{
+            height: 100%;
+            vertical-align: middle;
+            text-align: center;
+            color: #ffffff;
+            text-decoration: none;
+            img{
+              margin-top: 40%;
+            }
+            p{
+              position: relative;
+              margin-top: -11%;
+            }
+          }
+
+
+        }
+      }
+    }
+
   }
 }

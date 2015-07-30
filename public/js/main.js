@@ -46,4 +46,38 @@ $(document).ready(function () {
             menu: '#fp_menu'
         }
     );
+    var maskOptions = {
+        translation: {
+            'Z': {
+                pattern: /[0-9]/
+            },
+            placeholder: "+7 ___ ___ __ __"
+        }
+    };
+    $("#user_phone").mask("+7 (ZZZ) ZZZ-ZZ-ZZ", maskOptions);
+    $(".application__inform .now .applicate").click(function(e){
+        e.preventDefault();
+        var nameGroup = $(this).children('span').text();
+        var lock = false;
+
+        $(".application__form .form-middle #send_direction").children().each(function(){
+           if($(this).text() == nameGroup){
+               $(this).attr("selected", "selected");
+               lock = true;
+           }
+        });
+        if(!lock) {
+            $(".application__form .form-middle #send_direction").prepend($('<option value="0">' + nameGroup + '</option>'))
+                .children().first().attr("selected", "selected");
+        }
+    });
+    $(".moveDown").click(function(){
+        $.fn.fullpage.moveSectionDown();
+    });
+    $(".wrapper-movedown").mouseenter(function(){
+        $(".moveDown").animate({opacity:1},200);
+    });
+    $(".wrapper-movedown").mouseleave(function(){
+        $(".moveDown").animate({opacity:0},200);
+    });
 });

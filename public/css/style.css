@@ -17,7 +17,7 @@ em, i {
   font-style: italic !important;
 }
 
-/* line 5, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -39,51 +39,51 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 /* line 8, ../sass/base/_variables.scss */
-.main_wrapper #s_directions .directions__text-head, .main_wrapper #s_masters .masters__head, .main_wrapper #s_studio .studio__head, .main_wrapper #s_application .application__head, .main_wrapper #s_intro .intro__main_text, .main_wrapper #s_directions .directions_text p, .main_wrapper #s_directions .directions_text a, .main_wrapper #s_masters .masters__teacher .teachers .description a, .main_wrapper #s_studio .studio__information .studios .description a, .main_wrapper #s_application .application__inform .now div a, .main_wrapper #s_application .application__form #send_form, .main_wrapper footer div {
+.main_wrapper #s_directions .directions__text-head, .main_wrapper #s_masters .masters__head, .main_wrapper #s_studio .studio__head, .main_wrapper #s_application .application__head, .main_wrapper #s_intro .intro__main_text, .main_wrapper #s_directions .directions_text p, .main_wrapper #s_directions .directions_text a, .main_wrapper #s_masters .masters__teacher .teachers .description a, .main_wrapper #s_studio .studio__information .studios .description a, .main_wrapper #s_application .application__inform .now div a, .main_wrapper #s_application .application__form #send_form, .main_wrapper .inner_section .content .application__form #send_form, .main_wrapper footer div {
   font-family: "Arial";
   font-size: 0.803em;
   font-weight: 400;
@@ -101,19 +101,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @font-face {
   font-family: "Bebas Neue Bold";
-  src: url('../fonts/bebas/BebasNeue Bold.ttf?1389691026') format('truetype'), url('../fonts/bebas/BebasNeue Bold.otf?1389690978') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Bold.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Bold.otf?1437395161') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Book";
-  src: url('../fonts/bebas/BebasNeue Book.ttf?1389998578') format('truetype'), url('../fonts/bebas/BebasNeue Book.otf?1389998438') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Book.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Book.otf?1437395161') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Light";
-  src: url('../fonts/bebas/BebasNeue Light.ttf?1389998708') format('truetype'), url('../fonts/bebas/BebasNeue Light.otf?1389998678') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Light.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Light.otf?1437395161') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Regular";
-  src: url('../fonts/bebas/BebasNeue Regular.ttf?1389998908') format('truetype'), url('../fonts/bebas/BebasNeue Regular.otf?1389998860') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Regular.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Regular.otf?1437395161') format('opentype');
 }
 /* line 4, ../sass/base/_reset.scss */
 body, .main-wrapper, html {
@@ -305,6 +305,26 @@ header .h_number:before {
   z-index: 1;
   opacity: 0;
 }
+/* line 48, ../sass/base/_variables.scss */
+.main_wrapper #s_intro .wrapper-movedown {
+  height: 10%;
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  width: 100%;
+}
+/* line 54, ../sass/base/_variables.scss */
+.main_wrapper #s_intro .wrapper-movedown svg {
+  opacity: 0;
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  left: 49%;
+}
+/* line 60, ../sass/base/_variables.scss */
+.main_wrapper #s_intro .wrapper-movedown svg line {
+  stroke: #ffffff;
+}
 /* line 1, ../sass/components/_directions.scss */
 .main_wrapper #s_directions {
   position: relative;
@@ -451,14 +471,23 @@ header .h_number:before {
   background: url("../images/button_small_check.png") no-repeat;
 }
 /* line 48, ../sass/base/_variables.scss */
-.main_wrapper #s_directions svg {
+.main_wrapper #s_directions .wrapper-movedown {
+  height: 10%;
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  width: 100%;
+}
+/* line 54, ../sass/base/_variables.scss */
+.main_wrapper #s_directions .wrapper-movedown svg {
+  opacity: 0;
   position: absolute;
   z-index: 15;
-  top: 90.5%;
+  top: 0;
   left: 49%;
 }
-/* line 53, ../sass/base/_variables.scss */
-.main_wrapper #s_directions svg line {
+/* line 60, ../sass/base/_variables.scss */
+.main_wrapper #s_directions .wrapper-movedown svg line {
   stroke: #dc241c;
 }
 /* line 124, ../sass/components/_directions.scss */
@@ -484,7 +513,7 @@ header .h_number:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
 .main_wrapper #s_masters .masters__teacher:after {
   content: " ";
   display: block;
@@ -563,14 +592,23 @@ header .h_number:before {
   background: url("../images/button_small_check_teachers.png") no-repeat;
 }
 /* line 48, ../sass/base/_variables.scss */
-.main_wrapper #s_masters svg {
+.main_wrapper #s_masters .wrapper-movedown {
+  height: 10%;
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  width: 100%;
+}
+/* line 54, ../sass/base/_variables.scss */
+.main_wrapper #s_masters .wrapper-movedown svg {
+  opacity: 0;
   position: absolute;
   z-index: 15;
-  top: 90.5%;
+  top: 0;
   left: 49%;
 }
-/* line 53, ../sass/base/_variables.scss */
-.main_wrapper #s_masters svg line {
+/* line 60, ../sass/base/_variables.scss */
+.main_wrapper #s_masters .wrapper-movedown svg line {
   stroke: #ffffff;
 }
 /* line 54, ../sass/components/_masters.scss */
@@ -643,7 +681,7 @@ header .h_number:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
 .main_wrapper #s_studio .studio__information:after {
   content: " ";
   display: block;
@@ -730,14 +768,23 @@ header .h_number:before {
   background: url("../images/button_small_check_teachers.png") no-repeat;
 }
 /* line 48, ../sass/base/_variables.scss */
-.main_wrapper #s_studio svg {
+.main_wrapper #s_studio .wrapper-movedown {
+  height: 10%;
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  width: 100%;
+}
+/* line 54, ../sass/base/_variables.scss */
+.main_wrapper #s_studio .wrapper-movedown svg {
+  opacity: 0;
   position: absolute;
   z-index: 15;
-  top: 90.5%;
+  top: 0;
   left: 49%;
 }
-/* line 53, ../sass/base/_variables.scss */
-.main_wrapper #s_studio svg line {
+/* line 60, ../sass/base/_variables.scss */
+.main_wrapper #s_studio .wrapper-movedown svg line {
   stroke: #ffffff;
 }
 /* line 1, ../sass/components/_application.scss */
@@ -1013,14 +1060,23 @@ header .h_number:before {
   margin-top: -11%;
 }
 /* line 48, ../sass/base/_variables.scss */
-.main_wrapper #s_application svg {
+.main_wrapper #s_application .wrapper-movedown {
+  height: 10%;
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  width: 100%;
+}
+/* line 54, ../sass/base/_variables.scss */
+.main_wrapper #s_application .wrapper-movedown svg {
+  opacity: 0;
   position: absolute;
   z-index: 15;
-  top: 90.5%;
+  top: 0;
   left: 49%;
 }
-/* line 53, ../sass/base/_variables.scss */
-.main_wrapper #s_application svg line {
+/* line 60, ../sass/base/_variables.scss */
+.main_wrapper #s_application .wrapper-movedown svg line {
   stroke: #ffffff;
 }
 /* line 1, ../sass/components/_inform.scss */
@@ -1268,6 +1324,203 @@ header .h_number:before {
 /* line 159, ../sass/components/_inner-page.scss */
 .main_wrapper .inner_section .content .gallery_img img {
   max-width: 100%;
+}
+/* line 163, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form {
+  width: 100%;
+}
+/* line 165, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form {
+  border: 1px solid #FFFFFF;
+  position: relative;
+  color: #ffffff;
+  width: 100%;
+  margin-bottom: 15%;
+  font-size: 1em;
+  height: 41vh;
+}
+/* line 175, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-subheader {
+  width: 96.5%;
+  background: #FFFFFF;
+  color: #DA251C;
+  font-family: "Bebas Neue Book";
+  font-size: 2.5em;
+  font-weight: 300;
+  padding: 1% 0 1% 3.5%;
+  height: 10%;
+}
+/* line 182, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left {
+  display: inline;
+  height: 85%;
+  width: 38.02817%;
+  float: left;
+  background: #150303;
+}
+/* line 188, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left div {
+  padding: 7% 12% 5% 9.5%;
+  width: 78.5%;
+}
+/* line 191, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left div input {
+  border-right: 1px solid #fff;
+  background: #150303;
+  color: #fff;
+  padding: 0.3em;
+}
+/* line 198, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left div ~ * {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 202, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_1 {
+  padding-top: 27%;
+}
+/* line 204, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_1 p {
+  padding-top: 1.5%;
+  width: 16.03053%;
+  float: left;
+}
+/* line 208, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_1 input {
+  width: 79.62963%;
+  float: right;
+  margin-right: 0;
+}
+/* line 212, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_2 {
+  padding-top: 10%;
+}
+/* line 214, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_2 p {
+  padding-top: 1.5%;
+  width: 43.25397%;
+  float: left;
+}
+/* line 218, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_2 input {
+  width: 49.77169%;
+  float: right;
+  margin-right: 0;
+  text-align: right;
+}
+/* line 221, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_2 input::-webkit-datetime-edit {
+  text-align: center;
+}
+/* line 224, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_2 input::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  background: url("../images/date_form_button.png") no-repeat;
+  padding-left: 21%;
+  margin-right: -16%;
+  -webkit-appearance: none;
+}
+/* line 232, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_2 input::-webkit-inner-spin-button {
+  display: none;
+}
+/* line 237, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_3 {
+  padding-top: 5%;
+}
+/* line 239, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_3 #l_31 {
+  padding-top: 1.5%;
+  width: 30.37975%;
+  float: left;
+}
+/* line 243, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_3 #l_32 {
+  width: 20.53232%;
+  float: left;
+  text-align: right;
+}
+/* line 247, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_3 #l_33 {
+  padding-top: 1.5%;
+  width: 27.63158%;
+  float: left;
+  text-align: center;
+}
+/* line 254, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_3 #l_34 {
+  width: 13.15789%;
+  float: right;
+  margin-right: 0;
+}
+/* line 258, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_4 {
+  padding-top: 5%;
+}
+/* line 260, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_4 p {
+  padding-top: 1.5%;
+  width: 53.9924%;
+  float: left;
+}
+/* line 264, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-left .line_4 input {
+  width: 40.45584%;
+  float: right;
+  margin-right: 0;
+  text-align: center;
+}
+/* line 270, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-middle {
+  padding-right: 1.4%;
+  display: inline;
+  width: 38.02817%;
+  float: left;
+  height: 85%;
+  background: #1c0404;
+}
+/* line 277, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-middle div {
+  margin: 24% 9.5% 5% 12%;
+}
+/* line 279, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-middle div select {
+  width: 100%;
+  border-right: 1px solid #fff;
+  background: #1c0404;
+  color: #ffffff;
+  margin-top: 6%;
+  padding: 0.3em;
+}
+/* line 287, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-middle div:last-child {
+  margin-top: 10%;
+}
+/* line 292, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-right {
+  display: inline;
+  width: 22.53521%;
+  float: left;
+  text-align: center;
+  background: #260705;
+  height: 85%;
+}
+/* line 299, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-right a {
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* line 305, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-right a img {
+  margin-top: 40%;
+}
+/* line 308, ../sass/components/_inner-page.scss */
+.main_wrapper .inner_section .content .application__form #send_form .form-right a p {
+  position: relative;
+  margin-top: -11%;
 }
 /* line 1, ../sass/base/_footer.scss */
 .main_wrapper footer {

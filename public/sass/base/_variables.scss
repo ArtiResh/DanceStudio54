@@ -45,13 +45,22 @@ $susy: (
   }
 }
 @mixin var_SvgSwitcher($line-color){
-  svg{
+  .wrapper-movedown{
+    height: 10%;
     position: absolute;
-    z-index: 15;
-    top:90.5%;
-    left:49%;
-    line{
-      stroke: $line-color;
+    z-index: 20;
+    bottom: 0;
+    width: 100%;
+    svg{
+      opacity: 0;
+      position: absolute;
+      z-index: 15;
+      top:0;
+      left:49%;
+      line{
+        stroke: $line-color;
+      }
     }
   }
 }
+

@@ -46,6 +46,7 @@
 {!! Html::script('js/jquery.fullPage.min.js') !!}
 {!! Html::script('https://maps.googleapis.com/maps/api/js?v=3.exp') !!}
 {!! Html::script('js/jquery.showcase-slider.js') !!}
+{!!Html::script('js/jquery.mask.min.js')!!}
 {!! Html::script('js/main.js') !!}
 </body>
 

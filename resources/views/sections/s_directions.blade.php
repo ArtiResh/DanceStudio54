@@ -43,10 +43,12 @@
         @endforeach
     </div>
 
-    <svg width="53" height="53">
-        <circle r="25" cx="27" cy="27"
-                fill="none" stroke="#dc241c" stroke-width="2" />
-        <line x1="40" y1="20" x2="26" y2="34"></line>
-        <line x1="15" y1="20" x2="26" y2="34"></line>
-    </svg>
+    <div class="wrapper-movedown">
+        <svg width="53" height="53" class="moveDown">
+            <circle r="25" cx="27" cy="27"
+                    fill="none" stroke="#dc241c" stroke-width="2" />
+            <line x1="40" y1="20" x2="26" y2="34"></line>
+            <line x1="15" y1="20" x2="26" y2="34"></line>
+        </svg>
+    </div>
 </section>

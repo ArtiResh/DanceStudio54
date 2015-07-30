@@ -2,25 +2,24 @@
     <div class="application__head">Сейчас идет набор в группы</div>
     <div class="application__inform">
         <div class="now">
-            <?
-            for ($i = 0; $i < 3; $i++) {
-            ?>
-            <div>
-                <h1>Strip / Go-go</h1>
 
-                <p>Условия набора</p>
-                <p class="data">
-                    Девушки, 16 - 22 года;</br>
-                    Спортивное телосложение;</br>
-                    Тренировки пн-чт, с 16:00 до 18:00;</br>
-                    Зал на пр.Мира, тц "Спутник" , 4 этаж;</br>
-                </p>
-                <a class="applicate" href="javascript:void(0)">Записаться на Strip / Go-go</a>
-            </div>
+            @foreach($groups as $group)
 
-            <?
-            }
-            ?>
+                <div>
+                    <h1>{{$group['name']}}</h1>
+
+                    <p>Условия набора</p>
+                    <p class="data">
+                        {!!$group['desc']!!}
+                    </p>
+                    <a class="applicate" href="">Записаться на <span>{{$group['name']}}</span></a>
+                </div>
+
+
+            @endforeach
+
+
+
 
         </div>
         <div class="divider">
@@ -60,9 +59,13 @@
 
                     <p>Выберите танцевальное направление</p>
                     <select name="" id="send_direction">
-                        <option value="">Juzz Funk</option>
-                        <option value="">Dance Show</option>
-                        <option value="">Disco</option>
+                        @foreach($directions as $direction)
+
+                            <option value="">{{$direction['name']}}</option>
+                        @endforeach
+                        {{--<option value="">Juzz Funk</option>--}}
+                        {{--<option value="">Dance Show</option>--}}
+                        {{--<option value="">Disco</option>--}}
                     </select>
 
                 </div>
@@ -85,10 +88,12 @@
             </div>
         </form>
     </div>
-    <svg width="53" height="53">
-        <circle r="25" cx="27" cy="27"
-                fill="none" stroke="#dc241c" stroke-width="2" />
-        <line x1="40" y1="20" x2="26" y2="34"></line>
-        <line x1="15" y1="20" x2="26" y2="34"></line>
-    </svg>
+    <div class="wrapper-movedown">
+        <svg width="53" height="53" class="moveDown">
+            <circle r="25" cx="27" cy="27"
+                    fill="none" stroke="#dc241c" stroke-width="2" />
+            <line x1="40" y1="20" x2="26" y2="34"></line>
+            <line x1="15" y1="20" x2="26" y2="34"></line>
+        </svg>
+    </div>
 </section>

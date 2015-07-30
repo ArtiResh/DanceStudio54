@@ -13,7 +13,7 @@ Admin::model('App\Groups')->title('Наборы')->display(function () {
         FormItem::columns()->columns([
             [
                 FormItem::text('name', 'Название'),
-                FormItem::textarea('desc', 'Описание'),
+                FormItem::ckeditor('desc', 'Описание'),
             ]
         ])
     ]);

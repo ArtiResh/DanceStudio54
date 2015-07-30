@@ -63,4 +63,13 @@ $(document).ready(function(){
             changeSection(sect_id);
         }
     });
+    var maskOptions = {
+        translation: {
+            'Z': {
+                pattern: /[0-9]/
+            },
+            placeholder: "+7 ___ ___ __ __"
+        }
+    }
+    $("#user_phone").mask("+7 (ZZZ) ZZZ-ZZ-ZZ", maskOptions);
 });
