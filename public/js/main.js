@@ -42,7 +42,7 @@ $(document).ready(function () {
     }, 7000);
     $(".main_wrapper").fullpage(
         {
-            anchors: ['intro', 'directions', 'masters', 'studio', 'application', 'inform'],
+            anchors: ['intro', 'directions', 'teachers', 'events', 'application', 'inform'],
             menu: '#fp_menu'
         }
     );

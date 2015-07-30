@@ -47,6 +47,7 @@ var changeMainImages = function(sectId){
 };
 
 $(document).ready(function(){
+    $("#fp_menu").find("[data-menuanchor='" + window.location.pathname.substr(1) + "']").addClass('active');
     changeKey = true;
     mainImgTimer = false;
     changeSection(getUrlParams('id'));
