@@ -43,12 +43,12 @@
                     <p>Дата рождения</p>
                     <input type="date"/>
                 </div>
-                <div class="line_3">
-                    <p id="l_31">Рост (см)</p>
-                    <input type="text" id="l_32"/>
-                    <p id="l_33">Вес (кг)</p>
-                    <input type="text" id="l_34"/>
-                </div>
+                {{--<div class="line_3">--}}
+                    {{--<p id="l_31">Рост (см)</p>--}}
+                    {{--<input type="text" id="l_32"/>--}}
+                    {{--<p id="l_33">Вес (кг)</p>--}}
+                    {{--<input type="text" id="l_34"/>--}}
+                {{--</div>--}}
                 <div class="line_4">
                     <p>Контактный телефон</p>
                     <input type="text" placeholder="+7(___) ___ __ __" id="user_phone" class="rfield" />

@@ -75,9 +75,9 @@ $(document).ready(function () {
         $.fn.fullpage.moveSectionDown();
     });
     $(".wrapper-movedown").mouseenter(function(){
-        $(".moveDown").animate({opacity:1},200);
+        $(".moveDown").animate({opacity:1},300);
     });
     $(".wrapper-movedown").mouseleave(function(){
-        $(".moveDown").animate({opacity:0},200);
+        $(".moveDown").animate({opacity:0},700);
     });
 });
