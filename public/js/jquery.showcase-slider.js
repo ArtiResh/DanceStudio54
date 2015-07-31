@@ -1,6 +1,6 @@
 /**
  *  * Showcase Slider
- * @version 1.0.2
+ * @version 1.1.0
  * @author Reshetov Artem
  *
  */
@@ -8,7 +8,7 @@
 var imgInterval = 0;
 
 changeImg = function (element) {
-    if(element.children('img').length>1) {
+    if (element.children('img').length > 1) {
         element.children().first()
             .animate({opacity: 0}, 250, function () {
                 $(this).css({display: "none"});
@@ -28,6 +28,8 @@ changeImg = function (element) {
      * */
 
     function Showcase(element, options) {
+        _this = this;
+
         this.element = element;
 
         this.options = $.extend({}, Showcase.Defaults, options);
@@ -52,13 +54,13 @@ changeImg = function (element) {
         marginRight: 1.5,
         slider: ".directions__slider",
         blockImage: ".backscreen",
-        navigationPanel:".directions__nav",
+        navigationPanel: ".directions__nav",
         navigationClass: "active_dir",
         countOfNum: 3,
         nameOfCenterEl: "center",
-        idOfCenterEl:1,
+        idOfCenterEl: 1,
         sideOfMovement: "left",
-        speedSlide: 150
+        speedSlide: 200
     };
 
     /**
@@ -73,7 +75,6 @@ changeImg = function (element) {
 
         init: function () {
             var id;
-            var _this = this;
             var settings = this.options;
             /**Цикл по всем вложенным контейнерам слайдера,
              * определяет их длину в процентах,
@@ -104,23 +105,23 @@ changeImg = function (element) {
         on: function (elem, settings) {
 
             settings.sideOfMovement = $(elem).position().left - $("#bs_" + this.options.idOfCenterEl).position().left;
-            if(settings.sideOfMovement<0){
+            if (settings.sideOfMovement < 0) {
                 settings.sideOfMovement = "left";
                 navVar = -1;
-                this.options.idOfCenterEl == 1? navVar = 10: navVar = navVar;
+                this.options.idOfCenterEl == 1 ? navVar = 10 : navVar = navVar;
             }
-            else if(settings.sideOfMovement>0){
+            else if (settings.sideOfMovement > 0) {
                 settings.sideOfMovement = "right";
                 navVar = 1;
-                this.options.idOfCenterEl == 11? navVar = -10: navVar = navVar;
+                this.options.idOfCenterEl == 11 ? navVar = -10 : navVar = navVar;
             }
-            else{
+            else {
                 navVar = 0;
             }
 
             /** изменение пункта меню*/
             $(settings.navigationPanel).children().removeClass(settings.navigationClass);
-            $("#nv_"+(this.options.idOfCenterEl+navVar)).addClass(settings.navigationClass);
+            $("#nv_" + (this.options.idOfCenterEl + navVar)).addClass(settings.navigationClass);
 
             /** запуск движения*/
             this.slide(elem, settings, 1);
@@ -133,7 +134,7 @@ changeImg = function (element) {
 
         getProductId: function (elem, countOfNum) {
 
-            typeof(elem)=="object"? elem = elem:elem = $(this.element).find(elem);
+            typeof(elem) == "object" ? elem = elem : elem = $(this.element).find(elem);
             return parseInt($(elem).attr('id').substr(countOfNum));
         },
 
@@ -150,18 +151,17 @@ changeImg = function (element) {
          *  Метод — "Обработчик события навигационной панели"
          * */
 
-        navigate: function(elem, settings){
-            var _this = this;
+        navigate: function (elem, settings) {
 
             /** не вызывает пункт мнюю который уже открыт*/
-            if( $(elem).hasClass("active_dir"))return true;
+            if ($(elem).hasClass("active_dir"))return true;
 
             /** смена пунктов меню*/
             $(settings.navigationPanel).children().removeClass(settings.navigationClass);
             $(elem).addClass(settings.navigationClass);
 
             /** определение переменных, получение номера максимального элемента */
-            var idCenter, idDir, idMax,leftSide,rightSide,itter,sideOfMovement;
+            var idCenter, idDir, idMax, leftSide, rightSide, itter, sideOfMovement;
             idMax = $(settings.navigationPanel).children().length;
 
             /** получение номера id центрального элемента и вызываемого пункта*/
@@ -169,23 +169,70 @@ changeImg = function (element) {
             idCenter = _this.options.idOfCenterEl;
 
             /** рассчет на сколько небходимо сдвинуться вправо и влево для смены*/
-            if(idDir<idCenter){
+            if (idDir < idCenter) {
                 rightSide = idCenter - idDir;
                 leftSide = (idMax - idCenter) + idDir;
             }
-            else{
+            else {
                 leftSide = idDir - idCenter;
                 rightSide = (idMax - idDir) + idCenter;
             }
 
             /** выбор кратчайшего смещения и стороны смещения*/
-            itter = leftSide<rightSide?leftSide:rightSide;
-            settings.sideOfMovement = rightSide<leftSide?"left":"right";
+            itter = leftSide < rightSide ? leftSide : rightSide;
+            settings.sideOfMovement = rightSide < leftSide ? "left" : "right";
 
             /** прокрутка слайдера*/
 
-            _this.slide(("#bs_"+idDir),settings, itter);
+            _this.slide(("#bs_" + idDir), settings, itter);
 
+        },
+
+        /**
+         * Метод — "Уменьшение центрального изображения"
+         * */
+
+        downSlide: function (elem) {
+            var settings = this.options;
+            $("." + settings.nameOfCenterEl).animate(
+                {
+                    paddingTop: settings.paddingTop + "%",
+                    height: settings.heightLow + "%",
+                    width: _this.naturalWidthFuture[_this.options.idOfCenterEl] + "%",
+                    marginRight: "0",
+                    marginLeft: "0"
+                }, 2 * settings.speedSlide);
+            $("." + settings.nameOfCenterEl).removeClass(settings.nameOfCenterEl);
+
+            return this;
+        },
+
+
+        /**
+         * Метод — "Увеличение центрального изображения"
+         * */
+
+        upSlide: function (elem,speedAmount) {
+            var settings = this.options;
+            $(elem).animate({
+                width: _this.naturalWidthFuture[_this.getProductId($(elem), settings.countOfNum)] * 2 + "%",
+                marginRight: settings.marginRight + "%",
+                marginLeft: settings.marginLeft + "%",
+                height: settings.heightTall + "%",
+                paddingTop: 0
+            }, speedAmount * settings.speedSlide, "linear", function () {
+
+                $(this).addClass(settings.nameOfCenterEl);
+
+                imgInterval = setInterval(function () {
+                    changeImg($(elem));
+                }, 7000);
+
+                /** передача id центрального элемента в массив*/
+                _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
+
+            });
+            return this;
         },
 
         /**
@@ -195,90 +242,55 @@ changeImg = function (element) {
         slide: function (elem, settings, steps) {
             /** определение переменных, и сброс если был клинкнут центральный элемент*/
             var selected = elem;
-            var _this = this;
+
             var _mainEl = this.element;
-            if($(selected).hasClass(settings.nameOfCenterEl))return this;
+            if ($(selected).hasClass(settings.nameOfCenterEl))return this;
 
             /****************** блок иссчезания текста **********************/
 
-            $("#desc_"+ this.options.idOfCenterEl).animate({opacity:0},400,function(){
-                $(this).css({display:"none"});
-                $("#desc_"+ _this.getProductId($(selected), settings.countOfNum)).css({display:"block"}).animate({opacity:1},800);
+            $("#desc_" + this.options.idOfCenterEl).animate({opacity: 0}, 400, function () {
+                $(this).css({display: "none"});
+                $("#desc_" + _this.getProductId($(selected), settings.countOfNum)).css({display: "block"}).animate({opacity: 1}, 800);
             });
 
             /****************** **********************/
-
-            /** уменьшение центральной картинки*/
-                //$("." + settings.nameOfCenterEl).animate(
-                //    {
-                //        paddingTop: settings.paddingTop + "%",
-                //        height: settings.heightLow + "%"
-                //    }, 150);//, function () {
 
             clearInterval(imgInterval);
             /** реализиция движения при выборе левого элемента*/
             if (settings.sideOfMovement === "left") {
 
                 /** цикл, смещающий на количество позиций переданное через steps*/
-                for(var loops = 0;loops<steps;loops++) {
+                var offset = -(_this.naturalWidthFuture[_this.getProductId($(".directions__slider .backscreen:last"), settings.countOfNum)]);
+                for (var loops = 0; loops < steps; loops++) {
 
-                    if(loops == 0){
-                        $("." + settings.nameOfCenterEl).animate(
-                            {
-                                paddingTop: settings.paddingTop + "%",
-                                height: settings.heightLow + "%"
-
-                            }, 400);
-                        $("."+settings.nameOfCenterEl).removeClass(settings.nameOfCenterEl);
+                    if (loops == 0) {
+                        _this.downSlide();
                     }
-
                     /** добавление в начало слайдера блока из конца (на случай если был выбран первый элемент) и смещение слайдера на его длину*/
-                    $(_mainEl).css({left: -(_this.naturalWidthFuture[_this.getProductId($(".directions__slider .backscreen:last"), settings.countOfNum)]) * 3*steps + "%"})
+                    $(_mainEl).css({left: offset * 3 * steps + "%"})
                         .prepend($(".directions__slider .backscreen:last"));
                 }
 
                 /** двигаем слайдер*/
-                $(_mainEl).animate({left: "0"}, (settings.speedSlide * 2.5));
 
+                if (steps == 1) {
+                    $(_mainEl).animate({left: "0"}, (settings.speedSlide * 2.5));
+                    _this.upSlide(selected,2.1);
+                }
+                else {
+                    $(_mainEl).animate({left: 3 * offset + '%'}, (settings.speedSlide / 2 * steps), "linear", function () {
+                        //    alert("5555");
+                        _this.upSlide(selected,2.1);
+                        $(_mainEl).animate({left: "0"}, settings.speedSlide * 2.5, "linear");
 
-                /** увеличение длины и отступов выбранного элемента*/
-                $(selected).animate({
-                    width: _this.naturalWidthFuture[_this.getProductId($(selected), settings.countOfNum)] * 2 + "%",
-                    marginRight: settings.marginRight + "%",
-                    marginLeft: settings.marginLeft + "%",
-                    height: settings.heightTall + "%",
-                    paddingTop: 0
-                }, 400,"linear",function(){
-
-
-                /** убираем класс с экс-центрального элемента*/
-                    /** сохраняем центральный элемент*/
-                var exTemp = $("#bs_"+_this.options.idOfCenterEl);
-
-
-                /** увеличивааем центральный элемент, добавляем класс и уменьшаем длину экс-центрального элемента*/
-                //$(selected).animate({height: settings.heightTall + "%", paddingTop: 0}, 250, function () {
-
-                    $(this).addClass(settings.nameOfCenterEl);
-
-                    imgInterval = setInterval(function(){
-                        changeImg($(selected));
-                    }, 7000);
-
-                    /** передача id центрального элемента в массив*/
-                    _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
-                    console.log(_this.options.idOfCenterEl);
-
-                    exTemp.css({
-                        width: _this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] + "%",
-                        marginRight: 0
                     });
-                });
+                }
 
             }
 
             /** реализация движения при выборе вправого элемента*/
             else {
+
                 $(selected).css({
                     width: _this.naturalWidthFuture[_this.getProductId(selected, settings.countOfNum)] * 2 + "%",
                     marginRight: settings.marginRight + "%",
@@ -286,80 +298,37 @@ changeImg = function (element) {
                 });
 
 
-                $("." + settings.nameOfCenterEl).each(function(){
+                _this.downSlide();
 
-                    $(this).animate(
-                        {
-                            paddingTop: settings.paddingTop + "%",
-                            height: settings.heightLow + "%",
-                            width: _this.naturalWidthFuture[_this.options.idOfCenterEl] + "%",
-                            marginRight: "0",
-                            marginLeft: "0"
-                        }, 150);
-                    $("." + settings.nameOfCenterEl).addClass("blur");
+                var  offset = -(_this.naturalWidthFuture[this.options.idOfCenterEl]);
+                if (steps == 1||steps == 2) {
 
-                    var offset =0;
-                    if(steps != 1){
-                        offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 3*steps-1);
-                        $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide * 2), "linear");
-                    }
-                    var exTemp = $("." + settings.nameOfCenterEl);
-                    offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 3)+ offset;
-                    $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide * 2), "linear", function () {
+                    $(_mainEl).animate({left: offset * 3 * steps + "%"}, (settings.speedSlide * 2), "linear", function () {
 
-                        exTemp.removeClass(settings.nameOfCenterEl);
-                        exTemp.removeClass("blur");
                         /** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину, по очередно*/
-                        for(var loops = 0;loops<steps;loops++) {
+                        for (var loops = 0; loops < steps; loops++) {
                             $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
                         }
                     });
-                        $(selected).animate({
-                            height: settings.heightTall + "%",
-                            paddingTop: 0,
-                            marginLeft: settings.marginLeft + "%"
-                        }, 300,"linear", function () {
+                    _this.upSlide(selected,2);
+                }
+                else {
 
-                            /** Добавление класса */
-                            $(this).addClass(settings.nameOfCenterEl);
-
-                            imgInterval = setInterval(function(){
-                                changeImg($(selected));
-                            }, 7000);
-
-                            /** передача id центрального элемента в массив*/
-                            _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
-                            exTemp.css({
-                                width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
-                                marginRight: 0
-                            });
+                    $(_mainEl).animate({left: offset*3 *(steps-2) + "%"}, (settings.speedSlide * steps/1.5), "linear", function () {
+                        $(_mainEl).animate({left: offset*3*steps  + "%"}, (settings.speedSlide *1.5), "linear",function(){
+                            for (var loops = 0; loops < steps; loops++) {
+                                /** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину, по очередно*/
+                                $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
+                            }
                         });
+                        _this.upSlide(selected,1.5);
+                    });
 
-                        ///** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину, по очередно*/
-                        //for(var loops = 0;loops<steps;loops++) {
-                        //    $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
-                        //}
-                  //  });
-
-                });
-
-
-
-                /** увеличение длины и отступов выбранного элемента*/
-
-                //$("." + settings.nameOfCenterEl).animate({
-                //
-                //}, settings.speedSlide);
-                /** смещение слайдера на 3ую длину выбранного блока*/
-                /** цикл, смещающий на количество позиций переданное через steps*/
-
-
-          //  });
+                }
             }
-            //  });
-
         }
     };
+
 
     /**
      * Реализация прототипа класса
