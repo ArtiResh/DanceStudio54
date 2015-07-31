@@ -30,6 +30,8 @@ changeImg = function (element) {
     function Showcase(element, options) {
         _this = this;
 
+        this._lock = false;
+
         this.element = element;
 
         this.options = $.extend({}, Showcase.Defaults, options);
@@ -104,6 +106,7 @@ changeImg = function (element) {
 
         on: function (elem, settings) {
 
+            if(this._lock) return true;
             settings.sideOfMovement = $(elem).position().left - $("#bs_" + this.options.idOfCenterEl).position().left;
             if (settings.sideOfMovement < 0) {
                 settings.sideOfMovement = "left";
@@ -152,7 +155,7 @@ changeImg = function (element) {
          * */
 
         navigate: function (elem, settings) {
-
+            if(this._lock) return true;
             /** не вызывает пункт мнюю который уже открыт*/
             if ($(elem).hasClass("active_dir"))return true;
 
@@ -230,7 +233,7 @@ changeImg = function (element) {
 
                 /** передача id центрального элемента в массив*/
                 _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
-
+                _this._lock = false;
             });
             return this;
         },
@@ -240,6 +243,7 @@ changeImg = function (element) {
          * */
 
         slide: function (elem, settings, steps) {
+            this._lock = true;
             /** определение переменных, и сброс если был клинкнут центральный элемент*/
             var selected = elem;
 
@@ -315,17 +319,18 @@ changeImg = function (element) {
                 else {
 
                     $(_mainEl).animate({left: offset*3 *(steps-2) + "%"}, (settings.speedSlide * steps/1.5), "linear", function () {
-                        $(_mainEl).animate({left: offset*3*steps  + "%"}, (settings.speedSlide *1.5), "linear",function(){
+                        $(_mainEl).animate({left: offset*3*steps  + "%"}, (settings.speedSlide *2), "linear",function(){
                             for (var loops = 0; loops < steps; loops++) {
                                 /** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину, по очередно*/
                                 $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
                             }
                         });
-                        _this.upSlide(selected,1.5);
+                        _this.upSlide(selected,2);
                     });
 
                 }
             }
+
         }
     };
 
