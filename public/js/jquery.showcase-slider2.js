@@ -1,6 +1,6 @@
 /**
  *  * Showcase Slider
- * @version 1.0.2
+ * @version 1.1
  * @author Reshetov Artem
  *
  */
@@ -184,7 +184,7 @@ changeImg = function (element) {
 
             /** прокрутка слайдера*/
 
-            _this.slide(("#bs_"+idDir),settings, itter);
+                _this.slide(("#bs_"+idDir),settings, itter);
 
         },
 
@@ -209,123 +209,110 @@ changeImg = function (element) {
             /****************** **********************/
 
             /** уменьшение центральной картинки*/
-                //$("." + settings.nameOfCenterEl).animate(
-                //    {
-                //        paddingTop: settings.paddingTop + "%",
-                //        height: settings.heightLow + "%"
-                //    }, 150);//, function () {
+            $("." + settings.nameOfCenterEl).animate(
+                {
+                    paddingTop: settings.paddingTop + "%",
+                    height: settings.heightLow + "%"
+                }, 150, function () {
 
-            clearInterval(imgInterval);
-            /** реализиция движения при выборе левого элемента*/
-            if (settings.sideOfMovement === "left") {
+                    clearInterval(imgInterval);
+                    /** реализиция движения при выборе левого элемента*/
+                    if (settings.sideOfMovement === "left") {
 
-                /** цикл, смещающий на количество позиций переданное через steps*/
-                for(var loops = 0;loops<steps;loops++) {
+                        /** цикл, смещающий на количество позиций переданное через steps*/
+                        for(var loops = 0;loops<steps;loops++) {
 
-                    if(loops == 0){
-                        $("." + settings.nameOfCenterEl).animate(
-                            {
-                                paddingTop: settings.paddingTop + "%",
-                                height: settings.heightLow + "%"
-                            }, 300);
-                    }
+                            /** добавление в начало слайдера блока из конца (на случай если был выбран первый элемент) и смещение слайдера на его длину*/
+                            $(_mainEl).css({left: -(_this.naturalWidthFuture[_this.getProductId($(".directions__slider .backscreen:last"), settings.countOfNum)]) * 3*steps + "%"})
+                                .prepend($(".directions__slider .backscreen:last"));
+                        }
 
-                    /** добавление в начало слайдера блока из конца (на случай если был выбран первый элемент) и смещение слайдера на его длину*/
-                    $(_mainEl).css({left: -(_this.naturalWidthFuture[_this.getProductId($(".directions__slider .backscreen:last"), settings.countOfNum)]) * 3*steps + "%"})
-                        .prepend($(".directions__slider .backscreen:last"));
-                }
+                        /** двигаем слайдер*/
+                        $(_mainEl).animate({left: "0"}, (settings.speedSlide * 2.5));
 
-                /** двигаем слайдер*/
-                $(_mainEl).animate({left: "0"}, (settings.speedSlide * 2.5));
-
-                /** сохраняем центральный элемент*/
-                var exTemp = $(this);
-
-                /** увеличение длины и отступов выбранного элемента*/
-                $(selected).animate({
-                    width: _this.naturalWidthFuture[_this.getProductId($(selected), settings.countOfNum)] * 2 + "%",
-                    marginRight: settings.marginRight + "%",
-                    marginLeft: settings.marginLeft + "%",
-                    height: settings.heightTall + "%",
-                    paddingTop: 0
-                }, 400,"linear",function(){
+                        /** увеличение длины и отступов выбранного элемента*/
+                        $(selected).animate({
+                              width: _this.naturalWidthFuture[_this.getProductId($(selected), settings.countOfNum)] * 2 + "%",
+                              marginRight: settings.marginRight + "%",
+                              marginLeft: settings.marginLeft + "%"
+                        }, 500,"linear");
 
 
-                /** убираем класс с экс-центрального элемента*/
+                        /** убираем класс с экс-центрального элемента*/
+                        var exTemp = $(this);
+                        $(this).removeClass(settings.nameOfCenterEl);
 
-                exTemp.removeClass(settings.nameOfCenterEl);
+                        /** увеличивааем центральный элемент, добавляем класс и уменьшаем длину экс-центрального элемента*/
+                        $(selected).animate({height: settings.heightTall + "%", paddingTop: 0}, 250, function () {
 
-                /** увеличивааем центральный элемент, добавляем класс и уменьшаем длину экс-центрального элемента*/
-                //$(selected).animate({height: settings.heightTall + "%", paddingTop: 0}, 250, function () {
+                            $(this).addClass(settings.nameOfCenterEl);
 
-                    $(this).addClass(settings.nameOfCenterEl);
+                            imgInterval = setInterval(function(){
+                                changeImg($(selected));
+                            }, 7000);
 
-                    imgInterval = setInterval(function(){
-                        changeImg($(selected));
-                    }, 7000);
+                            /** передача id центрального элемента в массив*/
+                            _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
 
-                    /** передача id центрального элемента в массив*/
-                    _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
-
-                    exTemp.css({
-                        width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
-                        marginRight: 0
-                    });
-                });
-
-            }
-
-            /** реализация движения при выборе вправого элемента*/
-            else {
-                $("." + settings.nameOfCenterEl).addClass("blur");
-                /** увеличение длины и отступов выбранного элемента*/
-                $(selected).css({
-                    width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] * 2 + "%",
-                    marginRight: settings.marginRight + "%",
-                    marginLeft: settings.marginLeft + "%"
-                });
-                $("." + settings.nameOfCenterEl).animate({
-                    width: _this.naturalWidthFuture[_this.options.idOfCenterEl] + "%",
-                    marginRight: "0",
-                    marginLeft: "0"
-                }, settings.speedSlide);
-                /** смещение слайдера на 3ую длину выбранного блока*/
-                /** цикл, смещающий на количество позиций переданное через steps*/
-
-                offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 3*steps);
-                $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide * 2), "linear", function () {
-                    var exTemp = $("." + settings.nameOfCenterEl);
-                    exTemp.removeClass(settings.nameOfCenterEl);
-                    exTemp.removeClass("blur");
-
-                    $(selected).animate({
-                        height: settings.heightTall + "%",
-                        paddingTop: 0,
-                        marginLeft: settings.marginLeft + "%"
-                    }, 250,"linear", function () {
-
-                        /** Добавление класса */
-                        $(this).addClass(settings.nameOfCenterEl);
-
-                        imgInterval = setInterval(function(){
-                            changeImg($(selected));
-                        }, 7000);
-
-                        /** передача id центрального элемента в массив*/
-                        _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
-                        exTemp.css({
-                            width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
-                            marginRight: 0
+                            exTemp.css({
+                                width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
+                                marginRight: 0
+                            });
                         });
-                    });
 
-                    /** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину, по очередно*/
-                    for(var loops = 0;loops<steps;loops++) {
-                        $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
+                    }
+
+                    /** реализация движения при выборе вправого элемента*/
+                    else {
+                        $("." + settings.nameOfCenterEl).addClass("blur");
+                        /** увеличение длины и отступов выбранного элемента*/
+                        $(selected).css({
+                            width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] * 2 + "%",
+                            marginRight: settings.marginRight + "%",
+                            marginLeft: settings.marginLeft + "%"
+                        });
+                        $("." + settings.nameOfCenterEl).animate({
+                            width: _this.naturalWidthFuture[_this.options.idOfCenterEl] + "%",
+                            marginRight: "0",
+                            marginLeft: "0"
+                        }, settings.speedSlide);
+                        /** смещение слайдера на 3ую длину выбранного блока*/
+                        /** цикл, смещающий на количество позиций переданное через steps*/
+
+                            offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 3*steps);
+                            $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide * 2), "linear", function () {
+                                var exTemp = $("." + settings.nameOfCenterEl);
+                                exTemp.removeClass(settings.nameOfCenterEl);
+                                exTemp.removeClass("blur");
+
+                                $(selected).animate({
+                                    height: settings.heightTall + "%",
+                                    paddingTop: 0,
+                                    marginLeft: settings.marginLeft + "%"
+                                }, 250,"linear", function () {
+
+                                    /** Добавление класса */
+                                    $(this).addClass(settings.nameOfCenterEl);
+
+                                    imgInterval = setInterval(function(){
+                                        changeImg($(selected));
+                                    }, 7000);
+
+                                    /** передача id центрального элемента в массив*/
+                                    _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
+                                    exTemp.css({
+                                        width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
+                                        marginRight: 0
+                                    });
+                                });
+
+                                /** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину, по очередно*/
+                                for(var loops = 0;loops<steps;loops++) {
+                                    $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
+                                }
+                            });
                     }
                 });
-            }
-            //  });
 
         }
     };
