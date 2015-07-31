@@ -227,7 +227,9 @@ changeImg = function (element) {
                             {
                                 paddingTop: settings.paddingTop + "%",
                                 height: settings.heightLow + "%"
-                            }, 300);
+
+                            }, 400);
+                        $("."+settings.nameOfCenterEl).removeClass(settings.nameOfCenterEl);
                     }
 
                     /** добавление в начало слайдера блока из конца (на случай если был выбран первый элемент) и смещение слайдера на его длину*/
@@ -238,8 +240,6 @@ changeImg = function (element) {
                 /** двигаем слайдер*/
                 $(_mainEl).animate({left: "0"}, (settings.speedSlide * 2.5));
 
-                /** сохраняем центральный элемент*/
-                var exTemp = $(this);
 
                 /** увеличение длины и отступов выбранного элемента*/
                 $(selected).animate({
@@ -252,8 +252,9 @@ changeImg = function (element) {
 
 
                 /** убираем класс с экс-центрального элемента*/
+                    /** сохраняем центральный элемент*/
+                var exTemp = $("#bs_"+_this.options.idOfCenterEl);
 
-                exTemp.removeClass(settings.nameOfCenterEl);
 
                 /** увеличивааем центральный элемент, добавляем класс и уменьшаем длину экс-центрального элемента*/
                 //$(selected).animate({height: settings.heightTall + "%", paddingTop: 0}, 250, function () {
@@ -266,9 +267,10 @@ changeImg = function (element) {
 
                     /** передача id центрального элемента в массив*/
                     _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
+                    console.log(_this.options.idOfCenterEl);
 
                     exTemp.css({
-                        width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
+                        width: _this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] + "%",
                         marginRight: 0
                     });
                 });
@@ -277,53 +279,82 @@ changeImg = function (element) {
 
             /** реализация движения при выборе вправого элемента*/
             else {
-                $("." + settings.nameOfCenterEl).addClass("blur");
-                /** увеличение длины и отступов выбранного элемента*/
                 $(selected).css({
-                    width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] * 2 + "%",
+                    width: _this.naturalWidthFuture[_this.getProductId(selected, settings.countOfNum)] * 2 + "%",
                     marginRight: settings.marginRight + "%",
                     marginLeft: settings.marginLeft + "%"
                 });
-                $("." + settings.nameOfCenterEl).animate({
-                    width: _this.naturalWidthFuture[_this.options.idOfCenterEl] + "%",
-                    marginRight: "0",
-                    marginLeft: "0"
-                }, settings.speedSlide);
+
+
+                $("." + settings.nameOfCenterEl).each(function(){
+
+                    $(this).animate(
+                        {
+                            paddingTop: settings.paddingTop + "%",
+                            height: settings.heightLow + "%",
+                            width: _this.naturalWidthFuture[_this.options.idOfCenterEl] + "%",
+                            marginRight: "0",
+                            marginLeft: "0"
+                        }, 150);
+                    $("." + settings.nameOfCenterEl).addClass("blur");
+
+                    var offset =0;
+                    if(steps != 1){
+                        offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 3*steps-1);
+                        $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide * 2), "linear");
+                    }
+                    var exTemp = $("." + settings.nameOfCenterEl);
+                    offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 3)+ offset;
+                    $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide * 2), "linear", function () {
+
+                        exTemp.removeClass(settings.nameOfCenterEl);
+                        exTemp.removeClass("blur");
+                        /** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину, по очередно*/
+                        for(var loops = 0;loops<steps;loops++) {
+                            $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
+                        }
+                    });
+                        $(selected).animate({
+                            height: settings.heightTall + "%",
+                            paddingTop: 0,
+                            marginLeft: settings.marginLeft + "%"
+                        }, 300,"linear", function () {
+
+                            /** Добавление класса */
+                            $(this).addClass(settings.nameOfCenterEl);
+
+                            imgInterval = setInterval(function(){
+                                changeImg($(selected));
+                            }, 7000);
+
+                            /** передача id центрального элемента в массив*/
+                            _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
+                            exTemp.css({
+                                width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
+                                marginRight: 0
+                            });
+                        });
+
+                        ///** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину, по очередно*/
+                        //for(var loops = 0;loops<steps;loops++) {
+                        //    $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
+                        //}
+                  //  });
+
+                });
+
+
+
+                /** увеличение длины и отступов выбранного элемента*/
+
+                //$("." + settings.nameOfCenterEl).animate({
+                //
+                //}, settings.speedSlide);
                 /** смещение слайдера на 3ую длину выбранного блока*/
                 /** цикл, смещающий на количество позиций переданное через steps*/
 
-                offset = -(_this.naturalWidthFuture[_this.getProductId($(this), settings.countOfNum)] * 3*steps);
-                $(_mainEl).animate({left: offset + "%"}, (settings.speedSlide * 2), "linear", function () {
-                    var exTemp = $("." + settings.nameOfCenterEl);
-                    exTemp.removeClass(settings.nameOfCenterEl);
-                    exTemp.removeClass("blur");
 
-                    $(selected).animate({
-                        height: settings.heightTall + "%",
-                        paddingTop: 0,
-                        marginLeft: settings.marginLeft + "%"
-                    }, 250,"linear", function () {
-
-                        /** Добавление класса */
-                        $(this).addClass(settings.nameOfCenterEl);
-
-                        imgInterval = setInterval(function(){
-                            changeImg($(selected));
-                        }, 7000);
-
-                        /** передача id центрального элемента в массив*/
-                        _this.options.idOfCenterEl = _this.getProductId(this, settings.countOfNum);
-                        exTemp.css({
-                            width: _this.naturalWidthFuture[_this.getProductId(this, settings.countOfNum)] + "%",
-                            marginRight: 0
-                        });
-                    });
-
-                    /** добавление в конец слайдера блока из конца (на случай если был выбран последний элемент) и смещение слайдера на его длину, по очередно*/
-                    for(var loops = 0;loops<steps;loops++) {
-                        $(_mainEl).append($(".directions__slider .backscreen:first")).css({left: 0});
-                    }
-                });
+          //  });
             }
             //  });
 
