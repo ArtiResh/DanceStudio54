@@ -1,6 +1,6 @@
 /**
  *  * Showcase Slider
- * @version 1.1.0
+ * @version 1.1.2
  * @author Reshetov Artem
  *
  */
@@ -62,7 +62,7 @@ changeImg = function (element) {
         nameOfCenterEl: "center",
         idOfCenterEl: 1,
         sideOfMovement: "left",
-        speedSlide: 200
+        speedSlide: 150
     };
 
     /**
@@ -252,9 +252,9 @@ changeImg = function (element) {
 
             /****************** блок иссчезания текста **********************/
 
-            $("#desc_" + this.options.idOfCenterEl).animate({opacity: 0}, 400, function () {
+            $("#desc_" + this.options.idOfCenterEl).animate({opacity: 0}, 300, function () {
                 $(this).css({display: "none"});
-                $("#desc_" + _this.getProductId($(selected), settings.countOfNum)).css({display: "block"}).animate({opacity: 1}, 800);
+                $("#desc_" + _this.getProductId($(selected), settings.countOfNum)).css({display: "block"}).animate({opacity: 1}, 600);
             });
 
             /****************** **********************/
@@ -283,8 +283,7 @@ changeImg = function (element) {
                 }
                 else {
                     $(_mainEl).animate({left: 3 * offset + '%'}, (settings.speedSlide / 2 * steps), "linear", function () {
-                        //    alert("5555");
-                        _this.upSlide(selected,2.1);
+                        _this.upSlide(selected,2.5);
                         $(_mainEl).animate({left: "0"}, settings.speedSlide * 2.5, "linear");
 
                     });
