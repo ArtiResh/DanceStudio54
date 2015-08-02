@@ -41,13 +41,8 @@
       background-position: right;
     }
     .load {
-
       width: 15%;
-      a {
-        @include var_TextBebasNew(#DA251C, 3.5em, " Book");
-
-      }
-
+      @include var_LinkBebasNew(#DA251C, #FF2E23, 3.5em, " Book");
     }
   }
   .application__form {

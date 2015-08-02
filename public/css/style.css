@@ -17,7 +17,7 @@ em, i {
   font-style: italic !important;
 }
 
-/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -39,45 +39,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -101,19 +101,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 @font-face {
   font-family: "Bebas Neue Bold";
-  src: url('../fonts/bebas/BebasNeue Bold.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Bold.otf?1437395161') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Bold.ttf?1389691026') format('truetype'), url('../fonts/bebas/BebasNeue Bold.otf?1389690978') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Book";
-  src: url('../fonts/bebas/BebasNeue Book.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Book.otf?1437395161') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Book.ttf?1389998578') format('truetype'), url('../fonts/bebas/BebasNeue Book.otf?1389998438') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Light";
-  src: url('../fonts/bebas/BebasNeue Light.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Light.otf?1437395161') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Light.ttf?1389998708') format('truetype'), url('../fonts/bebas/BebasNeue Light.otf?1389998678') format('opentype');
 }
 @font-face {
   font-family: "Bebas Neue Regular";
-  src: url('../fonts/bebas/BebasNeue Regular.ttf?1437395161') format('truetype'), url('../fonts/bebas/BebasNeue Regular.otf?1437395161') format('opentype');
+  src: url('../fonts/bebas/BebasNeue Regular.ttf?1389998908') format('truetype'), url('../fonts/bebas/BebasNeue Regular.otf?1389998860') format('opentype');
 }
 /* line 4, ../sass/base/_reset.scss */
 body, .main-wrapper, html {
@@ -129,7 +129,15 @@ body h1, .main-wrapper h1, html h1 {
   text-transform: uppercase;
 }
 
-/* line 1, ../sass/base/_header.scss */
+@keyframes star {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* line 9, ../sass/base/_header.scss */
 header {
   width: 100%;
   position: fixed;
@@ -137,14 +145,14 @@ header {
   background-color: #DA251C;
   z-index: 20;
 }
-/* line 7, ../sass/base/_header.scss */
+/* line 15, ../sass/base/_header.scss */
 header > * {
   padding-top: 19px;
   height: auto;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 13, ../sass/base/_header.scss */
+/* line 21, ../sass/base/_header.scss */
 header .h_divider {
   position: relative;
   top: 7px;
@@ -152,22 +160,22 @@ header .h_divider {
   border-right: 1px solid #B21810;
   height: 26px;
 }
-/* line 20, ../sass/base/_header.scss */
+/* line 28, ../sass/base/_header.scss */
 header .h_logo {
   width: 21.1%;
   text-align: center;
 }
-/* line 24, ../sass/base/_header.scss */
+/* line 32, ../sass/base/_header.scss */
 header nav {
   width: 57.8%;
 }
-/* line 26, ../sass/base/_header.scss */
+/* line 34, ../sass/base/_header.scss */
 header nav .h_divider {
   top: 0;
   float: left;
   height: 45px;
 }
-/* line 31, ../sass/base/_header.scss */
+/* line 39, ../sass/base/_header.scss */
 header nav a {
   display: inline-block;
   text-align: center;
@@ -179,30 +187,50 @@ header nav a {
   text-decoration: none;
   float: left;
   line-height: 45px;
-  padding-right: 4.09%;
-  /*.star {
-    position: relative;
-    top: -1px;
-    right: 2px;
-  }*/
+  margin-right: 3.4%;
 }
-/* line 43, ../sass/base/_header.scss */
-header nav a:not(:first-of-type):before {
-  content: "\2605";
-  position: relative;
-  top: -1px;
-  right: 2px;
-  display: none;
-}
-/* line 50, ../sass/base/_header.scss */
-header nav a:not(:first-of-type).active:before {
-  display: inline-block;
-}
-/* line 58, ../sass/base/_header.scss */
+/* line 51, ../sass/base/_header.scss */
 header nav a.link_01 {
-  margin-left: 5.4%;
+  margin-left: 5%;
 }
-/* line 63, ../sass/base/_header.scss */
+/* line 54, ../sass/base/_header.scss */
+header nav a .star {
+  position: relative;
+  top: -50px;
+  right: 2px;
+  -webkit-transform-origin: 50% 55%;
+  -moz-transform-origin: 50% 55%;
+  -o-transform-origin: 50% 55%;
+  transform-origin: 50% 55%;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  line-height: 0;
+  -webkit-transition: top .15s linear;
+  -moz-transition: top .15s linear;
+  -ms-transition: top .15s linear;
+  -o-transition: top .15s linear;
+  transition: top .15s linear;
+}
+/* line 74, ../sass/base/_header.scss */
+header nav a.active .star {
+  top: -1px;
+}
+/* line 77, ../sass/base/_header.scss */
+header nav a.rotate .star {
+  animation: star .5s linear infinite;
+}
+/* line 80, ../sass/base/_header.scss */
+header nav a.up .star {
+  top: -50px !important;
+}
+/* line 83, ../sass/base/_header.scss */
+header nav a.down .star {
+  top: -1px !important;
+}
+/* line 88, ../sass/base/_header.scss */
 header .h_number {
   width: 33%;
   font-family: "Arial Black";
@@ -211,7 +239,7 @@ header .h_number {
   padding: 0 0 0 4%;
   line-height: 45px;
 }
-/* line 37, ../sass/base/_variables.scss */
+/* line 48, ../sass/base/_variables.scss */
 header .h_number:before {
   content: '';
   display: inline-block;
@@ -221,7 +249,7 @@ header .h_number:before {
   top: 15.5px;
   background: url("../images/tel_ico.png") no-repeat;
 }
-/* line 71, ../sass/base/_header.scss */
+/* line 96, ../sass/base/_header.scss */
 header .h_number:before {
   padding: 0;
   margin-right: 10px;
@@ -305,23 +333,42 @@ header .h_number:before {
   z-index: 1;
   opacity: 0;
 }
-/* line 48, ../sass/base/_variables.scss */
+/* line 59, ../sass/base/_variables.scss */
 .main_wrapper #s_intro .wrapper-movedown {
   height: 10%;
   position: absolute;
   z-index: 20;
   bottom: 0;
   width: 100%;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  -ms-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  opacity: 1;
+  /*&:hover{
+    opacity: 1;
+  }*/
 }
-/* line 54, ../sass/base/_variables.scss */
+/* line 74, ../sass/base/_variables.scss */
 .main_wrapper #s_intro .wrapper-movedown svg {
-  opacity: 0;
+  opacity: .5;
+  -webkit-transition: opacity .25s linear;
+  -moz-transition: opacity .25s linear;
+  -ms-transition: opacity .25s linear;
+  -o-transition: opacity .25s linear;
+  transition: opacity .25s linear;
   position: absolute;
-  z-index: 15;
+  z-index: 25;
   top: 0;
   left: 49%;
+  cursor: pointer;
 }
-/* line 60, ../sass/base/_variables.scss */
+/* line 86, ../sass/base/_variables.scss */
+.main_wrapper #s_intro .wrapper-movedown svg:hover {
+  opacity: 1;
+}
+/* line 89, ../sass/base/_variables.scss */
 .main_wrapper #s_intro .wrapper-movedown svg line {
   stroke: #ffffff;
 }
@@ -450,7 +497,7 @@ header .h_number:before {
   color: #4491F9;
   font-size: 1.2em;
 }
-/* line 37, ../sass/base/_variables.scss */
+/* line 48, ../sass/base/_variables.scss */
 .main_wrapper #s_directions .directions_text .video:before {
   content: '';
   display: inline-block;
@@ -460,7 +507,7 @@ header .h_number:before {
   top: 20.5px;
   background: url("../images/button_small_video.png") no-repeat;
 }
-/* line 37, ../sass/base/_variables.scss */
+/* line 48, ../sass/base/_variables.scss */
 .main_wrapper #s_directions .directions_text .applicate:before {
   content: '';
   display: inline-block;
@@ -470,23 +517,42 @@ header .h_number:before {
   top: 20.5px;
   background: url("../images/button_small_check.png") no-repeat;
 }
-/* line 48, ../sass/base/_variables.scss */
+/* line 59, ../sass/base/_variables.scss */
 .main_wrapper #s_directions .wrapper-movedown {
   height: 10%;
   position: absolute;
   z-index: 20;
   bottom: 0;
   width: 100%;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  -ms-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  opacity: 1;
+  /*&:hover{
+    opacity: 1;
+  }*/
 }
-/* line 54, ../sass/base/_variables.scss */
+/* line 74, ../sass/base/_variables.scss */
 .main_wrapper #s_directions .wrapper-movedown svg {
-  opacity: 0;
+  opacity: .5;
+  -webkit-transition: opacity .25s linear;
+  -moz-transition: opacity .25s linear;
+  -ms-transition: opacity .25s linear;
+  -o-transition: opacity .25s linear;
+  transition: opacity .25s linear;
   position: absolute;
-  z-index: 15;
+  z-index: 25;
   top: 0;
   left: 49%;
+  cursor: pointer;
 }
-/* line 60, ../sass/base/_variables.scss */
+/* line 86, ../sass/base/_variables.scss */
+.main_wrapper #s_directions .wrapper-movedown svg:hover {
+  opacity: 1;
+}
+/* line 89, ../sass/base/_variables.scss */
 .main_wrapper #s_directions .wrapper-movedown svg line {
   stroke: #dc241c;
 }
@@ -513,7 +579,7 @@ header .h_number:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
 .main_wrapper #s_masters .masters__teacher:after {
   content: " ";
   display: block;
@@ -571,7 +637,7 @@ header .h_number:before {
   color: #FFF;
   font-size: 0.915em;
 }
-/* line 37, ../sass/base/_variables.scss */
+/* line 48, ../sass/base/_variables.scss */
 .main_wrapper #s_masters .masters__teacher .teachers .description .more:before {
   content: '';
   display: inline-block;
@@ -581,7 +647,7 @@ header .h_number:before {
   top: 15.5px;
   background: url("../images/button_small_question.png") no-repeat;
 }
-/* line 37, ../sass/base/_variables.scss */
+/* line 48, ../sass/base/_variables.scss */
 .main_wrapper #s_masters .masters__teacher .teachers .description .applicate:before {
   content: '';
   display: inline-block;
@@ -591,23 +657,42 @@ header .h_number:before {
   top: 15.5px;
   background: url("../images/button_small_check_teachers.png") no-repeat;
 }
-/* line 48, ../sass/base/_variables.scss */
+/* line 59, ../sass/base/_variables.scss */
 .main_wrapper #s_masters .wrapper-movedown {
   height: 10%;
   position: absolute;
   z-index: 20;
   bottom: 0;
   width: 100%;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  -ms-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  opacity: 1;
+  /*&:hover{
+    opacity: 1;
+  }*/
 }
-/* line 54, ../sass/base/_variables.scss */
+/* line 74, ../sass/base/_variables.scss */
 .main_wrapper #s_masters .wrapper-movedown svg {
-  opacity: 0;
+  opacity: .5;
+  -webkit-transition: opacity .25s linear;
+  -moz-transition: opacity .25s linear;
+  -ms-transition: opacity .25s linear;
+  -o-transition: opacity .25s linear;
+  transition: opacity .25s linear;
   position: absolute;
-  z-index: 15;
+  z-index: 25;
   top: 0;
   left: 49%;
+  cursor: pointer;
 }
-/* line 60, ../sass/base/_variables.scss */
+/* line 86, ../sass/base/_variables.scss */
+.main_wrapper #s_masters .wrapper-movedown svg:hover {
+  opacity: 1;
+}
+/* line 89, ../sass/base/_variables.scss */
 .main_wrapper #s_masters .wrapper-movedown svg line {
   stroke: #ffffff;
 }
@@ -681,7 +766,7 @@ header .h_number:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
 .main_wrapper #s_studio .studio__information:after {
   content: " ";
   display: block;
@@ -747,7 +832,7 @@ header .h_number:before {
   color: #FFF;
   font-size: 0.915em;
 }
-/* line 37, ../sass/base/_variables.scss */
+/* line 48, ../sass/base/_variables.scss */
 .main_wrapper #s_studio .studio__information .studios .description .more:before {
   content: '';
   display: inline-block;
@@ -757,7 +842,7 @@ header .h_number:before {
   top: 15.5px;
   background: url("../images/button_small_question.png") no-repeat;
 }
-/* line 37, ../sass/base/_variables.scss */
+/* line 48, ../sass/base/_variables.scss */
 .main_wrapper #s_studio .studio__information .studios .description .applicate:before {
   content: '';
   display: inline-block;
@@ -767,23 +852,42 @@ header .h_number:before {
   top: 15.5px;
   background: url("../images/button_small_check_teachers.png") no-repeat;
 }
-/* line 48, ../sass/base/_variables.scss */
+/* line 59, ../sass/base/_variables.scss */
 .main_wrapper #s_studio .wrapper-movedown {
   height: 10%;
   position: absolute;
   z-index: 20;
   bottom: 0;
   width: 100%;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  -ms-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  opacity: 1;
+  /*&:hover{
+    opacity: 1;
+  }*/
 }
-/* line 54, ../sass/base/_variables.scss */
+/* line 74, ../sass/base/_variables.scss */
 .main_wrapper #s_studio .wrapper-movedown svg {
-  opacity: 0;
+  opacity: .5;
+  -webkit-transition: opacity .25s linear;
+  -moz-transition: opacity .25s linear;
+  -ms-transition: opacity .25s linear;
+  -o-transition: opacity .25s linear;
+  transition: opacity .25s linear;
   position: absolute;
-  z-index: 15;
+  z-index: 25;
   top: 0;
   left: 49%;
+  cursor: pointer;
 }
-/* line 60, ../sass/base/_variables.scss */
+/* line 86, ../sass/base/_variables.scss */
+.main_wrapper #s_studio .wrapper-movedown svg:hover {
+  opacity: 1;
+}
+/* line 89, ../sass/base/_variables.scss */
 .main_wrapper #s_studio .wrapper-movedown svg line {
   stroke: #ffffff;
 }
@@ -838,7 +942,7 @@ header .h_number:before {
   color: #FFF;
   font-size: 0.915em;
 }
-/* line 37, ../sass/base/_variables.scss */
+/* line 48, ../sass/base/_variables.scss */
 .main_wrapper #s_application .application__inform .now div .applicate:before {
   content: '';
   display: inline-block;
@@ -860,18 +964,22 @@ header .h_number:before {
 .main_wrapper #s_application .application__inform .load {
   width: 15%;
 }
-/* line 46, ../sass/components/_application.scss */
+/* line 37, ../sass/base/_variables.scss */
 .main_wrapper #s_application .application__inform .load a {
   color: #DA251C;
   font-family: "Bebas Neue Book";
   font-size: 3.5em;
   font-weight: 300;
 }
-/* line 53, ../sass/components/_application.scss */
+/* line 42, ../sass/base/_variables.scss */
+.main_wrapper #s_application .application__inform .load a:hover {
+  color: #FF2E23;
+}
+/* line 48, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form {
   width: 100%;
 }
-/* line 55, ../sass/components/_application.scss */
+/* line 50, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form {
   border: 1px solid #FFFFFF;
   position: relative;
@@ -880,7 +988,7 @@ header .h_number:before {
   font-size: 1em;
   height: 41vh;
 }
-/* line 64, ../sass/components/_application.scss */
+/* line 59, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-subheader {
   width: 96.5%;
   background: #FFFFFF;
@@ -891,7 +999,7 @@ header .h_number:before {
   padding: 1% 0 1% 3.5%;
   height: 10%;
 }
-/* line 71, ../sass/components/_application.scss */
+/* line 66, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left {
   display: inline;
   height: 85%;
@@ -899,62 +1007,62 @@ header .h_number:before {
   float: left;
   background: #150303;
 }
-/* line 77, ../sass/components/_application.scss */
+/* line 72, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left div {
   padding: 7% 12% 5% 9.5%;
   width: 78.5%;
 }
-/* line 80, ../sass/components/_application.scss */
+/* line 75, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left div input {
   border-right: 1px solid #fff;
   background: #150303;
   color: #fff;
   padding: 0.3em;
 }
-/* line 87, ../sass/components/_application.scss */
+/* line 82, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left div ~ * {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 91, ../sass/components/_application.scss */
+/* line 86, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_1 {
   padding-top: 23%;
 }
-/* line 93, ../sass/components/_application.scss */
+/* line 88, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_1 p {
   padding-top: 1.5%;
   width: 16.03053%;
   float: left;
 }
-/* line 97, ../sass/components/_application.scss */
+/* line 92, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_1 input {
   width: 79.62963%;
   float: right;
   margin-right: 0;
 }
-/* line 101, ../sass/components/_application.scss */
+/* line 96, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_2 {
   padding-top: 12%;
   padding-bottom: 7%;
 }
-/* line 104, ../sass/components/_application.scss */
+/* line 99, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_2 p {
   padding-top: 1.5%;
   width: 43.25397%;
   float: left;
 }
-/* line 108, ../sass/components/_application.scss */
+/* line 103, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_2 input {
   width: 49.77169%;
   float: right;
   margin-right: 0;
   text-align: right;
 }
-/* line 111, ../sass/components/_application.scss */
+/* line 106, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_2 input::-webkit-datetime-edit {
   text-align: center;
 }
-/* line 114, ../sass/components/_application.scss */
+/* line 109, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_2 input::-webkit-calendar-picker-indicator {
   opacity: 1;
   background: url("../images/date_form_button.png") no-repeat;
@@ -962,57 +1070,57 @@ header .h_number:before {
   margin-right: -16%;
   -webkit-appearance: none;
 }
-/* line 122, ../sass/components/_application.scss */
+/* line 117, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_2 input::-webkit-inner-spin-button {
   display: none;
 }
-/* line 127, ../sass/components/_application.scss */
+/* line 122, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_3 {
   padding-top: 5%;
 }
-/* line 129, ../sass/components/_application.scss */
+/* line 124, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_3 #l_31 {
   padding-top: 1.5%;
   width: 30.37975%;
   float: left;
 }
-/* line 133, ../sass/components/_application.scss */
+/* line 128, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_3 #l_32 {
   width: 20.53232%;
   float: left;
   text-align: right;
 }
-/* line 137, ../sass/components/_application.scss */
+/* line 132, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_3 #l_33 {
   padding-top: 1.5%;
   width: 27.63158%;
   float: left;
   text-align: center;
 }
-/* line 144, ../sass/components/_application.scss */
+/* line 139, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_3 #l_34 {
   width: 13.15789%;
   float: right;
   margin-right: 0;
 }
-/* line 148, ../sass/components/_application.scss */
+/* line 143, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_4 {
   padding-top: 5%;
 }
-/* line 150, ../sass/components/_application.scss */
+/* line 145, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_4 p {
   padding-top: 1.5%;
   width: 53.9924%;
   float: left;
 }
-/* line 154, ../sass/components/_application.scss */
+/* line 149, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-left .line_4 input {
   width: 37.32194%;
   float: right;
   margin-right: 0;
   text-align: center;
 }
-/* line 160, ../sass/components/_application.scss */
+/* line 155, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-middle {
   padding-right: 1.4%;
   display: inline;
@@ -1021,11 +1129,11 @@ header .h_number:before {
   height: 85%;
   background: #1c0404;
 }
-/* line 167, ../sass/components/_application.scss */
+/* line 162, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-middle div {
   margin: 24% 9.5% 5% 12%;
 }
-/* line 169, ../sass/components/_application.scss */
+/* line 164, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-middle div select {
   width: 100%;
   border-right: 1px solid #fff;
@@ -1034,11 +1142,11 @@ header .h_number:before {
   margin-top: 6%;
   padding: 0.3em;
 }
-/* line 177, ../sass/components/_application.scss */
+/* line 172, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-middle div:last-child {
   margin-top: 10%;
 }
-/* line 182, ../sass/components/_application.scss */
+/* line 177, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-right {
   display: inline;
   width: 22.53521%;
@@ -1047,7 +1155,7 @@ header .h_number:before {
   background: #260705;
   height: 85%;
 }
-/* line 189, ../sass/components/_application.scss */
+/* line 184, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-right a {
   height: 100%;
   vertical-align: middle;
@@ -1055,32 +1163,51 @@ header .h_number:before {
   color: #ffffff;
   text-decoration: none;
 }
-/* line 195, ../sass/components/_application.scss */
+/* line 190, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-right a img {
   margin-top: 36%;
 }
-/* line 198, ../sass/components/_application.scss */
+/* line 193, ../sass/components/_application.scss */
 .main_wrapper #s_application .application__form #send_form .form-right a p {
   position: relative;
   margin-top: -11%;
 }
-/* line 48, ../sass/base/_variables.scss */
+/* line 59, ../sass/base/_variables.scss */
 .main_wrapper #s_application .wrapper-movedown {
   height: 10%;
   position: absolute;
   z-index: 20;
   bottom: 0;
   width: 100%;
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  -ms-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  opacity: 1;
+  /*&:hover{
+    opacity: 1;
+  }*/
 }
-/* line 54, ../sass/base/_variables.scss */
+/* line 74, ../sass/base/_variables.scss */
 .main_wrapper #s_application .wrapper-movedown svg {
-  opacity: 0;
+  opacity: .5;
+  -webkit-transition: opacity .25s linear;
+  -moz-transition: opacity .25s linear;
+  -ms-transition: opacity .25s linear;
+  -o-transition: opacity .25s linear;
+  transition: opacity .25s linear;
   position: absolute;
-  z-index: 15;
+  z-index: 25;
   top: 0;
   left: 49%;
+  cursor: pointer;
 }
-/* line 60, ../sass/base/_variables.scss */
+/* line 86, ../sass/base/_variables.scss */
+.main_wrapper #s_application .wrapper-movedown svg:hover {
+  opacity: 1;
+}
+/* line 89, ../sass/base/_variables.scss */
 .main_wrapper #s_application .wrapper-movedown svg line {
   stroke: #ffffff;
 }

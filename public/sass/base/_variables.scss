@@ -33,6 +33,17 @@ $susy: (
   font-size: $fsize;
   font-weight: 300;
 }
+@mixin var_LinkBebasNew($color, $colorHov, $fsize, $ftype){
+  a {
+    color: $color;
+    font-family: "Bebas Neue"+$ftype;
+    font-size: $fsize;
+    font-weight: 300;
+    &:hover{
+      color: $colorHov;
+    }
+  }
+}
 @mixin var_BeforeImage($side,$locate){
   &:before{
     content: '';
@@ -51,12 +62,30 @@ $susy: (
     z-index: 20;
     bottom: 0;
     width: 100%;
+    -webkit-transition: opacity .2s linear;
+    -moz-transition: opacity .2s linear;
+    -ms-transition: opacity .2s linear;
+    -o-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+    opacity: 1;
+    /*&:hover{
+      opacity: 1;
+    }*/
     svg{
-      opacity: 0;
+      opacity: .5;
+      -webkit-transition: opacity .25s linear;
+      -moz-transition: opacity .25s linear;
+      -ms-transition: opacity .25s linear;
+      -o-transition: opacity .25s linear;
+      transition: opacity .25s linear;
       position: absolute;
-      z-index: 15;
+      z-index: 25;
       top:0;
       left:49%;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
       line{
         stroke: $line-color;
       }

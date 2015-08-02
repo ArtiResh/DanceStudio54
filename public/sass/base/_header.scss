@@ -1,3 +1,11 @@
+@keyframes star {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 header{
       width: 100%;
       position: fixed;
@@ -39,24 +47,41 @@ header{
           text-decoration: none;
           float: left;
           line-height: 45px;
-          padding-right: 4.09%;
-          &:not(:first-of-type):before{
-            content: "\2605";
-            position: relative;
-            top: -1px;
-            right: 2px;
-            display: none;
-          }
-          &:not(:first-of-type).active:before {
-            display: inline-block;
-          }
-          /*.star {
-            position: relative;
-            top: -1px;
-            right: 2px;
-          }*/
+          margin-right: 3.4%;
           &.link_01{
-            margin-left: 5.4%;
+            margin-left: 5%;
+          }
+          .star {
+            position: relative;
+            top: -50px;
+            right: 2px;
+            -webkit-transform-origin: 50% 55%;
+            -moz-transform-origin: 50% 55%;
+            -o-transform-origin: 50% 55%;
+            transform-origin: 50% 55%;
+            height: 15px;
+            width: 15px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+            line-height: 0;
+            -webkit-transition: top .15s linear;
+            -moz-transition: top .15s linear;
+            -ms-transition: top .15s linear;
+            -o-transition: top .15s linear;
+            transition: top .15s linear;
+          }
+          &.active .star {
+            top: -1px;
+          }
+          &.rotate .star {
+            animation: star .5s linear infinite;
+          }
+          &.up .star {
+            top: -50px !important;
+          }
+          &.down .star {
+            top: -1px !important;
           }
         }
       }
