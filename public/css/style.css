@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -393,44 +394,52 @@ header .h_number:before {
   font-family: "Bebas Neue Bold";
   font-size: 1.5em;
   font-weight: 300;
-  margin: 0 1em;
+  padding: .5em 1em;
   letter-spacing: 0.05em;
   cursor: pointer;
-}
-/* line 17, ../sass/components/_directions.scss */
-.main_wrapper #s_directions .directions__nav .active_dir {
-  color: #DA251C;
-  width: 161px;
-  height: 64px;
-  /*background: url(../images/button_menu_directions.png) no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-  background-position: 0px 10px;
-  padding: 0.7em 1.1em 1.5em 1.1em;*/
-  padding: .5em .9em;
-  background: #fff;
-  border-bottom: 2px solid #E97F79;
-  border-radius: 25px / 30px;
   position: relative;
+  transition: border .25s linear;
+  border-bottom: 2px solid rgba(233, 127, 121, 0);
+  border-radius: 25px / 30px;
+  /* ╨в╨╡╨╜╤М */
+  /* ╨Я╨╗╨░╤И╨║╨░ */
 }
-/* line 31, ../sass/components/_directions.scss */
-.main_wrapper #s_directions .directions__nav .active_dir:after {
+/* line 20, ../sass/components/_directions.scss */
+.main_wrapper #s_directions .directions__nav div:after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 12.5%;
   width: 75%;
   height: 100%;
+  transition: box-shadow .25s linear;
+}
+/* line 30, ../sass/components/_directions.scss */
+.main_wrapper #s_directions .directions__nav div:hover:after {
   box-shadow: 0 15px 25px -15px rgba(218, 37, 28, 0.48);
 }
-/* line 42, ../sass/components/_directions.scss */
+/* line 38, ../sass/components/_directions.scss */
+.main_wrapper #s_directions .directions__nav .active_dir {
+  color: #DA251C;
+  width: 161px;
+  height: 64px;
+  background: #fff;
+  border-bottom: 2px solid #E97F79;
+  border-radius: 25px / 30px;
+  position: relative;
+}
+/* line 46, ../sass/components/_directions.scss */
+.main_wrapper #s_directions .directions__nav .active_dir:after {
+  box-shadow: 0 15px 25px -15px rgba(218, 37, 28, 0.48);
+}
+/* line 51, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__slider {
   width: 300%;
   height: 100%;
   vertical-align: bottom;
   position: absolute;
 }
-/* line 48, ../sass/components/_directions.scss */
+/* line 57, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__slider div {
   width: 7.63359%;
   float: left;
@@ -443,18 +452,18 @@ header .h_number:before {
   -o-filter: blur(9px);
   -ms-filter: blur(9px);
 }
-/* line 63, ../sass/components/_directions.scss */
+/* line 72, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__slider div img {
   display: block;
   max-width: 100%;
   max-height: 100%;
 }
-/* line 68, ../sass/components/_directions.scss */
+/* line 77, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__slider div .secondimg {
   opacity: 0;
   display: none;
 }
-/* line 76, ../sass/components/_directions.scss */
+/* line 85, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions__slider .center {
   padding-top: 0;
   width: 15.38462%;
@@ -468,7 +477,7 @@ header .h_number:before {
   -o-filter: blur(0);
   -ms-filter: blur(0);
 }
-/* line 91, ../sass/components/_directions.scss */
+/* line 100, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text {
   position: absolute;
   display: none;
@@ -478,7 +487,7 @@ header .h_number:before {
   left: 55%;
   max-width: 430px;
 }
-/* line 99, ../sass/components/_directions.scss */
+/* line 108, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text h1 {
   color: #DA251C;
   font-family: "Bebas Neue Book";
@@ -487,12 +496,12 @@ header .h_number:before {
   line-height: 0.95em;
   padding-bottom: 0.1em;
 }
-/* line 104, ../sass/components/_directions.scss */
+/* line 113, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text p {
   padding: 0.7em 0 0.7em;
   line-height: 1.2em;
 }
-/* line 110, ../sass/components/_directions.scss */
+/* line 119, ../sass/components/_directions.scss */
 .main_wrapper #s_directions .directions_text a {
   color: #4491F9;
   font-size: 1.2em;
@@ -556,7 +565,7 @@ header .h_number:before {
 .main_wrapper #s_directions .wrapper-movedown svg line {
   stroke: #dc241c;
 }
-/* line 124, ../sass/components/_directions.scss */
+/* line 133, ../sass/components/_directions.scss */
 .main_wrapper .blur {
   -webkit-filter: blur(9px) !important;
   -moz-filter: blur(9px) !important;
@@ -579,7 +588,7 @@ header .h_number:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
 .main_wrapper #s_masters .masters__teacher:after {
   content: " ";
   display: block;
@@ -766,7 +775,7 @@ header .h_number:before {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+/* line 12, ../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.3/sass/susy/output/support/_clearfix.scss */
 .main_wrapper #s_studio .studio__information:after {
   content: " ";
   display: block;

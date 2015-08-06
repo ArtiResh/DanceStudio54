@@ -10,24 +10,13 @@
     div{
       display: inline;
       @include var_TextBebasNew(#2B1B1B, 1.5em," Bold");
-      margin: 0 1em;
+      padding: .5em 1em;
       letter-spacing: 0.05em;
       cursor: pointer;
-    }
-    .active_dir{
-      color: #DA251C;
-      width: 161px;
-      height: 64px;
-      /*background: url(../images/button_menu_directions.png) no-repeat;
-      -webkit-background-size: contain;
-      background-size: contain;
-      background-position: 0px 10px;
-      padding: 0.7em 1.1em 1.5em 1.1em;*/
-      padding: .5em .9em;
-      background: #fff;
-      border-bottom: 2px solid #E97F79;
-      border-radius: 25px / 30px;
       position: relative;
+      transition: border .25s linear;
+      border-bottom: 2px solid rgba(233, 127, 121, 0);
+      border-radius: 25px / 30px;
       &:after {
         content: "";
         position: absolute;
@@ -35,6 +24,26 @@
         left: 12.5%;
         width: 75%;
         height: 100%;
+        transition: box-shadow .25s linear;
+      }
+      /* Тень */
+      &:hover:after {
+        box-shadow: 0 15px 25px -15px rgba(218, 37, 28, .48);
+      }
+      /* Плашка */
+      &:hover {
+//        border-bottom: 2px solid rgba(233, 127, 121, 1);
+      }
+    }
+    .active_dir{
+      color: #DA251C;
+      width: 161px;
+      height: 64px;
+      background: #fff;
+      border-bottom: 2px solid #E97F79;
+      border-radius: 25px / 30px;
+      position: relative;
+      &:after {
         box-shadow: 0 15px 25px -15px rgba(218, 37, 28, .48);
       }
     }
